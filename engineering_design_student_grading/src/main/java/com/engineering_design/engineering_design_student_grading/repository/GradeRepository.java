@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface GradeRepository {
     Grade save(Grade grade);
-    Optional<Grade> findByStudentNumber(Long studentNumber);
+    void update(Grade grade, Long studentNumber, String team);
+    Optional<Grade> findByStudentNumberAndTeam(Long studentNumber, String Team);
     List<Grade> findAll();
 }

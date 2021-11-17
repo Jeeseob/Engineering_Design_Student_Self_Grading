@@ -35,33 +35,68 @@ public class Controller {
         return "home";
     }
 
-    //@PostMapping("/grade/add")
+
     @RequestMapping(value = "/grade/add", method=RequestMethod.POST)
     public void addData(HttpServletResponse response, @RequestBody DataForm form) throws Exception {
 
-        // 받아온 데이터 확인하는 로직 만들 것
-
         Gson gson = new Gson();
-
-        // 받아온 데이터로 Student 객체에 정보 저장 후, 테이블에 매핑
-        Student student = new Student();
-        student.setStudentNumber(Long.parseLong(form.getStudentNumber()));
-        student.setName(form.getName());
-        student.setPhoneNumber(form.getPhoneNumber());
-
-        studentService.addStudent(student);
-
-        SetGrade setGrade = new SetGrade();
-        grades = setGrade.setGrade(form.getGradeForms(),form.getStudentNumber());
-        for(Grade grade : grades) {
-            gradeService.addGrade(grade);
-        }
         Map<String, Object> result = new HashMap<String, Object>();
-        result.put("result", "success");
         result.put("studentNumber", form.getStudentNumber());
 
+
+        // 데이터 중복 여부 확인
+        if (studentService.findTrue(Long.parseLong(form.getStudentNumber()))) {
+            //update 처리
+            result.put("result", "update");
+            response.getWriter().println(gson.toJson(result));
+            return;
+        }
+        // add 로직
+        else {
+            // 받아온 데이터로 Student 객체에 정보 저장 후, 테이블에 매핑
+            Student student = new Student();
+            student.setStudentNumber(Long.parseLong(form.getStudentNumber()));
+            student.setName(form.getName());
+            student.setPhoneNumber(form.getPhoneNumber());
+
+
+            SetGrade setGrade = new SetGrade();
+            grades = setGrade.setGrade(form.getGradeForms(), form.getStudentNumber());
+
+            studentService.addStudent(student);
+
+            for (Grade grade : grades) {
+                gradeService.addGrade(grade);
+            }
+            result.put("result", "success");
+        }
         response.getWriter().println(gson.toJson(result));
     }
+
+    @RequestMapping(value = "/grade/update", method=RequestMethod.POST)
+    public void updateData(HttpServletResponse response, @RequestBody DataForm form) throws Exception {
+
+        Gson gson = new Gson();
+        Map<String, Object> result = new HashMap<String, Object>();
+        result.put("studentNumber", form.getStudentNumber());
+
+        if (studentService.findTrue(Long.parseLong(form.getStudentNumber()))) {
+            //update 처리
+            SetGrade setGrade = new SetGrade();
+            grades = setGrade.setGrade(form.getGradeForms(), form.getStudentNumber());
+
+            for (Grade grade : grades) {
+                gradeService.updateGrade(grade, Long.parseLong(form.getStudentNumber()), grade.getTeam());
+            }
+            result.put("result", "success");
+        }
+        else {
+            result.put("result", "error");
+        }
+        response.getWriter().println(gson.toJson(result));
+    }
+
+
     @GetMapping("/success")
     public String success() {
         return "result/success";

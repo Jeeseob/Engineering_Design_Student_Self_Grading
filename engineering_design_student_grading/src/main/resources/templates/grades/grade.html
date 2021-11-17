@@ -98,8 +98,32 @@
 
                     success: function(data) {
                         console.log(data);
-                        alert("제출 완료");
-                        location.href="/success";
+                        var jData = JSON.parse(data);
+                        console.log(jData.result);
+                        if(jData.result == "update") {
+
+                            alert("이전에 제출한 기록이 있습니다. 다시 제출 하시겠습니까?")
+                            $.ajax({
+                                type: "POST",
+                                url: "/grade/update",
+                                contentType: "application/json; charset=utf-8",
+
+                                data: JSON.stringify(parm),
+                                datatype: "json",
+                                success: function(data) {
+                                    console.log(data);
+                                    alert("제출 완료");
+                                    location.href="/success";
+                                },
+                                error: function(jqXHR,textStatus,errorThrown) {
+                                    alert("제출 에러 입력내용을 다시 확인해 주세요");
+                                }
+                            });
+                        }
+                        else {
+                            alert("제출 완료");
+                            location.href = "/success";
+                        }
                     },
                     error: function(jqXHR,textStatus,errorThrown) {
                         alert("제출 에러 입력내용을 다시 확인해 주세요");

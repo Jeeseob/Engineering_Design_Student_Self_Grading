@@ -7,6 +7,7 @@ import java.util.Optional;
 
 public interface StudentRepository {
     Student save(Student student);
+    Boolean existsByStudentNumber(Long studentNumber);
     Optional<Student> findByStudentNumber(Long studentNumber);
     List<Student> findAll();
 }

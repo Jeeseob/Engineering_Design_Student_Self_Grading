@@ -12,4 +12,4 @@ public interface SpringDataJpaStudentRepository extends JpaRepository<Student, L
 
     @Override
     Optional<Student> findByStudentNumber(Long studentNumber);
-}
+   }

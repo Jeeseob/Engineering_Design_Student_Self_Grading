@@ -19,13 +19,17 @@ public class GradeService {
         gradeRepository.save(grade);
         return grade.getStudentNumber();
     }
+    public void updateGrade(Grade grade, Long studentNumber, String team) {
+        gradeRepository.update(grade, studentNumber, team);
+        //return grade.getStudentNumber();
+    }
 
 
     public List<Grade> findGrades() {
         return gradeRepository.findAll();
     }
 
-    public Optional<Grade> findOne(Long studentNubmer) {
-        return gradeRepository.findByStudentNumber(studentNubmer);
+    public Optional<Grade> findOne(Long studentNubmer, String team) {
+        return gradeRepository.findByStudentNumberAndTeam(studentNubmer, team);
     }
 }

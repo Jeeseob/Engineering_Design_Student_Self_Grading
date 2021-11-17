@@ -18,10 +18,11 @@ public class StudentService {
     }
 
     public Long addStudent(Student student) {
-        validateDuplicateStudent(student);
+       //validateDuplicateStudent(student);
         studentRepository.save(student);
         return student.getStudentNumber();
     }
+
     private void validateDuplicateStudent(Student student) {
         studentRepository.findByStudentNumber(student.getStudentNumber())
                 .ifPresent(m-> {
@@ -35,5 +36,9 @@ public class StudentService {
 
     public Optional<Student> findOne(Long StudentNumber) {
         return studentRepository.findByStudentNumber(StudentNumber);
+    }
+
+    public Boolean findTrue(Long studentNumber) {
+        return studentRepository.existsByStudentNumber(studentNumber);
     }
 }
