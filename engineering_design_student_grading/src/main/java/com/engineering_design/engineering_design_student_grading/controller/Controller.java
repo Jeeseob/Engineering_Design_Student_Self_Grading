@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,7 @@ public class Controller {
 
     private final StudentService studentService;
     private final GradeService gradeService;
+    ArrayList<Grade> grades;
 
     @Autowired
     public Controller(StudentService studentService, GradeService gradeService) {
@@ -37,26 +39,23 @@ public class Controller {
     @RequestMapping(value = "/grade/add", method=RequestMethod.POST)
     public void addData(HttpServletResponse response, @RequestBody DataForm form) throws Exception {
 
-        System.out.println(form.getStudentNumber());
         // 받아온 데이터 확인하는 로직 만들 것
+
         Gson gson = new Gson();
 
+        // 받아온 데이터로 Student 객체에 정보 저장 후, 테이블에 매핑
         Student student = new Student();
-        Grade grade = new Grade();
-
         student.setStudentNumber(Long.parseLong(form.getStudentNumber()));
         student.setName(form.getName());
         student.setPhoneNumber(form.getPhoneNumber());
+
         studentService.addStudent(student);
 
-        grade.setStudentNumber(Long.parseLong(form.getStudentNumber()));
-        grade.setaPoint1_1( Integer.parseInt(form.getaPoint1_1()));
-        grade.setbPoint1_1( Integer.parseInt(form.getbPoint1_1()));
-        grade.setcPoint1_1( Integer.parseInt(form.getcPoint1_1()));
-        grade.setdPoint1_1( Integer.parseInt(form.getdPoint1_1()));
-
-        gradeService.addGrade(grade);
-
+        SetGrade setGrade = new SetGrade();
+        grades = setGrade.setGrade(form.getGradeForms(),form.getStudentNumber());
+        for(Grade grade : grades) {
+            gradeService.addGrade(grade);
+        }
         Map<String, Object> result = new HashMap<String, Object>();
         result.put("result", "success");
         result.put("studentNumber", form.getStudentNumber());

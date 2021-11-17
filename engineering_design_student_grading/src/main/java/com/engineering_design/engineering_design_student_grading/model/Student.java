@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 public class Student {
 
-    @Id //DB가 PK를 알아서 생성.
+    @Id
     private Long studentNumber;
     private String name;
     private String phoneNumber;

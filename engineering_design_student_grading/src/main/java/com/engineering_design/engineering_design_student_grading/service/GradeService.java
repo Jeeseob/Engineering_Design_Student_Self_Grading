@@ -16,16 +16,10 @@ public class GradeService {
     }
 
     public Long addGrade(Grade grade) {
-        validateDuplicateGrade(grade);
         gradeRepository.save(grade);
         return grade.getStudentNumber();
     }
-    private void validateDuplicateGrade(Grade grade) {
-        gradeRepository.findByStudentNumber(grade.getStudentNumber())
-                .ifPresent(m-> {
-                    throw new IllegalStateException("이미 존재하는 회원입니다.");
-                });
-    }
+
 
     public List<Grade> findGrades() {
         return gradeRepository.findAll();

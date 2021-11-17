@@ -5,14 +5,14 @@ import javax.persistence.*;
 @Entity
 public class Grade {
 
-    @Id 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) //DB가 PK를 알아서 생성.
     private Long id;
     private Long studentNumber;
     private String team;
-    private int aPoint1_1;
-    private int bPoint1_1;
-    private int cPoint1_1;
-    private int dPoint1_1;
+    private int aPoint;
+    private int bPoint;
+    private int cPoint;
+    private int dPoint;
 
     public Long getId() {
         return id;
@@ -38,35 +38,35 @@ public class Grade {
         this.team = team;
     }
 
-    public int getaPoint1_1() {
-        return aPoint1_1;
+    public int getaPoint() {
+        return aPoint;
     }
 
-    public void setaPoint1_1(int aPoint1_1) {
-        this.aPoint1_1 = aPoint1_1;
+    public void setaPoint(int aPoint) {
+        this.aPoint = aPoint;
     }
 
-    public int getbPoint1_1() {
-        return bPoint1_1;
+    public int getbPoint() {
+        return bPoint;
     }
 
-    public void setbPoint1_1(int bPoint1_1) {
-        this.bPoint1_1 = bPoint1_1;
+    public void setbPoint(int bPoint) {
+        this.bPoint = bPoint;
     }
 
-    public int getcPoint1_1() {
-        return cPoint1_1;
+    public int getcPoint() {
+        return cPoint;
     }
 
-    public void setcPoint1_1(int cPoint1_1) {
-        this.cPoint1_1 = cPoint1_1;
+    public void setcPoint(int cPoint) {
+        this.cPoint = cPoint;
     }
 
-    public int getdPoint1_1() {
-        return dPoint1_1;
+    public int getdPoint() {
+        return dPoint;
     }
 
-    public void setdPoint1_1(int dPoint1_1) {
-        this.dPoint1_1 = dPoint1_1;
+    public void setdPoint(int dPoint) {
+        this.dPoint = dPoint;
     }
 }
