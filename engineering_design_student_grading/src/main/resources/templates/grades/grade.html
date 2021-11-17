@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Engineering Design Student Grading</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+    <!--
+    <iframe id="iframe" name="iframe1" style="display:none"></iframe>
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type='text/javascript'>
+            function sum(){
+                var ap1_1 = document.getElementById('aPoint1_1');
+                var bp1_1 = document.getElementById('bPoint1_1');
+                var cp1_1 = document.getElementById('cPoint1_1');
+                var dp1_1 = document.getElementById('dPoint1_1');
+                var point1_1 = Number(ap1_1.value)+Number(bp1_1.value)+Number(cp1_1.value)+Number(dp1_1.value);
+                document.getElementById("write").innerHTML=point1_1;
+            }
+
+            // function show(){
+            //     var ap1_1 = document.getElementById('1_1aPoint');
+            //     var bp1_1 = document.getElementById('1_1bPoint');
+            //     var cp1_1 = document.getElementById('1_1cPoint');
+            //     var dp1_1 = document.getElementById('1_1dPoint');
+            //
+            //     document.getElementById("testa").innerHTML=Number(ap1_1.value);
+            //     document.getElementById("testb").innerHTML=Number(bp1_1.value);
+            //     document.getElementById("testc").innerHTML=Number(cp1_1.value);
+            //     document.getElementById("testd").innerHTML=Number(dp1_1.value);
+            // }
+
+            function checkGrade() {
+                let studentNumber = document.getElementById('studentNumber');
+                let name = document.getElementById('name');
+                let phoneNumber = document.getElementById('phoneNumber');
+                let aPoint1_1 = document.getElementById('aPoint1_1');
+                let bPoint1_1 = document.getElementById('bPoint1_1');
+                let cPoint1_1 = document.getElementById('cPoint1_1');
+                let dPoint1_1 = document.getElementById('dPoint1_1');
+
+                let regExp_studentNumber = /\d{9}/;
+                let regExp_name = /\D/;
+                let regExp_phoneNumber = /\d{4}/;
+
+                if (!regExp_studentNumber.test(studentNumber.value)) {
+                    alert("학번을 다시 확인해 주세요");
+                    studentNumber.focus();
+                    return;
+                }
+                if (!regExp_name.test(name.value)) {
+                    alert("이름을 다시 확인해 주세요");
+                    name.focus();
+                    return;
+                }
+                if (!regExp_phoneNumber.test(phoneNumber.value)) {
+                    alert("전화번호 다시 확인해 주세요");
+                    phoneNumber.focus();
+                    return;
+                }
+
+                var parm = {
+                        "studentNumber": studentNumber.value,
+                        "name": name.value,
+                        "phoneNumber": phoneNumber.value,
+                        "aPoint1_1": aPoint1_1.value,
+                        "bPoint1_1": bPoint1_1.value,
+                        "cPoint1_1": cPoint1_1.value,
+                        "dPoint1_1": dPoint1_1.value,
+                    }
+                $.ajax({
+                    type : "POST",
+                    url : "grade/add",
+                    contentType: "application/json; charset=utf-8",
+
+                    data : JSON.stringify(parm),
+                    datatype : "json",
+
+                    success: function(data) {
+                        console.log(data);
+                        alert("제출 완료");
+                        location.href="/success";
+                    },
+                    error: function(jqXHR,textStatus,errorThrown) {
+                        alert("제출 에러 입력내용을 다시 확인해 주세요");
+                    }
+
+                });
+
+            }
+        </script>
+
+        <!-- <form action="grade/add" method="POST"> -->
+            <!-- target="iframe1" -->
+            <center>
+            <h1>공학설계 입문 학생평가</h1>
+            </center>
+
+            <label>학번:</label>
+            <div style="display:inline; padding:0px 0px 0px 97px;">
+                <input id="studentNumber" name="studentNumber" type="text" required><br>
+            </div>
+
+            <label>이름:</label>
+            <div style="display:inline; padding:0px 0px 0px 97px;">
+                <input id="name" name="name" type="text" required><br>
+            </div>
+
+            <label>전화번호 뒷자리(4) : </label>
+            <input id="phoneNumber" type="text" required><br>
+            <h3 >1-1조</h3>
+            <A href = "https://www.google.com" target ="blank">1-1조 과제 링크</A><br><br>
+            <label style="display:inline">A 점수:</label>
+            <input id="aPoint1_1" name="aPoint1_1" value = "0" type="number" onchange="sum()" step="2" min = "1" max ="5" required>
+            <label style="display:inline" >B 점수:</label>
+            <input style="display:inline" id="bPoint1_1" name="bPoint1_1" value = "0" type="number" onchange="sum()" step="2" min = "1" max ="5" required>
+            <label style="display:inline" >C 점수:</label>
+            <input style="display:inline" id="cPoint1_1" name="cPoint1_1" value = "0" type="number" onchange="sum()" step="2" min = "1" max ="5" required>
+            <label style="display:inline" >D 점수:</label>
+            <input style="display:inline" id="dPoint1_1" name="dPoint1_1" value = "0" type="number" onchange="sum()" step="2" min = "1" max ="5" required><br><br>
+    <!--
+            <div style="padding:0px 0px 0px 0px; display:inline;">
+                <p style="display:inline">A 점수 :&nbsp;&nbsp;</p>
+            </div>
+            <p style="display:inline" id="testa"> 0 </p>
+            <div style="padding:0px 5px 0px 10px; display:inline;">
+                <p style="display:inline">B 점수 :&nbsp;&nbsp;</p>
+            </div>
+            <p style="display:inline" id="testb"> 0 </p>
+            <div style="padding:0px 10px 0px 10px; display:inline;">
+                <p style="display:inline">C 점수 :&nbsp;&nbsp;</p>
+            </div>
+            <p style="display:inline" id="testc"> 0 </p>
+            <div style="padding:0px 10px 0px 10px; display:inline;">
+                <p style="display:inline">D 점수 :&nbsp;&nbsp;</p>
+            </div>
+                <p style="display:inline" id="testd"> 0 </p>
+    -->
+
+            <br><br>
+            <p style="display:inline" > 1-1조 Total 점수:&nbsp;</p>
+            <p style="display:inline"   id="write"> 0 <p>
+
+            <br>
+        <button type="button" onclick="checkGrade()">점수 제출</button>
+        <!--</form>-->
+
+    </body>
+</html>

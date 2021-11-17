@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>제출명단(학번)</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <!-- templete에서 아래 로직을 실행해줌.
+            객체를 받아와서 member에 넣음. -->
+            <tr th:each="student : ${students}">
+                <!--getter, setter로 가져옴.-->
+                <td th:text="${student.studentNumber}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
