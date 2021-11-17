@@ -24,6 +24,16 @@ public class GradeService {
         //return grade.getStudentNumber();
     }
 
+    public Boolean checkGrade(Grade grade){
+        if((grade.getaPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5)
+            && (grade.getbPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5 )
+                && (grade.getbPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5 )
+                    &&(grade.getbPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5 )){
+            return false;
+        }
+        return true;
+    }
+
 
     public List<Grade> findGrades() {
         return gradeRepository.findAll();

@@ -101,7 +101,6 @@
                         var jData = JSON.parse(data);
                         console.log(jData.result);
                         if(jData.result == "update") {
-
                             alert("이전에 제출한 기록이 있습니다. 다시 제출 하시겠습니까?")
                             $.ajax({
                                 type: "POST",
@@ -116,9 +115,20 @@
                                     location.href="/success";
                                 },
                                 error: function(jqXHR,textStatus,errorThrown) {
-                                    alert("제출 에러 입력내용을 다시 확인해 주세요");
+                                    alert("제출 에러");
                                 }
                             });
+                        }
+                        else if(jData.result == "noData") {
+                            console.log("noData")
+                            alert("존재하지 않는 학생입니다. " +
+                                "입력내용을 다시 확인해 주세요");
+                        }
+                        else if(jData.result == "noPoint") {
+                            console.log("noPoint")
+                            alert("채점되지 않은 항목이 존재합니다. " +
+                                "입력내용을 다시 확인해 주세요. " +
+                                "(점수는 최소 1점 최대 5점 입니다)");
                         }
                         else {
                             alert("제출 완료");
@@ -126,7 +136,7 @@
                         }
                     },
                     error: function(jqXHR,textStatus,errorThrown) {
-                        alert("제출 에러 입력내용을 다시 확인해 주세요");
+                        alert("제출 에러");
                     }
 
                 });
