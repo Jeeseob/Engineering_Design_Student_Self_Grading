@@ -24,8 +24,8 @@ dependencies {
 
 	// DB사용을 위한 라이브러리
 	//runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'mysql:mysql-connector-java'
-	//	implementation 'mysql:mysql-connector-java'
+	// runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'mysql:mysql-connector-java'
 
 	//application.properties 보안을 위한 암호화 라이브러리
 	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'

@@ -18,16 +18,8 @@ public class StudentService {
     }
 
     public Long addStudent(Student student) {
-       //validateDuplicateStudent(student);
         studentRepository.save(student);
         return student.getStudentNumber();
-    }
-
-    private void validateDuplicateStudent(Student student) {
-        studentRepository.findByStudentNumber(student.getStudentNumber())
-                .ifPresent(m-> {
-                    throw new IllegalStateException("이미 존재하는 회원입니다.");
-                });
     }
 
     public List<Student> findStudent() {
