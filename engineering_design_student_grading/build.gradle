@@ -19,10 +19,18 @@ dependencies {
 	//JPA 사용을 위한 라이브러리
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
+	// response를 json 형식으로 변환하기 위한 라이브러리
 	implementation 'com.google.code.gson:gson:2.8.6'
 
 	// DB사용을 위한 라이브러리
-	runtimeOnly 'com.h2database:h2'
+	//runtimeOnly 'com.h2database:h2'
+	runtimeOnly 'mysql:mysql-connector-java'
+	//	implementation 'mysql:mysql-connector-java'
+
+	//application.properties 보안을 위한 암호화 라이브러리
+	implementation 'com.github.ulisesbocchio:jasypt-spring-boot-starter:3.0.4'
+
+
 }
 
 test {

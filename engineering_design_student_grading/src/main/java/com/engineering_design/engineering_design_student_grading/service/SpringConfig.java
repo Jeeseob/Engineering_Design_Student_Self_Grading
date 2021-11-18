@@ -5,6 +5,9 @@ import com.engineering_design.engineering_design_student_grading.model.Student;
 import com.engineering_design.engineering_design_student_grading.repository.CheckStudentRepository;
 import com.engineering_design.engineering_design_student_grading.repository.GradeRepository;
 import com.engineering_design.engineering_design_student_grading.repository.StudentRepository;
+import org.jasypt.encryption.StringEncryptor;
+import org.jasypt.encryption.pbe.PooledPBEStringEncryptor;
+import org.jasypt.encryption.pbe.config.SimpleStringPBEConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,4 +40,7 @@ public class SpringConfig {
     public CheckStudentService checkStudentService() {
         return new CheckStudentService(checkStudentRepository);
     }
+
+
+
 }
