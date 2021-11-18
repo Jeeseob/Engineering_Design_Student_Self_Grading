@@ -128,7 +128,7 @@
                             console.log("noPoint")
                             alert("채점되지 않은 항목이 존재합니다. " +
                                 "입력내용을 다시 확인해 주세요. " +
-                                "(점수는 최소 1점 최대 5점 입니다)");
+                                "(점수는 1,3,5점 중 하나입니다)");
                         }
                         else {
                             alert("제출 완료");
@@ -171,8 +171,9 @@
             <label style="display:inline" >C 점수:</label>
             <input style="display:inline" id="cPoint1_1" name="cPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>
             <label style="display:inline" >D 점수:</label>
-            <input style="display:inline" id="dPoint1_1" name="dPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required><br><br>
+            <input style="display:inline" id="dPoint1_1" name="dPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>
 
+            <br><br>
             <p style="display:inline" > 1-1조 Total 점수:&nbsp;</p>
             <p style="display:inline"   id="write1_1"> 0 <p>
 
@@ -186,8 +187,11 @@
             <label style="display:inline" >C 점수:</label>
             <input style="display:inline" id="cPoint1_2" name="cPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')"  step="2" min = "1" max ="5" required>
             <label style="display:inline" >D 점수:</label>
-            <input style="display:inline" id="dPoint1_2" name="dPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')"  step="2" min = "1" max ="5" required><br><br>
+            <input style="display:inline" id="dPoint1_2" name="dPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')"  step="2" min = "1" max ="5" required>
 
+            <br><br>
+            <p style="display:inline" > 1-2조 Total 점수:&nbsp;</p>
+            <p style="display:inline"   id="write1_2"> 0 <p>
 
     <!--
             <div style="padding:0px 0px 0px 0px; display:inline;">
@@ -207,11 +211,6 @@
             </div>
                 <p style="display:inline" id="testd"> 0 </p>
     -->
-
-            <br><br>
-            <p style="display:inline" > 1-1조 Total 점수:&nbsp;</p>
-            <p style="display:inline"   id="write1_2"> 0 <p>
-
             <br>
         <button type="button" onclick="checkGrade()">점수 제출</button>
         <!--</form>-->
