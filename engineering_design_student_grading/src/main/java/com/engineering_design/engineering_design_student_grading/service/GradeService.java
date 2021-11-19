@@ -26,9 +26,9 @@ public class GradeService {
 
     public Boolean checkGrade(Grade grade){
         if((grade.getaPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5)
-            && (grade.getbPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5 )
-                && (grade.getbPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5 )
-                    &&(grade.getbPoint() == 1 ||grade.getaPoint() == 3 ||grade.getaPoint() == 5 )){
+            && (grade.getbPoint() == 1 ||grade.getbPoint() == 3 ||grade.getbPoint() == 5 )
+                && (grade.getcPoint() == 1 ||grade.getcPoint() == 3 ||grade.getcPoint() == 5 )
+                    &&(grade.getdPoint() == 1 ||grade.getdPoint() == 3 ||grade.getdPoint() == 5 )){
             return false;
         }
         return true;

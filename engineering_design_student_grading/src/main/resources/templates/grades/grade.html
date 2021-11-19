@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Engineering Design Student Grading</title>
+        <title>공학설계입문</title>
         <meta charset="UTF-8">
         <style>
             table {border-collapse: collapse}
@@ -11,6 +11,8 @@
                 margin: 0px 0px 0px 0px;
             }
         </style>
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </head>
 
     <body>
@@ -20,6 +22,9 @@
     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type='text/javascript'>
+            function goHome(){
+                location.href ="/";
+            }
             function sum(){
                 var ap = document.getElementById(arguments[0]);
                 var bp = document.getElementById(arguments[1]);
@@ -55,6 +60,7 @@
                 let studentNumber = document.getElementById('studentNumber');
                 let name = document.getElementById('name');
                 let phoneNumber = document.getElementById('phoneNumber');
+
                 let aPoint1_1 = document.getElementById('aPoint1_1');
                 let bPoint1_1 = document.getElementById('bPoint1_1');
                 let cPoint1_1 = document.getElementById('cPoint1_1');
@@ -70,17 +76,20 @@
                 let regExp_phoneNumber = /\d{4}/;
 
                 if (!regExp_studentNumber.test(studentNumber.value)) {
-                    alert("학번을 다시 확인해 주세요");
+                    swal("학번을 다시 확인해 주세요", {icon: "error"});
+                    //alert("학번을 다시 확인해 주세요");
                     studentNumber.focus();
                     return;
                 }
                 if (!regExp_name.test(name.value)) {
-                    alert("이름을 다시 확인해 주세요");
+                    swal("이름을 다시 확인해 주세요", {icon: "error"});
+                    //alert("이름을 다시 확인해 주세요");
                     name.focus();
                     return;
                 }
                 if (!regExp_phoneNumber.test(phoneNumber.value)) {
-                    alert("전화번호 다시 확인해 주세요");
+                    swal("전화번호를 확인해 주세요", {icon: "error"});
+                    //alert("전화번호 다시 확인해 주세요");
                     phoneNumber.focus();
                     return;
                 }
@@ -119,42 +128,59 @@
                         var jData = JSON.parse(data);
                         console.log(jData.result);
                         if(jData.result == "update") {
-                            alert("이전에 제출한 기록이 있습니다. 다시 제출 하시겠습니까?")
-                            $.ajax({
-                                type: "POST",
-                                url: "/grade/update",
-                                contentType: "application/json; charset=utf-8",
+                            swal({
+                                title: "이전에 제출한 기록이 있습니다.",
+                                text: "다시 제출 하시겠습니까?",
+                                icon: "warning",
+                                buttons: true,
+                                //dangerMode: true,
+                            }).then(updated)
+                            if(updated){
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/grade/update",
+                                    contentType: "application/json; charset=utf-8",
 
-                                data: JSON.stringify(parm),
-                                datatype: "json",
-                                success: function(data) {
-                                    console.log(data);
-                                    alert("제출 완료");
-                                    location.href="/success";
-                                },
-                                error: function(jqXHR,textStatus,errorThrown) {
-                                    alert("제출 에러");
-                                }
-                            });
+                                    data: JSON.stringify(parm),
+                                    datatype: "json",
+                                    success: function (data) {
+                                        console.log(data);
+                                        swal("업데이트 되었습니다", {
+                                            icon: "success",});
+                                        //alert("제출 완료");
+                                        location.href = "/success";
+                                    },
+                                    error: function (jqXHR, textStatus, errorThrown) {
+                                        swal("시스템 에러 교수님께 연락드리세요", {icon: "error"});
+                                    }
+                                });
+                            }
                         }
                         else if(jData.result == "noData") {
                             console.log("noData")
-                            alert("존재하지 않는 학생입니다. " +
-                                "입력내용을 다시 확인해 주세요");
+                            swal("존재하지 않는 학생입니다. 입력내용을 다시 확인해 주세요", {icon: "error"});
+                            //alert("존재하지 않는 학생입니다. " +
+                                //"입력내용을 다시 확인해 주세요");
                         }
                         else if(jData.result == "noPoint") {
                             console.log("noPoint")
-                            alert("채점되지 않은 항목이 존재합니다. " +
-                                "입력내용을 다시 확인해 주세요. " +
-                                "(점수는 1,3,5점 중 하나입니다)");
+                            swal("채점되지 않은 항목이 존재합니다. (각 점수는 최소 1점 입니다)", {icon: "error"});
+                            // alert("채점되지 않은 항목이 존재합니다. " +
+                            //     "입력내용을 다시 확인해 주세요. " +
+                            //     "(점수는 1,3,5점 중 하나입니다)");
                         }
                         else {
-                            alert("제출 완료");
-                            location.href = "/success";
+                            //alert("제출 완료");
+                            swal({text: "제출 완료 되었습니다.", icon: "success", buttons :true}).
+                            then(successed)
+                            if (successed) {
+                                location.href = "/success";
+                            }
                         }
                     },
                     error: function(jqXHR,textStatus,errorThrown) {
-                        alert("제출 에러");
+                        swal("시스템 에러 교수님께 연락드리세요", {icon: "error"});
+                        //alert("제출 에러");
                     }
 
                 });
@@ -183,7 +209,7 @@
 
 
             <h3>평가 기준 안내</h3>
-                <img th:src="@{/image/grading-standard.png}" alt="grading-standard" width="700">
+                <img th:src="@{/image/grading-standard.png}" alt="grading-standard" width="735">
             <br><br>
             <h3>평가 표</h3>
             <table>
@@ -288,6 +314,8 @@
 
             <br>
         <button type="button" onclick="checkGrade()">점수 제출</button>
+
+        <button type="button" onclick="goHome()">취소(홈으로)</button>
         <!--</form>-->
 
     </body>

@@ -29,6 +29,7 @@ public class Controller {
     private final GradeService gradeService;
     private final CheckStudentService checkStudentService;
     ArrayList<Grade> grades;
+    Boolean checkGrade;
 
     public Controller(StudentService studentService, GradeService gradeService, CheckStudentService checkStudentService) {
         this.studentService = studentService;
@@ -54,7 +55,7 @@ public class Controller {
 
         //점수 확인 (1,3,5 중 하나여야 함)
         SetGrade setGrade = new SetGrade();
-        Boolean checkGrade = true;
+        checkGrade = true;
         grades = setGrade.setGrade(form.getGradeForms(), form.getStudentNumber());
 
         for (Grade grade : grades) {
@@ -141,12 +142,6 @@ public class Controller {
     public String newGrade() {
         return "grades/grade";
     }
-
-//    @GetMapping("/images")
-//    public ResponseEntity<Resource> image(){
-//        Resource resource = new FileSystemResource("/resources/images/grading-standard.png");
-//        return new ResponseEntity<Resource> (resource, new HttpHeaders(), HttpStatus.OK);
-//    }
 
     @GetMapping("/students")
     public String list(Model model) {
