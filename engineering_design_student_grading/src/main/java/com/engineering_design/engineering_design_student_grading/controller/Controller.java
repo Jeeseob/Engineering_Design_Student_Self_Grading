@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.nio.charset.StandardCharsets;
@@ -140,9 +141,10 @@ public class Controller {
     public String newGrade() {
         return "grades/grade";
     }
-//    @GetMapping("/image")
+
+//    @GetMapping("/images")
 //    public ResponseEntity<Resource> image(){
-//        Resource resource = new FileSystemResource("webapp/images/grading-standard.png");
+//        Resource resource = new FileSystemResource("/resources/images/grading-standard.png");
 //        return new ResponseEntity<Resource> (resource, new HttpHeaders(), HttpStatus.OK);
 //    }
 
