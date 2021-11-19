@@ -140,11 +140,11 @@ public class Controller {
     public String newGrade() {
         return "grades/grade";
     }
-    @GetMapping("/image")
-    public ResponseEntity<Resource> image(){
-        Resource resource = new FileSystemResource("webapp/images/grading-standard.png");
-        return new ResponseEntity<Resource> (resource, new HttpHeaders(), HttpStatus.OK);
-    }
+//    @GetMapping("/image")
+//    public ResponseEntity<Resource> image(){
+//        Resource resource = new FileSystemResource("webapp/images/grading-standard.png");
+//        return new ResponseEntity<Resource> (resource, new HttpHeaders(), HttpStatus.OK);
+//    }
 
     @GetMapping("/students")
     public String list(Model model) {
