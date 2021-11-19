@@ -12,6 +12,10 @@
             }
         </style>
 <!--        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     </head>
 
     <body>
@@ -19,9 +23,7 @@
     <!--
     <iframe id="iframe" name="iframe1" style="display:none"></iframe>
     -->
-    <script type="text/javascript" src="/lib/sweetalert.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script type='text/javascript'>
+    <script type='text/javascript'>
             function goHome(){
                 location.href ="/";
             }
@@ -76,19 +78,19 @@
                 let regExp_phoneNumber = /\d{4}/;
 
                 if (!regExp_studentNumber.test(studentNumber.value)) {
-                    swal("학번을 다시 확인해 주세요", {icon: "error"});
+                    swal({title : "학번을 다시 확인해 주세요", icon: "error"});
                     //alert("학번을 다시 확인해 주세요");
                     studentNumber.focus();
                     return;
                 }
                 if (!regExp_name.test(name.value)) {
-                    swal("이름을 다시 확인해 주세요", {icon: "error"});
+                    swal({title : "이름을 다시 확인해 주세요", icon: "error"});
                     //alert("이름을 다시 확인해 주세요");
                     name.focus();
                     return;
                 }
                 if (!regExp_phoneNumber.test(phoneNumber.value)) {
-                    swal("전화번호를 확인해 주세요", {icon: "error"});
+                    swal({title : "전화번호를 확인해 주세요", icon: "error"});
                     //alert("전화번호 다시 확인해 주세요");
                     phoneNumber.focus();
                     return;
@@ -145,33 +147,32 @@
                                     datatype: "json",
                                     success: function (data) {
                                         console.log(data);
-                                        swal("업데이트 되었습니다", {
-                                            icon: "success",});
+                                        swal({title : "업데이트 되었습니다", icon: "success",});
                                         //alert("제출 완료");
                                         location.href = "/success";
                                     },
                                     error: function (jqXHR, textStatus, errorThrown) {
-                                        swal("시스템 에러 교수님께 연락드리세요", {icon: "error"});
+                                        swal({title : "시스템 에러 교수님께 연락드리세요", icon: "error"});
                                     }
                                 });
                             }
                         }
                         else if(jData.result == "noData") {
                             console.log("noData")
-                            swal("존재하지 않는 학생입니다. 입력내용을 다시 확인해 주세요", {icon: "error"});
+                            swal({title : "존재하지 않는 학생입니다.", text: "입력내용을 다시 확인해 주세요", icon: "error"});
                             //alert("존재하지 않는 학생입니다. " +
                                 //"입력내용을 다시 확인해 주세요");
                         }
                         else if(jData.result == "noPoint") {
                             console.log("noPoint")
-                            swal("채점되지 않은 항목이 존재합니다. (각 점수는 최소 1점 입니다)", {icon: "error"});
+                            swal({title: "채점되지 않은 항목이 존재합니다." ,text: "(각 점수는 최소 1점 입니다)", icon: "error"});
                             // alert("채점되지 않은 항목이 존재합니다. " +
                             //     "입력내용을 다시 확인해 주세요. " +
                             //     "(점수는 1,3,5점 중 하나입니다)");
                         }
                         else {
                             //alert("제출 완료");
-                            swal({text: "제출 완료 되었습니다.", icon: "success", buttons :true}).
+                            swal({title: "제출 완료 되었습니다.", icon: "success", buttons :true}).
                             then(successed)
                             if (successed) {
                                 location.href = "/success";
@@ -179,7 +180,7 @@
                         }
                     },
                     error: function(jqXHR,textStatus,errorThrown) {
-                        swal("시스템 에러 교수님께 연락드리세요", {icon: "error"});
+                        swal({title: "시스템 에러 교수님께 연락드리세요", icon: "error"});
                         //alert("제출 에러");
                     }
 
