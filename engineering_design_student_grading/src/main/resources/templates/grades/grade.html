@@ -3,6 +3,14 @@
     <head>
         <title>Engineering Design Student Grading</title>
         <meta charset="UTF-8">
+        <style>
+            table {border-collapse: collapse}
+            table *{border: 1px solid black; text-align: center;}
+            p {
+                line-height: 100%;
+                margin: 0px 0px 0px 0px;
+            }
+        </style>
     </head>
 
     <body>
@@ -17,21 +25,31 @@
                 var bp = document.getElementById(arguments[1]);
                 var cp = document.getElementById(arguments[2]);
                 var dp = document.getElementById(arguments[3]);
-                var point = Number(ap.value)+Number(bp.value)+Number(cp.value)+Number(dp.value);
+                var point = 0;
+                if(Number(ap.value) != -1){
+                    point = point+Number(ap.value);
+                }
+                if(Number(bp.value) != -1){
+                    point = point + Number(bp.value);
+                }
+                if(Number(cp.value) != -1){
+                    point = point = point + Number(cp.value);
+                }
+                if(Number(dp.value) != -1){
+                    point = point = point + Number(dp.value);
+                }
                 document.getElementById(arguments[4]).innerHTML=point;
             }
 
-            // function show(){
-            //     var ap1_1 = document.getElementById('1_1aPoint');
-            //     var bp1_1 = document.getElementById('1_1bPoint');
-            //     var cp1_1 = document.getElementById('1_1cPoint');
-            //     var dp1_1 = document.getElementById('1_1dPoint');
-            //
-            //     document.getElementById("testa").innerHTML=Number(ap1_1.value);
-            //     document.getElementById("testb").innerHTML=Number(bp1_1.value);
-            //     document.getElementById("testc").innerHTML=Number(cp1_1.value);
-            //     document.getElementById("testd").innerHTML=Number(dp1_1.value);
-            // }
+            function show(){
+                var point = document.getElementById(arguments[0]);
+                if(Number(point.value) == -1){
+                    document.getElementById(arguments[1]).innerHTML="0";
+                }
+                else {
+                    document.getElementById(arguments[1]).innerHTML = Number(point.value);
+                }
+            }
 
             function checkGrade() {
                 let studentNumber = document.getElementById('studentNumber');
@@ -162,55 +180,112 @@
 
             <label>전화번호 뒷자리(4) : </label>
             <input id="phoneNumber" type="text" required><br>
-            <h3 >1-1조</h3>
-            <A href = "https://www.google.com" target ="blank">1-1조 과제 링크</A><br><br>
-            <label style="display:inline">A 점수:</label>
-            <input id="aPoint1_1" name="aPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>
-            <label style="display:inline" >B 점수:</label>
-            <input style="display:inline" id="bPoint1_1" name="bPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>
-            <label style="display:inline" >C 점수:</label>
-            <input style="display:inline" id="cPoint1_1" name="cPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>
-            <label style="display:inline" >D 점수:</label>
-            <input style="display:inline" id="dPoint1_1" name="dPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>
 
+
+            <h3>평가 기준 안내</h3>
+                <img src="images/grading-standard.png" alt="grading standard" width="700">
             <br><br>
-            <p style="display:inline" > 1-1조 Total 점수:&nbsp;</p>
-            <p style="display:inline"   id="write1_1"> 0 <p>
+            <h3>평가 표</h3>
+            <table>
+                <tr>
+                    <th rowspan="2">조번호</th>
+                    <th rowspan="2">과제링크</th>
+                    <th colspan="4">채점기준</th>
+                    <th rowspan="2">합계</th>
+                </tr>
+                <tr>
+                    <th>노력 정도</th>
+                    <th>창의성</th>
+                    <th>아이디어</th>
+                    <th>완성도</th>
+                </tr>
+                <tr>
+                    <td>1-1</td>
+                    <td>
+                        <A href = "https://www.google.com" target ="blank">1-1조 과제 링크</A>
+                    </td>
+                    <td style='line-height:100%' align=center>
+                        <input id="aPoint1_1" name="aPoint1_1" value = "-1" type="range"
+                               onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1');
+                                show('aPoint1_1','getAPoint1_1')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getAPoint1_1"> 0 </p>
+                    </td>
 
-            <br>
-            <h3 >1-2조</h3>
-            <A href = "https://www.google.com" target ="blank">1-2조 과제 링크</A><br><br>
-            <label style="display:inline">A 점수:</label>
-            <input id="aPoint1_2" name="aPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')" step="2" min = "1" max ="5" required>
-            <label style="display:inline" >B 점수:</label>
-            <input style="display:inline" id="bPoint1_2" name="bPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')"  step="2" min = "1" max ="5" required>
-            <label style="display:inline" >C 점수:</label>
-            <input style="display:inline" id="cPoint1_2" name="cPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')"  step="2" min = "1" max ="5" required>
-            <label style="display:inline" >D 점수:</label>
-            <input style="display:inline" id="dPoint1_2" name="dPoint1_2" value = "0" type="number" onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2')"  step="2" min = "1" max ="5" required>
+                    <td style='line-height:100%' align=center>
+                        <input id="bPoint1_1" name="bPoint1_1" value = "-1" type="range"
+                               onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1');
+                                show('bPoint1_1','getBPoint1_1')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getBPoint1_1"> 0 </p>
+                    </td>
+                    <td>
+                        <input id="cPoint1_1" name="cPoint1_1" value = "-1" type="range"
+                               onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1');
+                                show('cPoint1_1','getCPoint1_1')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getCPoint1_1"> 0 </p>
+                    </td>
+                    <td>
+                        <input id="dPoint1_1" name="dPoint1_1" value = "-1" type="range"
+                               onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1');
+                                show('dPoint1_1','getDPoint1_1')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getDPoint1_1"> 0 </p>
+                    </td>
+                    <td>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="write1_1" value = 0>0</p>
+                    </td>
+                </tr>
 
-            <br><br>
-            <p style="display:inline" > 1-2조 Total 점수:&nbsp;</p>
-            <p style="display:inline"   id="write1_2"> 0 <p>
 
-    <!--
-            <div style="padding:0px 0px 0px 0px; display:inline;">
-                <p style="display:inline">A 점수 :&nbsp;&nbsp;</p>
-            </div>
-            <p style="display:inline" id="testa"> 0 </p>
-            <div style="padding:0px 5px 0px 10px; display:inline;">
-                <p style="display:inline">B 점수 :&nbsp;&nbsp;</p>
-            </div>
-            <p style="display:inline" id="testb"> 0 </p>
-            <div style="padding:0px 10px 0px 10px; display:inline;">
-                <p style="display:inline">C 점수 :&nbsp;&nbsp;</p>
-            </div>
-            <p style="display:inline" id="testc"> 0 </p>
-            <div style="padding:0px 10px 0px 10px; display:inline;">
-                <p style="display:inline">D 점수 :&nbsp;&nbsp;</p>
-            </div>
-                <p style="display:inline" id="testd"> 0 </p>
-    -->
+                <tr>
+                    <td>1-2</td>
+                    <td>
+                        <A href = "https://www.google.com" target ="blank">1-2조 과제 링크</A>
+                    </td>
+                    <td style='line-height:100%' align=center>
+                        <input id="aPoint1_2" name="aPoint1_2" value = "-1" type="range"
+                               onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2');
+                                show('aPoint1_2','getAPoint1_2')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getAPoint1_2"> 0 </p>
+                    </td>
+
+                    <td style='line-height:100%' align=center>
+                        <input id="bPoint1_2" name="bPoint1_2" value = "-1" type="range"
+                               onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2');
+                                show('bPoint1_2','getBPoint1_2')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getBPoint1_2"> 0 </p>
+                    </td>
+                    <td>
+                        <input id="cPoint1_2" name="cPoint1_2" value = "-1" type="range"
+                               onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2');
+                                show('cPoint1_2','getCPoint1_2')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getCPoint1_2"> 0 </p>
+                    </td>
+                    <td>
+                        <input id="dPoint1_2" name="dPoint1_2" value = "-1" type="range"
+                               onchange="sum('aPoint1_2','bPoint1_2','cPoint1_2', 'dPoint1_2','write1_2');
+                                show('dPoint1_2','getDPoint1_2')" step="2" min = "-1" max ="5" required>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="getDPoint1_2"> 0 </p>
+                    </td>
+                    <td>
+                        <p style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;" id="write1_2" value = 0>0</p>
+                    </td>
+                </tr>
+
+            </table>
+<!--            <h3 >1-1조</h3>-->
+<!--            <A href = "https://www.google.com" target ="blank">1-1조 과제 링크</A><br><br>-->
+<!--            <label style="display:inline">A 점수:</label>-->
+<!--            <input id="aPoint1_1" name="aPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>-->
+<!--            <label style="display:inline" >B 점수:</label>-->
+<!--            <input style="display:inline" id="bPoint1_1" name="bPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>-->
+<!--            <label style="display:inline" >C 점수:</label>-->
+<!--            <input style="display:inline" id="cPoint1_1" name="cPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>-->
+<!--            <label style="display:inline" >D 점수:</label>-->
+<!--            <input style="display:inline" id="dPoint1_1" name="dPoint1_1" value = "0" type="number" onchange="sum('aPoint1_1','bPoint1_1','cPoint1_1', 'dPoint1_1','write1_1')" step="2" min = "1" max ="5" required>-->
+
+<!--            <br><br>-->
+<!--            <p style="display:inline" > 1-1조 Total 점수:&nbsp;</p>-->
+<!--            <p style="display:inline"   id="write1_1"> 0 <p>-->
+
             <br>
         <button type="button" onclick="checkGrade()">점수 제출</button>
         <!--</form>-->
