@@ -6,18 +6,20 @@ import com.engineering_design.engineering_design_student_grading.service.CheckSt
 import com.engineering_design.engineering_design_student_grading.service.GradeService;
 import com.engineering_design.engineering_design_student_grading.service.StudentService;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import org.apache.tomcat.util.json.JSONParser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.File;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 @org.springframework.stereotype.Controller
 public class Controller {
@@ -137,6 +139,11 @@ public class Controller {
     @GetMapping("/new")
     public String newGrade() {
         return "grades/grade";
+    }
+    @GetMapping("/image")
+    public ResponseEntity<Resource> image(){
+        Resource resource = new FileSystemResource("webapp/images/grading-standard.png");
+        return new ResponseEntity<Resource> (resource, new HttpHeaders(), HttpStatus.OK);
     }
 
     @GetMapping("/students")
