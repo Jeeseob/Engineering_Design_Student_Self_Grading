@@ -136,26 +136,31 @@
                                 icon: "warning",
                                 buttons: true,
                                 //dangerMode: true,
-                            }).then(updated)
-                            if(updated){
-                                $.ajax({
-                                    type: "POST",
-                                    url: "/grade/update",
-                                    contentType: "application/json; charset=utf-8",
+                            }).then((buttons) => {
+                                if (buttons) {
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/grade/update",
+                                        contentType: "application/json; charset=utf-8",
 
-                                    data: JSON.stringify(parm),
-                                    datatype: "json",
-                                    success: function (data) {
-                                        console.log(data);
-                                        swal({title : "업데이트 되었습니다", icon: "success",});
-                                        //alert("제출 완료");
-                                        location.href = "/success";
-                                    },
-                                    error: function (jqXHR, textStatus, errorThrown) {
-                                        swal({title : "시스템 에러 교수님께 연락드리세요", icon: "error"});
-                                    }
-                                });
-                            }
+                                        data: JSON.stringify(parm),
+                                        datatype: "json",
+                                        success: function (data) {
+                                            console.log(data);
+                                            swal({title: "업데이트 되었습니다", icon: "success", buttons: true})
+                                                .then((supdate) => {
+                                                    //alert("제출 완료");
+                                                    if (supdate) {
+                                                        location.href = "/success";
+                                                    }
+                                                })
+                                        },
+                                        error: function (jqXHR, textStatus, errorThrown) {
+                                            swal({title: "시스템 에러 교수님께 연락드리세요", icon: "error"});
+                                        }
+                                    });
+                                }
+                            })
                         }
                         else if(jData.result == "noData") {
                             console.log("noData")
@@ -172,11 +177,12 @@
                         }
                         else {
                             //alert("제출 완료");
-                            swal({title: "제출 완료 되었습니다.", icon: "success", buttons :true}).
-                            then(successed)
-                            if (successed) {
-                                location.href = "/success";
-                            }
+                            swal({title: "제출 완료 되었습니다.", icon: "success", buttons: true})
+                                .then((successed) => {
+                                    if (successed) {
+                                        location.href = "/success";
+                                    }
+                                })
                         }
                     },
                     error: function(jqXHR,textStatus,errorThrown) {
