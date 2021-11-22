@@ -5,9 +5,18 @@
     <title>공학설계입문</title>
 </head>
 <body>
-<h1>공학설계 입문 학생 채점 페이지 입니다.</h1>
-<A href = "/new">채점 하기</A>&nbsp;&nbsp;&nbsp;&nbsp;
-<A href = "/students">제출 확인</A>
+    <script type='text/javascript'>
+        function goGrade(){
+            location.href ="/new";
+        }
+        function goList(){
+            location.href ="/stuents";
+        }
+    </script>
+<h1>2021학년도 2학기 공학설계 입문 학생 채점 페이지 입니다.</h1>
+
+<button type="button" onclick="goGrade()">채점 하기</button>&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" onclick="goList()">제출 확인</button>
 
 </body>
 </html>
