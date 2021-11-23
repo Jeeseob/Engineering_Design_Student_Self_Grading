@@ -11,18 +11,13 @@
                 margin: 0px 0px 0px 0px;
             }
         </style>
+            <!--alert 추가-->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<!--        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+            <!--JQuery-->
         <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>-->
-<!--        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">-->
     </head>
 
     <body>
-
-    <!--
-    <iframe id="iframe" name="iframe1" style="display:none"></iframe>
-    -->
     <script type='text/javascript'>
             function goHome(){
                 location.href ="/";
@@ -73,6 +68,91 @@
                 let cPoint1_2 = document.getElementById('cPoint1_2');
                 let dPoint1_2 = document.getElementById('dPoint1_2');
 
+                let aPoint1_3 = document.getElementById('aPoint1_3');
+                let bPoint1_3 = document.getElementById('bPoint1_3');
+                let cPoint1_3 = document.getElementById('cPoint1_3');
+                let dPoint1_3 = document.getElementById('dPoint1_3');
+
+                let aPoint1_4 = document.getElementById('aPoint1_4');
+                let bPoint1_4 = document.getElementById('bPoint1_4');
+                let cPoint1_4 = document.getElementById('cPoint1_4');
+                let dPoint1_4 = document.getElementById('dPoint1_4');
+
+                let aPoint1_5 = document.getElementById('aPoint1_5`');
+                let bPoint1_5 = document.getElementById('bPoint1_5');
+                let cPoint1_5 = document.getElementById('cPoint1_5');
+                let dPoint1_5 = document.getElementById('dPoint1_5');
+
+                let aPoint1_6 = document.getElementById('aPoint1_6');
+                let bPoint1_6 = document.getElementById('bPoint1_6');
+                let cPoint1_6 = document.getElementById('cPoint1_6');
+                let dPoint1_6 = document.getElementById('dPoint1_6');
+
+                let aPoint1_7 = document.getElementById('aPoint1_7');
+                let bPoint1_7 = document.getElementById('bPoint1_7');
+                let cPoint1_7 = document.getElementById('cPoint1_7');
+                let dPoint1_7 = document.getElementById('dPoint1_7');
+
+                let aPoint1_8 = document.getElementById('aPoint1_8');
+                let bPoint1_8 = document.getElementById('bPoint1_8');
+                let cPoint1_8 = document.getElementById('cPoint1_8');
+                let dPoint1_8 = document.getElementById('dPoint1_8');
+
+                let aPoint1_9 = document.getElementById('aPoint1_9');
+                let bPoint1_9 = document.getElementById('bPoint1_9');
+                let cPoint1_9 = document.getElementById('cPoint1_9');
+                let dPoint1_9 = document.getElementById('dPoint1_9');
+
+                let aPoint2_1 = document.getElementById('aPoint2_1');
+                let bPoint2_1 = document.getElementById('bPoint2_1');
+                let cPoint2_1 = document.getElementById('cPoint2_1');
+                let dPoint2_1 = document.getElementById('dPoint2_1');
+
+                let aPoint2_2 = document.getElementById('aPoint2_2');
+                let bPoint2_2 = document.getElementById('bPoint2_2');
+                let cPoint2_2 = document.getElementById('cPoint2_2');
+                let dPoint2_2 = document.getElementById('dPoint2_2');
+
+                let aPoint2_3 = document.getElementById('aPoint2_3');
+                let bPoint2_3 = document.getElementById('bPoint2_3');
+                let cPoint2_3 = document.getElementById('cPoint2_3');
+                let dPoint2_3 = document.getElementById('dPoint2_3');
+
+                let aPoint2_4 = document.getElementById('aPoint2_4');
+                let bPoint2_4 = document.getElementById('bPoint2_4');
+                let cPoint2_4 = document.getElementById('cPoint2_4');
+                let dPoint2_4 = document.getElementById('dPoint2_4');
+
+                let aPoint2_5 = document.getElementById('aPoint2_5');
+                let bPoint2_5 = document.getElementById('bPoint2_5');
+                let cPoint2_5 = document.getElementById('cPoint2_5');
+                let dPoint2_5 = document.getElementById('dPoint2_5');
+
+                let aPoint2_6 = document.getElementById('aPoint2_6');
+                let bPoint2_6 = document.getElementById('bPoint2_6');
+                let cPoint2_6 = document.getElementById('cPoint2_6');
+                let dPoint2_6 = document.getElementById('dPoint2_6');
+
+                let aPoint2_7 = document.getElementById('aPoint2_7');
+                let bPoint2_7 = document.getElementById('bPoint2_7');
+                let cPoint2_7 = document.getElementById('cPoint2_7');
+                let dPoint2_7 = document.getElementById('dPoint2_7');
+
+                let aPoint2_8 = document.getElementById('aPoint2_8');
+                let bPoint2_8 = document.getElementById('bPoint2_8');
+                let cPoint2_8 = document.getElementById('cPoint2_8');
+                let dPoint2_8 = document.getElementById('dPoint2_8');
+
+                let aPoint2_9 = document.getElementById('aPoint2_9');
+                let bPoint2_9 = document.getElementById('bPoint2_9');
+                let cPoint2_9 = document.getElementById('cPoint2_9');
+                let dPoint2_9 = document.getElementById('dPoint2_9');
+
+                let aPoint2_10 = document.getElementById('aPoint2_10');
+                let bPoint2_10 = document.getElementById('bPoint2_10');
+                let cPoint2_10 = document.getElementById('cPoint2_10');
+                let dPoint2_10 = document.getElementById('dPoint2_10');
+
                 let regExp_studentNumber = /\d{9}/;
                 let regExp_name = /\D/;
                 let regExp_phoneNumber = /\d{4}/;
@@ -108,15 +188,115 @@
                         "bPoint": bPoint1_1.value,
                         "cPoint": cPoint1_1.value,
                         "dPoint": dPoint1_1.value,
-                    },
-                    {
+                    }, {
                         "team" : "1-2조",
                         "aPoint": aPoint1_2.value,
                         "bPoint": bPoint1_2.value,
                         "cPoint": cPoint1_2.value,
                         "dPoint": dPoint1_2.value,
-                    },
-                ]}
+                    }, {
+                        "team" : "1-3조",
+                        "aPoint": aPoint1_3.value,
+                        "bPoint": bPoint1_3.value,
+                        "cPoint": cPoint1_3.value,
+                        "dPoint": dPoint1_3.value,
+                        }, {
+                        "team" : "1-4조",
+                        "aPoint": aPoint1_4.value,
+                        "bPoint": bPoint1_4.value,
+                        "cPoint": cPoint1_4.value,
+                        "dPoint": dPoint1_4.value,
+                    }, {
+                        "team" : "1-5조",
+                        "aPoint": aPoint1_5.value,
+                        "bPoint": bPoint1_5.value,
+                        "cPoint": cPoint1_5.value,
+                        "dPoint": dPoint1_5.value,
+                    }, {
+                        "team" : "1-6조",
+                        "aPoint": aPoint1_6.value,
+                        "bPoint": bPoint1_6.value,
+                        "cPoint": cPoint1_6.value,
+                        "dPoint": dPoint1_6.value,
+                    }, {
+                        "team" : "1-7조",
+                        "aPoint": aPoint1_7.value,
+                        "bPoint": bPoint1_7.value,
+                        "cPoint": cPoint1_7.value,
+                        "dPoint": dPoint1_7.value,
+                    }, {
+                        "team" : "1-8조",
+                        "aPoint": aPoint1_8.value,
+                        "bPoint": bPoint1_8.value,
+                        "cPoint": cPoint1_8.value,
+                        "dPoint": dPoint1_8.value,
+                    }, {
+                        "team" : "1-9조",
+                        "aPoint": aPoint1_9.value,
+                        "bPoint": bPoint1_9.value,
+                        "cPoint": cPoint1_9.value,
+                        "dPoint": dPoint1_9.value,
+                    },{
+                        "team" : "2-1조",
+                        "aPoint": aPoint2_1.value,
+                        "bPoint": bPoint2_1.value,
+                        "cPoint": cPoint2_1.value,
+                        "dPoint": dPoint2_1.value,
+                    }, {
+                        "team" : "2-2조",
+                        "aPoint": aPoint2_2.value,
+                        "bPoint": bPoint2_2.value,
+                        "cPoint": cPoint2_2.value,
+                        "dPoint": dPoint2_2.value,
+                    }, {
+                        "team" : "2-3조",
+                        "aPoint": aPoint2_3.value,
+                        "bPoint": bPoint2_3.value,
+                        "cPoint": cPoint2_3.value,
+                        "dPoint": dPoint2_3.value,
+                    }, {
+                        "team" : "2-4조",
+                        "aPoint": aPoint2_4.value,
+                        "bPoint": bPoint2_4.value,
+                        "cPoint": cPoint2_4.value,
+                        "dPoint": dPoint2_4.value,
+                    }, {
+                        "team" : "2-5조",
+                        "aPoint": aPoint2_5.value,
+                        "bPoint": bPoint2_5.value,
+                        "cPoint": cPoint2_5.value,
+                        "dPoint": dPoint2_5.value,
+                    }, {
+                        "team" : "2-6조",
+                        "aPoint": aPoint2_6.value,
+                        "bPoint": bPoint2_6.value,
+                        "cPoint": cPoint2_6.value,
+                        "dPoint": dPoint2_6.value,
+                    }, {
+                        "team" : "2-7조",
+                        "aPoint": aPoint2_7.value,
+                        "bPoint": bPoint2_7.value,
+                        "cPoint": cPoint2_7.value,
+                        "dPoint": dPoint2_7.value,
+                    }, {
+                        "team" : "2-8조",
+                        "aPoint": aPoint2_8.value,
+                        "bPoint": bPoint2_8.value,
+                        "cPoint": cPoint2_8.value,
+                        "dPoint": dPoint2_8.value,
+                    }, {
+                        "team" : "2-9조",
+                        "aPoint": aPoint2_9.value,
+                        "bPoint": bPoint2_9.value,
+                        "cPoint": cPoint2_9.value,
+                        "dPoint": dPoint2_9.value,
+                    },{
+                        "team" : "2-10조",
+                        "aPoint": aPoint2_10.value,
+                        "bPoint": bPoint2_10.value,
+                        "cPoint": cPoint2_10.value,
+                        "dPoint": dPoint2_10.value,
+                    }]}
                 $.ajax({
                     type : "POST",
                     url : "grade/add",
@@ -194,11 +374,8 @@
 
             }
         </script>
-
-        <!-- <form action="grade/add" method="POST"> -->
-            <!-- target="iframe1" -->
             <center>
-            <h1>2021학년도 2학기 공학설계 입문 학생평가</h1>
+            <h1>2021학년도 공학설계 입문 학생평가</h1>
             </center>
 
             <label>학번:</label>
@@ -902,7 +1079,5 @@
         <button type="button" onclick="checkGrade()">점수 제출</button>
 
         <button type="button" onclick="goHome()">취소(홈으로)</button>
-        <!--</form>-->
-
     </body>
 </html>
