@@ -19,6 +19,9 @@
 
     <body>
     <script type='text/javascript'>
+            function notGrade() {
+                swal({title : "아직 채점 기간이 아닙니다.", icon: "error"});
+            }
             function goHome(){
                 location.href ="/";
             }
@@ -1076,7 +1079,7 @@
                 </tr>
             </table>
             <br>
-        <button type="button" onclick="checkGrade()">점수 제출</button>
+        <button type="button" onclick="notGrade()">점수 제출</button>
 
         <button type="button" onclick="goHome()">취소(홈으로)</button>
     </body>
