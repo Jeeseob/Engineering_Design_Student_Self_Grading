@@ -1,0 +1,235 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS shop</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+
+        .nav {
+            display: inline-block;
+            width: 100%;
+            background: white;
+            position: fixed;
+            font-weight: bold;
+            font-size: 15pt;
+            height: 50px;
+            padding-top: 10px;
+        }
+
+            .nav > div {
+                float: right;
+            }
+
+            .nav > ul {
+                float: left;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .nav > ul > li {
+                    display: inline-block;
+                    padding: 0;
+                }
+
+            .nav a {
+                display: block;
+                text-decoration: none;
+                padding: 10px 20px;
+                color: black;
+            }
+
+                .nav a:hover {
+                    background: white;
+                }
+
+        .img {
+            display: block;
+            margin: auto;
+        }
+
+        .face {
+            width: 200px; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+            margin: 0 auto;
+            padding: 15px;
+            text-align: center;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        #box {
+            width: 1200px; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+            margin: 0 auto;
+            padding: 0;
+            border-style: solid;
+            border-width: 2px;
+    
+        }
+
+        .picture {
+
+            padding-top: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        #content_first {
+            line-height: 35pt;
+            background-color: black;
+            text-align: center;
+            height: 50px;
+            color: white;
+        }
+        #content_a {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #content {
+            width: 100%;
+            background-color: white;
+            float: right;
+            height: 600px;
+            color: black;
+            padding-top: 50px;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .cs {
+            padding-right: 150px;
+        }
+
+        .name {
+            padding-left: 35px;
+            padding-top: 0px;
+            font-size: 50px;
+            width: 140px;
+            height: 80px;
+            font-weight: bold;
+        }
+
+        .privacy {
+            padding-left: 300px;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+        #footer {
+            background-color: black;
+            height: 300px;
+            clear: both;
+            color: white;
+        }
+        .ftcolor {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+        <nav class="nav" style="top: 0px;">
+            <ul>
+                <li><a href="About_2.html">ABOUT</a></li>
+                <li><a href="Shop_2.html">SHOP</a></li>
+                <li><a href="Community_2.html">COMMUNITY</a></li>
+                <li><a href="survey_2.html">SURVEY</a></li>
+            </ul>
+
+            <div><a href="main.html">로그아웃</a></div>
+            <div><a href="Cart_2.html">CART</a></div>
+            <div><a href="MyPage_2.html">MY PAGE</a></div>
+            <div><a href="MyPage_2.html">홍길동</a></div>
+            <a href="main_2.html">
+                <center>
+                    <div>
+                        <img src=CS.png
+                             width="150" height="50" style="padding-right : 150px">
+                    </div>
+                </center>
+            </a>
+        </nav>
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div id="box">
+        <div id="content_first">Shop Matching</div>
+        <p id="content_a">선택하신 옷 사이즈를 직접 맞출 수 있는 근처 옷 매장을 검색합니다. </p>
+
+        <div class="picture">
+            <a href="#">
+                <img src=지도.jpg
+                     width="1100" height="700"> <br />
+            </a>
+        </div>
+
+        <br /><br />
+
+        <div class="face" , style=" cursor: pointer;" onclick="location.href='Cloth_infor_2.html';">돌아가기</div>
+
+        <br /><br />
+
+
+    </div>
+
+    <br /><br /><br /><br />
+
+    <div id="footer">
+        <div class="name" style="float: left;">
+            <div><h2>CS</h2></div>
+        </div>
+        <div class="privacy" style="float: left;">
+            <h2>CS Center</h2><br>
+            <div class="ftcolor">
+                02- 2238-3804<br>
+                평일 AM 10:00- PM 4:00<br>
+                점심 PM 1:00- PM 2:00<br>
+                휴무 주말&공휴일 휴무
+            </div>
+
+
+        </div>
+        <div class="privacy" style="float: left;">
+            <h2>Bank Info</h2>
+            <div class="ftcolor">
+                상명은행 123-45678-90123<br>
+                CS은행 454645-01-123123<br>
+                예금주 : 공설입<br><br>
+            </div>
+
+            <strong>배송안내</strong><br><br>
+            <div class="ftcolor">
+                CS택배 1234-1234
+            </div>
+        </div>
+
+        <div class="privacy" style="float: left;">
+            <h2>Company Info</h2><br>
+            <div class="ftcolor">
+                CS SHOP | 대표자 상명대<br>
+                주소 : 서울캠퍼스 (03016) 서울시 종로구 홍지문 2길 10 상명대학교 <br>
+                사업자등록번호 : 없음
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
