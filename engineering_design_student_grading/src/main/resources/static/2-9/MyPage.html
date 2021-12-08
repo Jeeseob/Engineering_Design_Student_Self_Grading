@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS shop</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 100%;
+            background: white;
+            position: fixed;
+            font-weight: bold;
+            font-size: 15pt;
+            height: 50px;
+            padding-top: 10px;
+        }
+
+            .nav > div {
+                float: right;
+            }
+
+            .nav > ul {
+                float: left;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .nav > ul > li {
+                    display: inline-block;
+                    padding: 0;
+                }
+
+            .nav a {
+                display: block;
+                text-decoration: none;
+                padding: 10px 20px;
+                color: black;
+            }
+
+                .nav a:hover {
+                    background: white;
+                }
+
+        .img {
+            display: block;
+            margin: auto;
+        }
+
+        .box {
+            width: 50%;
+            height: 700px;
+            border: 1px solid black;
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        .picture {
+            padding-top: 50px;
+            padding-right: 80px;
+            padding-left: 90px;
+        }
+
+        #content {
+            width: 100%;
+            background-color: white;
+            height: 1000px;
+            color: black;
+            padding-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .form {
+            font-size: 15px;
+        }
+
+        .cs {
+            padding-right: 150px;
+        }
+
+        .name {
+            padding-left: 35px;
+            padding-top: 0px;
+            font-size: 50px;
+            width: 140px;
+            height: 80px;
+            font-weight: bold;
+        }
+
+        .privacy {
+            padding-left: 300px;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+        #footer {
+            background-color: black;
+            height: 300px;
+            clear: both;
+            color: white;
+        }
+
+        .ftcolor {
+            color: gray;
+        }
+
+        .order {
+            float: left;
+            width: 19%;
+            border-right: 1px solid rgb(192, 190, 190);
+            height: 100%;
+        }
+
+        .order_number {
+            color: rgb(18, 18, 250);
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="nav" style="top: 0px">
+            <ul>
+                <li><a href="About.html">ABOUT</a></li>
+                <li><a href="Shop.html">SHOP</a></li>
+                <li><a href="Community.html">COMMUNITY</a></li>
+                <li><a href="survey.html">SURVEY</a></li>
+            </ul>
+
+            <div><a href="Cart.html">CART</a></div>
+            <div><a href="MyPage.html">MY PAGE</a></div>
+            <div><a href="join.html">JOIN</a></div>
+            <div><a href="login.html">LOGIN</a></div>
+            <a href="main.html">
+                <center>
+                    <div>
+                        <img src=CS.jpg
+                             width="150"
+                             height="50"
+                             style="padding-right: 150px" />
+                    </div>
+                </center>
+            </a>
+        </nav>
+
+        <div id="content">
+            <h2 style="margin-right: 50px; text-align: center ">MY PAGE</h2>
+            <div class="box" style="padding: 10px 10px 10px 10px">
+                <div style="width: 100%; font-size: small">
+                    <div style="
+                float: left;
+                width: 40%;
+                border-right: 1px solid black;
+                padding-right: 50px;
+              ">
+                        <span>가용적립금</span>
+                        <button style="float: right">조회</button>
+                        <br />
+                        <br />
+                        <span>사용적립금</span>
+                        <br />
+                        <br />
+                        <span>총주문</span>
+                    </div>
+                    <div style="float: right; width: 45%">
+                        <span>총적립금</span>
+                        <br />
+                        <br />
+                        <span>예치금</span>
+                        <button style="float: right">조회</button>
+                        <br />
+                        <br />
+                        <span>쿠폰</span>
+                        <button style="float: right">조회</button>
+                    </div>
+                </div>
+                <br />
+                <div style="border: 1px solid black">
+                    <div style="background: rgb(226, 225, 225)">
+                        <strong>&nbsp;&nbsp;  나의 주문처리 현황</strong>(최근3개월 기준)
+                    </div>
+                    <br />
+                    <div style="text-align: center; height: 100px">
+                        <div class="order">
+                            입금전<br /><span class="order_number">0</span>
+                        </div>
+                        <div class="order">
+                            배송준비중<br /><span class="order_number">0</span>
+                        </div>
+                        <div class="order">
+                            배송중<br /><span class="order_number">0</span>
+                        </div>
+                        <div class="order">
+                            배송완료<br /><span class="order_number">0</span>
+                        </div>
+                        <div class="order" style="text-align: left; border: none">
+                            <ul style="font-size: small">
+                                <li>취소: <span style="color: rgb(18, 18, 250)">0</span></li>
+                                <li>교환: <span style="color: rgb(18, 18, 250)">0</span></li>
+                                <li>반품: <span style="color: rgb(18, 18, 250)">0</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+        </div>
+
+        <br /><br />
+        <div id="footer">
+            <div class="name" style="float: left">
+                <div><h2>CS</h2></div>
+            </div>
+            <div class="privacy" style="float: left">
+                <h2>CS Center</h2>
+                <br />
+                <div class="ftcolor">
+                    02- 2238-3804<br />
+                    평일 AM 10:00- PM 4:00<br />
+                    점심 PM 1:00- PM 2:00<br />
+                    휴무 주말&공휴일 휴무
+                </div>
+            </div>
+            <div class="privacy" style="float: left">
+                <h2>Bank Info</h2>
+                <div class="ftcolor">
+                    상명은행 123-45678-90123<br />
+                    CS은행 454645-01-123123<br />
+                    예금주 : 공설입<br /><br />
+                </div>
+
+                <strong>배송안내</strong><br /><br />
+                <div class="ftcolor">CS택배 1234-1234</div>
+            </div>
+
+            <div class="privacy" style="float: left">
+                <h2>Company Info</h2>
+                <br />
+                <div class="ftcolor">
+                    CS SHOP | 대표자 상명대<br />
+                    주소 : 서울캠퍼스 (03016) 서울시 종로구 홍지문 2길 10 상명대학교
+                    <br />
+                    사업자등록번호 : 없음
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
