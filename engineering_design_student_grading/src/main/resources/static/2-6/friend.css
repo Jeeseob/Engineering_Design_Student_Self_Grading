@@ -1,0 +1,168 @@
+﻿body {
+  background-color: white;
+}
+
+.page {
+  padding: 0px;
+  background-color: #fcfcfc;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  left: 300px;
+}
+
+.famous {
+  font-size: 38px;
+  font-weight: bold;
+  color: #4bb6ca;
+  margin-left: 20px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #4bb7ca4f;
+}
+
+.famous_filter {
+  margin-top: 12px;
+  margin-left: 20px;
+  height: 50px;
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+.famous_filter_title {
+  margin-top: 12px;
+  margin-left: 5px;
+  height: 50px;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.famous_plus {
+  margin-left: 26px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.famous_tag {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-left: 12px;
+  padding: 0px 10px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  color: #606060;
+}
+
+.famous_filter2 {
+  height: 49px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  border-bottom: 2px solid #000000;
+  /*    border-top: 1px solid rgba(0, 0, 0, 0.2);*/
+  width: 51.5%;
+  margin-left: 20px;
+  color: #606060;
+  font-size: 13px;
+}
+
+.famous_filter_numbers {
+  width: 196px;
+}
+
+.famous_filter_name {
+  width: 285px;
+}
+
+.famous_filter_field {
+  width: 200px;
+  text-align: center;
+}
+
+.famous_filter_follownumber {
+  width: 100px;
+}
+
+.famous_filter_search {
+  margin-top: 5px;
+  font-size: 20px;
+  margin-left: 100px;
+  float: left;
+  border: 1px solid gray;
+  text-align: start;
+}
+
+.famous_filter_search > i {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.famous_list {
+  width: 1900px;
+  height: 1600px;
+  padding: 10px 25px;
+}
+
+.famous_inner {
+  display: flex;
+  width: 52%;
+  height: 60px;
+  justify-content: left;
+  align-items: center;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.famous_inner_components {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  align-items: center;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 5px 0px;
+}
+
+.famous_inner_rank {
+  width: 200px;
+}
+
+.famous_inner_picture {
+  width: 100px;
+}
+
+.famous_inner_name {
+  width: 500px;
+}
+
+.famous_inner_race {
+  width: 200px;
+  font-size: 14px;
+}
+
+#innerspan {
+  border: 1px dotted gray;
+  width: 100px;
+  text-align: center;
+}
+
+.famous_inner_number1 {
+  width: 200px;
+}
+
+.famous_inner_number2 {
+  width: 200px;
+}
+
+.famous_most1 {
+  height: 50px;
+  width: 40px;
+}
+
+.famous_mostInmg {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
