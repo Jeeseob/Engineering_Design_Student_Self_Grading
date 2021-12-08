@@ -1,0 +1,102 @@
+/* 
+    [ 회원가입 페이지 - 연령대 질문 ]
+
+    색상 변경 버전
+
+    작성자 : 김정민
+*/
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+html::-webkit-scrollbar {
+    width: 18px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+body {
+    margin: 0;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 100%;
+    height: 40%;  
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.logo_btn {
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+.question_section {
+    background-color: white;
+    border: 5px solid black;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.q_text {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: black;
+}
+
+.buttons {
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+[class^=btn] {
+    font-size: 20px;
+    float: none;
+    margin: 20px auto;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f0e442;
+    border: none;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+[class^=btn]:hover {
+    border: 4px solid black;
+}
+
+[class^=btn]:active {
+    color: #f0e442;
+    background-color: black;
+}
+
+/* footer 부분 */
+footer {
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    /* position: absolute; */
+    margin-top: 50px;
+    text-align: center;
+    font-size: 5px;
+    color: var(--grey-y-change);
+}
+
+footer nav a {
+    color: var(--grey-y-change);
+}
