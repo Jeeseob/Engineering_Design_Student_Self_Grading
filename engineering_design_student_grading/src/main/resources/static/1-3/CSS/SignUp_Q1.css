@@ -1,0 +1,113 @@
+/* 
+    [ 회원가입 페이지 - 언어 선택 ]
+
+    작성자 : 김현재
+
+    수정 : 김정민
+*/
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+html::-webkit-scrollbar {
+    width: 18px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #f6e8db;
+}
+
+body {
+    margin: 0;
+    font-family: 'NanumSquare', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    width: 100%;
+    height: 40%;  
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.logo_btn {
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 50px;
+    font-weight: bold;
+    color: #9b4747;
+}
+
+.question_section {
+    background-color: white;
+    border: 5px solid #9b4747;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.q_text {
+    font-size: 25px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #404040;
+}
+
+.drop_down_box{
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 150px;
+    width: 80%;
+    height: 40%;
+    text-align:center;
+}
+
+.drop_down_box .language{
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+}
+
+.OK_Btn {
+    font-size: 20px;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    width: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f6e8db;
+    border: none;
+    border-radius: 12px;
+    transition: 0.25s;
+}
+
+.OK_Btn:hover {
+    border: 4px solid #9b4747;
+}
+
+.OK_Btn:active {
+    color: #f6e8db;
+    background-color: #9b4747;
+}
+
+/* footer 부분 */
+footer {
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+    /* position: absolute; */
+    margin-top: 100px;
+    text-align: center;
+    font-size: 5px;
+    color: var(--grey-y-change);
+}
+
+footer nav a {
+    color: var(--grey-y-change);
+}
