@@ -1,0 +1,272 @@
+﻿<script>
+    function press(f){
+        if(f.keyCode == 13){
+            action.submit();
+        }
+    }
+    </script>
+
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="EUC-KR">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Well-known</title>
+    <style>
+        :root{
+            --gray-color :#717271;
+            --light-gray-color: #dee0e5;
+            --midium-gray-color: #999fa6;
+            --button-gray-color: #f0f1f0;
+            --footer-back-color: #f1f2f1;
+            --footer-border-color: #e3e4e3;
+        
+            --button-text-gray-color: #5F6368;
+            --font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+        }  
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: var(--font-family);
+        }
+        
+        .top-header{
+            width: 100%;
+            height: 50px;
+            
+        }
+        .top-header .top-nav{
+            display: flex;
+            height: 36px;
+            padding-top: 18px;
+        
+            padding-left: 30px;
+            padding-right: 30px;
+            align-content: center;
+        }
+        .top-header .top-nav ul{
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            align-content: center;        
+        }
+        .top-header .top-nav ul li{
+            margin-right: 18px;
+            height: 36px;
+        }
+        .top-header .top-nav ul li a{
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            line-height: 36px;
+            width: 36;
+            color:var(   --gray-color )
+        }
+        .top-header .top-nav ul li a:hover{
+            text-decoration:underline
+        }
+        .top-header .top-nav .profile_img_wrap img{
+            width:36px;
+            height:36px;
+            border-radius: 18px;
+            justify-content: flex-end;
+            margin-left: auto;
+        }
+        .top-header .top-nav .upper_left_img_wrap{
+            justify-content: flex-start;
+        }
+        .top-header .top-nav #action-area{
+            justify-content: flex-start;
+            margin-right: auto;
+        }
+
+        .top-header .top-nav #action-area .small_searchbar_wrap{
+            padding-left:-25%;
+            padding-top:5%;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: var( --footer-back-color);
+            color: var( --button-text-gray-color);
+            font-size:15px;
+        }
+        footer .country{
+            border-top: solid 1px var(--footer-border-color);
+            padding-left: 32px;
+            line-height: 40px;
+            height: 40px;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer .foot-links-wrap{
+            border-top: solid 1px var(--footer-border-color);
+            padding-left: 32px;
+            line-height: 40px;
+        
+            height: 40px;
+            display: flex;
+            flex:auto;
+        }
+        footer .foot-links-wrap .foot-links-wrap-right{
+            width:50%
+        }
+        footer .foot-links-wrap .foot-links-wrap-right ul{
+            list-style: none;
+            display: flex;
+        
+        }
+        footer .foot-links-wrap .foot-links-wrap-right  ul li a{
+            display: block;
+            padding-right: 28px;
+            text-decoration: none;
+            
+        }
+        footer .foot-links-wrap .foot-links-wrap-left{
+            width: 50%;
+        }
+        footer .foot-links-wrap .foot-links-wrap-left ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        footer .foot-links-wrap .foot-links-wrap-left ul li a{
+            display: block;
+            padding-right: 28px;
+            text-decoration: none;
+        }
+        .main-content .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+        .main-content .title-area .title{
+            margin-top: 2%;
+            margin-bottom: 2%;
+            text-align: center;
+        }
+        .main-content .container .item{
+            width:50%;
+            height:100%;
+            margin-top: auto;
+            margin-bottom: 5%;
+            border-style: solid;
+            border-width: 1px;
+            border-color: #999fa6;
+        }
+        .main-content .container .item a:link{
+            color : red;
+            text-decoration: none;
+    
+        }
+        .main-content .container .item a:visited{
+            color : brown;
+            text-decoration: none;
+    
+        }
+        .main-content .container .item a:hover{
+            color : goldenrod;
+            text-decoration: none;
+    
+        }
+        .main-content .container .item a:active{
+            color : greenyellow;
+            text-decoration: none;
+    
+        }
+        .main-content .not-found .text-guide{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <nav class="top-nav">
+            <div class="upper_left_img_wrap">
+                <a href="../kim/main.html">
+                    <img src="../kim/very_small_letter_50h.jpg" width="100%" height="100%">
+                </a>
+            </div>
+            <form action="../cho/page2.html" method="post" name="search-area" id="action-area">
+                <div class="small_searchbar_wrap">
+                    <i class="fas fa-search"></i>
+                    <input class="search-input" type="text" placeholder="검색할 내용 혹은 태그를 입력하세요." onkeypress="JavaScript:press(this.form)" size="28"/>
+                    <button id="go_next_page" style="border: 0; background-color: white" type="button" title="submit" onclick="location.href='../cho/page2.html'"><a id="submit-form"><i class="far fa-paper-plane"></i></a></button>
+                </div>
+            </form>
+            <div class="profile_img_wrap">
+                <img src="../kim/deer.jpg">
+            </div>
+            <ul>
+                <li>수뭉이님 환영합니다</li>
+            </ul>
+        </nav>
+        <hr width="100%" color="black" size="1">
+    </header>
+
+    <div class="main-content">
+        <div class="title-area">
+            <div class="title"><h2 style="text-align: center;">답변이 완료된 질문</h2></div>
+        </div>
+        <div class="container">
+            <div class="item">
+                <img src="../lee/Q.png" style="float:left" border ="0" width="45" height = "35" > 
+                <div><a href="../jeon/question1/answer1/page3_answer1.html"><h2>수열 중에 피보나치 수열에 대한 정의가 궁금합니다.</h2></a></div>
+                <hr width="100%" color="black" size="1">
+                <img src ="../lee/professor.png" border ="0" width="20" height = "20" style="float: left">
+                <div><h4>피보나치 수열이란 처음 두 항을 1과 1로 한 후, 그 다음 항부터는
+                    바로 앞의 두개의 항을 더해 만드는 수열을 말합니다.</h4></div>
+            </div>
+            <div class="item">
+                <img src="../lee/Q.png" style="float:left" border ="0" width="45" height = "35" > 
+                <div><a href="../jeon/question2/answer2/page3_answer2.html"><h2>조건부확률에 대해 알려주세요.</h2></a></div>
+                <hr width="100%" color="black" size="1">
+                <img src ="../lee/professor.png" border ="0" width="20" height = "20" style="float: left">
+                <div><h4>표본공간 S의 두 사건 A,B에 대하여 확률이 0이 아닌 사건 A가 일어났다고 가정할 때
+                    사건 B가 일어날 확률을 건 A가 일어났을 때의 사건 B의 조건부확률이라 하고 ...</h4></div>
+            </div>
+            <div class="item">
+                <img src="../lee/Q.png" style="float:left" border ="0" width="45" height = "35" > 
+                <div><a href="../jeon/question3/page3_answer3.html"><h2>이 문제 좀 풀어주세요 ㅠ</h2></a></div>
+                <hr width="100%" color="black" size="1">
+                <img src ="../lee/professor.png" border ="0" width="20" height = "20" style="float: left">
+                <div><h4>학생 A가 1이 적혀 있는 카드를 선택하는 사건을 A,
+                    학생 B가 1이 적혀 있는 카드를 선택하는 사건을 B라 하면
+                    P(A) = 3/6 = 1/2, P(B|A) = 2/5가 됩니다...</h4></div>
+            </div>
+            <div class="item">a</div>
+        </div>
+        <div class="not-found">
+            <div class="text-guide">
+                <h2>원하는 답변이 없으신가요?</h2>
+                <br>
+                <a href="../lee/page5.html"><h3>질문 하러 가기</h3></a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="country">
+            <span>현재 접속 국가 : 대한민국</span>
+        </div>
+        <div class="foot-links-wrap">
+            <div class="foot-links-wrap-right">
+
+            </div>
+            <div class="foot-links-wrap-left">
+                <ul>
+                    <li><a href="../kim/info.html">Well-Known 정보</a></li>
+                    <li><a href="../kim/main.html">이용 약관</a></li>
+                    <li><a href="../kim/main.html">개인정보처리방침</a></li>
+                    <li><a href="../kim/main.html">게시중단요청서비스</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Well-Known</title>
+		<meta charset="EUC-KR" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			:root{
+            --gray-color :#717271;
+            --light-gray-color: #dee0e5;
+            --midium-gray-color: #999fa6;
+            --button-gray-color: #f0f1f0;
+            --footer-back-color: #f1f2f1;
+            --footer-border-color: #e3e4e3;
+        
+            --button-text-gray-color: #5F6368;
+            --font-family: 'Apple SD Gothic Neo',arial,sans-serif;
+        }  
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: var(--font-family);
+        }
+        
+        .top-header{
+            width: 100%;
+            height: 50px;
+            
+        }
+        .top-header .top-nav{
+            display: flex;
+            height: 36px;
+            padding-top: 18px;
+        
+            padding-left: 30px;
+            padding-right: 30px;
+            align-content: center;
+        }
+        .top-header .top-nav ul{
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            align-content: center;        
+        }
+        .top-header .top-nav ul li{
+            margin-right: 18px;
+            height: 36px;
+        }
+        .top-header .top-nav ul li a{
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            line-height: 36px;
+            width: 36;
+            color:var(   --gray-color )
+        }
+        .top-header .top-nav ul li a:hover{
+            text-decoration:underline
+        }
+        .top-header .top-nav .profile_img_wrap img{
+            width:36px;
+            height:36px;
+            border-radius: 18px;
+            justify-content: flex-end;
+            margin-left: auto;
+        }
+        .top-header .top-nav .upper_left_img_wrap{
+            justify-content: flex-start;
+        }
+        .top-header .top-nav #action-area{
+            justify-content: flex-start;
+            margin-right: auto;
+        }
+
+        .top-header .top-nav #action-area .small_searchbar_wrap{
+            padding-left:-25%;
+            padding-top:5%;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: var( --footer-back-color);
+            color: var( --button-text-gray-color);
+            font-size:15px;
+        }
+        footer .country{
+            border-top: solid 1px var(--footer-border-color);
+            padding-left: 32px;
+            line-height: 40px;
+            height: 40px;
+        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer .foot-links-wrap{
+            border-top: solid 1px var(--footer-border-color);
+            padding-left: 32px;
+            line-height: 40px;
+        
+            height: 40px;
+            display: flex;
+            flex:auto;
+        }
+        footer .foot-links-wrap .foot-links-wrap-right{
+            width:50%
+        }
+        footer .foot-links-wrap .foot-links-wrap-right ul{
+            list-style: none;
+            display: flex;
+        
+        }
+        footer .foot-links-wrap .foot-links-wrap-right  ul li a{
+            display: block;
+            padding-right: 28px;
+            text-decoration: none;
+            
+        }
+        footer .foot-links-wrap .foot-links-wrap-left{
+            width: 50%;
+        }
+        footer .foot-links-wrap .foot-links-wrap-left ul{
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+        footer .foot-links-wrap .foot-links-wrap-left ul li a{
+            display: block;
+            padding-right: 28px;
+            text-decoration: none;
+        }
+        a:link{
+            color : cornflowerblue;
+            text-decoration: none;
+        }
+        
+        a:visited{
+            color : cornflowerblue;
+            text-decoration: none;
+        }
+        
+        a:hover{
+            color : goldenrod;
+            text-decoration: none;
+        }
+        
+        a:active{
+            color : greenyellow;
+            text-decoration: none;
+        }
+			.container {
+    border: none;
+  }
+  .container:hover {
+    background-color: lavender;
+    cursor: pointer;
+  }
+		</style>
+	</head>
+	<body class="is-preload">
+		<div class="top-header">
+			<nav class="top-nav">
+				<div class="upper_left_img_wrap">
+					<a href="../../kim/main.html">
+						<img src="../../kim/very_small_letter_50h.jpg" height="200%">
+					</a>
+				</div>
+				
+				<div class="small_searchbar_wrap" >
+						
+					
+				</div>
+				<div class="profile_img_wrap" style="margin-left: auto;">
+					<img src="../../lee/professor.png">
+				</div>
+				<ul>
+					<li>스피드웨건 전문가님 환영합니다</li>
+				</ul>
+			</nav>
+	
+			<hr width="100%" color="black" size="1">
+		</div>
+			<div id="wrapper">
+					<div id="main">
+						<div class="inner">
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>이렇게나 많은 질문들이 전문가님의 답변을 기다리고 있어요!</h2>
+									</header>
+									<div class="posts">
+										<article>
+											<!-- <a href="#" class="image"><img src="images/12.PNG" alt="" /></a> -->
+											<h4 style="color: aqua;">#화학</h4>
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question1.html';">
+											<h3>유기화학 질문</h3>
+											유기화학 문제 풀다가 헷갈리는 부분이 있습니다.
+											Acetylene의 양쪽 수소 대신 CH3CH2CH2와 CH2CH3로 합성되는 과정이 무엇인가요?
+											할로젠화알킬을 사용해야 한다는 것만 어렴풋이 알겠습니다.
+											<br/><h5>조회수 2 · 방금 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question5.html';">
+											<h3>향료와 유기화학</h3>
+											유기화학과 향료의 연관성을 고등학교 수준으로 설명해주실분 찾습니다!
+											생기부에 이 둘의 내용이 같이 있는데 어떻게 연관지으면 좋을지
+											<br/><h5>조회수 4 · 방금 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question4.html';">
+											<h3>유기화학 도와주세요ㅜㅜ</h3>
+											1. aniline/benzene/toluene중 하나를 시작 물질로 선택하여
+											2-bromo-4-nitrotoluene을 합성 할 있는 유기화학반응을 제시하는 반응을 그림으로 설명부탁드립니다
+											<br/><h5>조회수 10 · 10분 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question6.html';">
+											<h3>유기화학 사슬 그리기</h3>
+											탄소18개에 3번탄소 6번탄소 9번탄소에 2중결합이
+            								있다고 하면 사슬로 어떻게 그리나요 ?
+            								^^^^^이런식으로 그리는거요
+											<br/><h5>조회수 15 · 12분 전</h5>
+											</div>
+
+										</article>
+										<article>
+											<h4 style="color: aqua;">#C</h4>
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question17.html';">
+												
+												<h3>c언어 포인터 이론질문</h3>
+												c언어 포인터파트에서 int * pnum = &num; 이게 포인터변수 pnum이 int 변수 num의 주소 값을 저장하자나요
+            									여기서 주소값이라는게 변수 num의 그냥 값을 말하는건가요? 아님 주소값은 또다른건가요? 
+												<br/>
+												<br/><h5>조회수 11 · 방금 전</h5>
+												</div>
+												
+												<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question18.html';">
+												<h3>C언어 문자배열 문자열배열</h3>
+												char y[3] = {'a', 'b', 'c'}; //문자배열(char) 
+												이것도 문자배열(char형)로 가능한가요...? 만약 가능하지않다면 왜 그런가요...?!
+												char xs[4] = "abc"; // 문자열 배열(String)
+												<br/><h5>조회수 20 · 5분 전</h5>
+												</div>
+	
+												<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question19.html';">
+												<h3>C언어 print 함수 질문입니다</h3>
+												매크로 함수 PRINT()가 정의되어 있을 때 예상되는 출력 결과가 무엇인가요?
+            									[#define PRINT(expr) printf(#expr “ = %d”, expr) int i = 10, j = 20; PRINT(i*j);]
+												<br/><h5>조회수 30 · 30분 전</h5>
+												</div>
+	
+												<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question20.html';">
+												<h3>c언어와 c++차이</h3>
+												c언어와 c++차이가 뭔가요? 고등학교때 java랑 python을 해봐서 대학 들어가기전 c언어를 한번 독학해보고 가고 싶습니다.
+												<br/><h5>조회수 35 · 50분 전</h5>
+												</div>
+
+										</article>
+										<article>
+											<!-- <a href="#" class="image"><img src="images/12.PNG" alt="" /></a> -->
+											<!-- <a href="#" class="image"><img src="images/12.PNG" alt="" /></a> -->
+											<h4 style="color: aqua;">#선형대수학</h4>
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question9.html';">
+											<h3>선형대수학 단위벡터 구하기</h3>
+											선형대수학 기저 질문
+            								1-x^2과 1+x^2을 포합하는 P3의 기저를 구하여라
+            								자세한 풀이 부탁드릴게요
+											<br/>
+											<br/><h5>조회수 10 · 30분 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question2.html';">
+											<h3>선형대수학 질문드립니다</h3>
+											오늘 벡터 파트의 선형독립과 종속에 관하여 배웠는데
+            								이 둘의 차이가 도대체 뭔가요?
+            								도무지 이해가 안 가 질문 드립니다.
+											<br/>
+											<br/><h5>조회수 17 · 2시간 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question7.html';">
+											<h3>선형대수학 도와주세요!!!!</h3>
+											(x,y,z)^t=X, (a,b,c)^t=Y , 임의의 실수를 r이라 할 때
+            								T(X-rY)=TX-rTY이고,
+            								T0=(0,0,0)^t 이므로 T는 선형변환인가요?
+											<br/>
+											<br/><h5>조회수 32 · 3시간 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question8.html';">
+											<h3>선형대수학 단위벡터 구하기</h3>
+											선형대수학 벡터 단원 문제입니다.
+            								자세한 해설 부탁드립니다 : )
+            								Q. 평면 x + y + z = 3 에 직교하는 단위벡터를 구하라.
+											<br/>
+											<br/><h5>조회수 41 · 5시간 전</h5>
+											</div>
+										</article>
+										<article>
+											<!-- <a href="#" class="image"><img src="images/12.PNG" alt="" /></a> -->
+											<h4 style="color: aqua;">#확률과 통계 #확통</h4>
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question13.html';">
+												
+												<h3>수학적 확률과 통계적 확률 차이</h3>
+												질문 그대로 수학적 확률과 통계적 확률의 차이가 발생하는 이유를 큰 수의 법칙으로 간단하게
+            									설명 부탁드립니다...ㅜㅜ
+												<br/>
+												<br/><h5>조회수 1 · 방금 전</h5>
+												</div>
+												
+												<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question16.html';">
+												<h3>미적분? 확통? 질문</h3>
+												미적분은 수학2를 바탕으로 한 단원이잖요
+												그럼 확통은 무슨 내용이랑 연관 되어 있는 건가요?
+												<br/><h5>조회수 9 · 방금 전</h5>
+												</div>
+	
+												<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question15.html';">
+												<h3>수학적 확률과 통계적 확률 차이</h3>
+												확률과통계 실생활
+            									확률과통계 내용중에서 간호학과와 엮을 수 있는 실생활 예시 뭐가 있을까요 ..??
+												<br/><h5>조회수 15 · 2분 전</h5>
+												</div>
+	
+												<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question14.html';">
+												<h3>수학적 확률과 통계적 확률 차이</h3>
+												확률과 통계 시험지 바꾸는 문제 있잖아요... 본인거는 안가지면서 시험지를 바꿀 수 있는
+            									경우의 수 그거 1부터 6까지 알려주세요. 그리고 X라는 변수가 들어갔을 때도 알고싶어요
+            									자꾸 헷갈리네요ㅠㅠ
+												<br/><h5>조회수 18 · 3분 전</h5>
+												</div>
+										</article>
+										<article>
+											<!-- <a href="#" class="image"><img src="images/12.PNG" alt="" /></a> -->
+											
+												<h4 style="color: aqua;">#경제</h4>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question12.html';">
+											<h3>군무원 경제학 시험범위</h3>
+											1.군무원 경제학 시험범위는 어떻게되나요
+            							    2.경제학 원론과 경제학 개론의 차이는 뭔가요?
+											<br/>
+											<br/><h5>조회수 4 · 방금 전</h5>
+											</div>
+											
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question3.html';">
+											<h3>ETF/ETN 기본 예탁금 뜻이 뭔가요?</h3>
+											ETF/ETN 거래를 해보려고 교육 이수까지 했습니다. 그런데 기본 예탁금 의미를 정확히 모르겠어서요.
+            								ETF 기본예탁금 1천만원 뜻이 1천만원어치 ETF/ETN 종목을 매수해야한다는 뜻인가요?
+            								아니면 증권계좌에 1천만원을 넣어둬야 ETF/ETN 거래를 할수 있다는 뜻인가요.
+											<br/><h5>조회수 7 · 30분 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question10.html';">
+											<h3>행동경제학</h3>
+											넛지에 나오는 행동경제학이 뭔지 자세하게 알려주세요 ㅠㅠ
+											<br/><br/>
+											<br/><h5>조회수 8 · 33분 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question11.html';">
+											<h3>개발 경제학이 뭔가요?</h3>
+											제목 곧 내용입니다
+            								개발 경제학과 관련된 충분한 지식을 얻고 싶어서요 ㅠㅠ 
+            								선진국이 빈곤국을 지원해야한다 이런 느낌인가요?
+											<br/><h5>조회수 12 · 45분 전</h5>
+											</div>
+										</article>
+										<article>
+											<!-- <a href="#" class="image"><img src="images/12.PNG" alt="" /></a> -->
+											<h4 style="color: aqua;">#공학설계입문 #공설입</h4>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question21.html';">
+											<h3>공학설계입문 질문</h3>
+											안녕하세요 교수님 중간보고 관련하여 질문드립니다.
+            							    질문1: 4,5,6번을 보고를 드릴 때 정형화된 양식이 있는 것인가요 아니면 자유형식인가요?
+											질문2: 1,2,3,4,5,6 내용이 골고루 포함이라고 하셨는데 내용이 누락되어도 괜찮나요?
+											<br/>
+											<br/><h5>조회수 2 · 방금 전</h5>
+											</div>
+											
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question22.html';">
+											<h3>공학설계입문 발표에 대해서</h3>
+											안녕하세요 교수님 발표 관련으로 질문 드립니다. 진짜 문제 정의문 발표 부분에서 정의문 4개(5whys, 파레토 도표, 원인결과 도표, 모순 분석)를 전부 사용해서 발표해야 하는지
+											아니면 정의문 4개중에 하나만 소개해도 되는지 궁금합니다.
+											<br/><h5>조회수 8 · 11분 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question23.html';">
+											<h3>공학설계입문 최종발표</h3>
+											발표에서 사용된 레이아웃이 프로젝트 최종 결과와 같지 않아도 상관없나요?
+											<br/><br/>
+											<br/><h5>조회수 17 · 34분 전</h5>
+											</div>
+
+											<div class="container" style="cursor: pointer;" onclick="location.href='../../lee/page7_question24.html';">
+											<h3>html 관련 질문 드립니다.</h3>
+											html 기초 pdf에 따라 다운 받고 똑같이 실행을 시켜보았는데 "지정된 파일을 찾을 수 없습니다"라고 뜨며 실행되지 않았습니다.
+            								그래서 저장소로 가서 실행해보니 MiscFiles에서 0x80004005오류가 뜹니다. 어떻게 해결해야 할까요..?
+											<br/><h5>조회수 25 · 46분 전</h5>
+											</div>
+										</article>
+										
+									</div>
+								</section>
+						</div>
+					</div>
+
+					<footer>
+						<div class="country">
+							<span>현재 접속 국가 : 대한민국</span>
+						</div>
+						<div class="foot-links-wrap">
+							<div class="foot-links-wrap-right">
+				
+							</div>
+							<div class="foot-links-wrap-left">
+								<ul>
+									<li><a href="#">Well-Known 정보</a></li>
+									<li><a href="#">이용 약관</a></li>
+									<li><a href="#">개인정보처리방침</a></li>
+									<li><a href="#">게시중단요청서비스</a></li>
+								</ul>
+							</div>
+						</div>
+					</footer>
+							</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+	<script>
+        function move(){
+            alert('');
+        }
+    </script>
+</html>

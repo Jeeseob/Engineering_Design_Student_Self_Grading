@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Well-Known</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css">
+
+        <!--부트스트랩-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+            <header class = "top-header">
+                <nav class="top-nav">
+                    <div class="upper_left_img_wrap">
+                        <a href="../../kim/main.html">
+                            <img src="../../kim/very_small_letter_50h.jpg" width="110%" height="190%">
+                        </a>
+                    </div>
+                    <form action="../../kim/page2_src/page2.html" name="search-area" id="action-area">
+                        <div class="small_searchbar_wrap pt-2">
+                            <i class="fas fa-search"></i>
+                            <input class="search-input " type="text" placeholder="검색할 내용 혹은 태그를 입력하세요." onkeypress="JavaScript:press(this.form)" size="30"/>
+                            <button id="go_next_page" style="border: 0; background-color: white" type="button" title="submit" onclick="location.href='../../kim/page2_src/page2.html'"><a id="submit-form"><i class="far fa-paper-plane"></i></a></button>
+                        </div>
+                    </form>
+                    <div class="profile_img_wrap">
+                        <img src="../../kim/deer.jpg">
+                    </div>
+                    <ul>
+                        <li>수뭉이님 환영합니다</li>
+                    </ul>
+                </nav>
+        
+                <hr width="100%" color="black" size="1">
+            </header>
+            <div class = "all pt-1">
+            <div class="out"> 
+                <section class = "question ">
+                    <div class="text-center pt-5 questiontitle d-flex">
+                        <div>
+                            <img src="../file/question.png" width="150px">
+                        </div>
+                        <div class="pt-3">
+                            N-Queen 문제는 크기가 N × N인 체스판 위에 퀸 N개를 서로 공격할 수 없게 놓는 문제이다.<br><br>
+
+                            N이 주어졌을 때, 퀸을 놓는 방법의 수를 구하는 프로그램을 작성하시오.<br><br>
+
+                            이 문제 감이 안오네요 ㅠㅠㅠ 자바로 방향성만 알면 좋을 것 같은데....
+                        </div>
+                        
+                    </div>
+                    <div class=" questionsub pt-5"> 
+                        #자바, #코딩, #백트래킹, #프로그래밍, #N
+                    </div>
+                </section >
+                <section class = "answer">
+                    <pre class="line-number">
+                        <code class="language-java">
+import java.util.Scanner;
+ 
+public class Main {
+ 
+	public static int[ ] arr;
+	public static int N;
+	public static int count = 0;
+ 
+	public static void main(String[ ] args) {
+ 
+		Scanner in = new Scanner(System.in);
+		N = in.nextInt();
+		arr = new int[N];
+ 
+		nQueen(0);
+		System.out.println(count);
+ 
+	}
+ 
+	public static void nQueen(int depth) {
+		// 모든 원소를 다 채운 상태면 count 증가 및 return 
+		if (depth == N) {
+			count++;
+			return;
+		}
+ 
+		for (int i = 0; i < N; i++) {
+			arr[depth] = i;
+			// 놓을 수 있는 위치일 경우 재귀호출
+			if (Possibility(depth)) {
+				nQueen(depth + 1);
+			}
+		}
+ 
+	}
+ 
+	public static boolean Possibility(int col) {
+ 
+		for (int i = 0; i < col; i++) {
+			// 해당 열의 행과 i열의 행이 일치할경우 (같은 행에 존재할 경우) 
+			if (arr[col] == arr[i]) {
+				return false;
+			} 
+			
+			/*
+			 * 대각선상에 놓여있는 경우
+			 * (열의 차와 행의 차가 같을 경우가 대각선에 놓여있는 경우다)
+			 */
+			else if (Math.abs(col - i) == Math.abs(arr[col] - arr[i])) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+}
+</code>
+                    </pre>
+                </section>
+                <section class = "answer1 borderline">
+                    <h2>백트래킹: </h2>
+                    해를 찾아가는 과정에서 지금의 경로가 해가 될 것 같지 않으면 <br>
+                    그 경로를 더 이상 가지 않고 되돌아 갑니다. <br><br>
+                    즉 완전탐색 알고리즘에서 유망하지 않은 노드들을 가지치기한 것으로 탐색 시간을 줄여줍니다. <br><br>
+                    예를 들어 4자리 숫자로 구성된 자물쇠를 맞춘다고 하였을 때 <br>
+                    가능한 모든 경우의 수(완전탐색)는 10000가지입니다. <br><br>
+                    하지만 특정 자리의 올바른 숫자를 알고 있다면 <br>
+                    경우의 수가 10의 배수만큼 줄어들게 되는데 이처럼 정답이 될 수 없는 경우를<br>
+                    제외하고 탐색을 하는 것을 백트래킹이라고 합니다.
+                </section>
+                <div class="button col-10 pt-3">
+                    <img src="../file/professor.png" style="width: 45px;"> <span style="font-size: 20px; font-weight: bold;">스피드웨건 전문가</span>
+                    <button type="button" class="btn float-right" onclick="location.href='../question5/quiz5_1/page4_quiz5_1.html'">다음</button>
+                </div>
+            </div>
+        </div>
+           
+        <footer>
+            <div class="country">
+                <span>현재 접속 국가 : 대한민국</span>
+            </div>
+            <div class="foot-links-wrap">
+                <div class="foot-links-wrap-right">
+    
+                </div>
+                <div class="foot-links-wrap-left">
+                    <ul>
+                        <li><a href="#">Well-Known 정보</a></li>
+                        <li><a href="#">이용 약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">게시중단요청서비스</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+            <script src="../file/prism.js"></script>
+            <script>
+                function press(f){
+                    if(f.keyCode == 13){
+                        action.submit();
+                    }
+                }
+            </script>
+  
+        
+    </body>
+</html>

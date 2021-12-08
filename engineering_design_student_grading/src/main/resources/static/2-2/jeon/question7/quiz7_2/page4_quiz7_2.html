@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Well-Known</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css" >
+
+        <!--부트스트랩-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <header class = "top-header">
+            <nav class="top-nav">
+                <div class="upper_left_img_wrap">
+                    <a href="../../../kim/main.html">
+                        <img src="../../../kim/very_small_letter_50h.jpg" width="110%" height="190%">
+                    </a>
+                </div>
+                <form action="../../../kim/page2_src/page2.html" name="search-area" id="action-area">
+                    <div class="small_searchbar_wrap pt-2">
+                        <i class="fas fa-search"></i>
+                        <input class="search-input " type="text" placeholder="검색할 내용 혹은 태그를 입력하세요." onkeypress="JavaScript:press(this.form)" size="30"/>
+                        <button id="go_next_page" style="border: 0; background-color: white" type="button" title="submit" onclick="location.href='../../../kim/page2_src/page2.html'"><a id="submit-form"><i class="far fa-paper-plane"></i></a></button>
+                    </div>
+                </form>
+                <div class="profile_img_wrap">
+                    <img src="../../../kim/deer.jpg">
+                </div>
+                <ul>
+                    <li>수뭉이님 환영합니다</li>
+                </ul>
+            </nav>
+    
+            <hr width="100%" color="black" size="1">
+        </header>
+    <div class="all pt-1">
+            <div class="out">            
+                <section class="question pt-5 d-flex">
+                    <img src="../../file/q.png" width="150px" height="150px">
+                    <div class="text-center">
+                        <br><br><br><br>
+                        정수 N이 주어졌을 때, 소인수분해하는 프로그램을 작성하시오.
+                    </div>
+                  
+                </section>
+                <br><br><br><br> <br><br><br><br> <br><br>
+                <section class="answer ">
+                    <div class="ml-4">
+                        <a href="https://ideone.com/">간단한 코딩 테스트 사이트</a>
+                        <button type="button" class="btn float-right mr-3" id="open">정답 확인</button>
+                    </div>
+                   
+                </section>
+                <br><br>
+            </div>
+        </div>
+        <section class="answer_check">
+                    <div style="width: 80%; margin:auto;" class="pt-1">
+                    <pre class="line-number">
+                        <code class="language-java">
+import java.util.Scanner;
+ 
+public class Main {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+        
+		int N = in.nextInt();
+ 
+		for (int i = 2; i <= Math.sqrt(N); i++) {	// 또는 i * i <= N
+			while (N % i == 0) {
+				System.out.println(i);
+				N /= i;
+			}
+		}
+		if (N != 1) {
+			System.out.println(N);
+		}
+	}
+}
+}
+</code>
+                    </pre>
+                </div>   
+                <button type="button" class="btn ml-4" onclick="location.href='../quiz7_1/page4_quiz7_1.html'">이전</button> 
+                    <button type="button" class="btn float-right mr-4" onclick="location.href='../quiz7_3/page4_quiz7_3.html'">다음</button>
+                </section>
+         
+                <footer>
+                    <div class="country">
+                        <span>현재 접속 국가 : 대한민국</span>
+                    </div>
+                    <div class="foot-links-wrap">
+                        <div class="foot-links-wrap-right">
+            
+                        </div>
+                        <div class="foot-links-wrap-left">
+                            <ul>
+                                <li><a href="#">Well-Known 정보</a></li>
+                                <li><a href="#">이용 약관</a></li>
+                                <li><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">게시중단요청서비스</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+            
+            <script src="../../file/prism.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $('.answer_check').hide();
+                    $('#open').on('click',function(){
+                        $('.answer_check').show();
+                    });
+                });
+                function press(f){
+                    if(f.keyCode == 13){
+                        action.submit();
+                    }
+                }
+            </script>
+
+        
+
+    </body>
+</html>
+
