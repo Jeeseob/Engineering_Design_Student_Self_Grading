@@ -1,0 +1,435 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+    <style>
+        * {
+            list-style: none;
+            text-decoration: none;
+            border-collapse: collapse;
+            margin: 0px;
+            padding: 0px;
+            color: rgb(153, 142, 142);
+        }
+
+        .contents1_bold {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .intro_bg {
+            background-image: url("people-3120717.jpg");
+            width: 100%;
+            height: 718px;
+        }
+
+        .header {
+            display: flex;
+            width: 1280px;
+            margin: auto;
+        }
+
+
+
+        .nav {
+            display: flex;
+            justify-content: flex-end;
+            line-height: 86px;
+            width: calc(980px);
+            color: #fff;
+        }
+
+            .nav > li {
+                margin-left: 84px;
+            }
+
+                .nav > li > a {
+                    color: #fff;
+                }
+
+        .nav2 {
+            width: 1000px;
+            color: #fff;
+            flex: 1;
+            height: 302px;
+            margin-left: 950px;
+            background-color: white;
+        }
+
+            .nav2 > li {
+                color: #000;
+                font-size: 20px;
+            }
+
+                .nav2 > li > a {
+                    color: rgb(214, 191, 191);
+                    font-size: 20px;
+                }
+
+        .icons4 {
+            margin-top: 8px;
+        }
+
+            .icons4 > img {
+                width: 1000px;
+                height: 541px;
+                float: right;
+                margin-top: 89px;
+            }
+
+
+
+        .intro_text {
+            width: 100%;
+            margin: 231px auto 231px auto;
+            text-align: center;
+        }
+
+            .intro_text > h1 {
+                font-size: 48px;
+                color: rgb(194, 88, 88);
+            }
+
+            .intro_text > h4 {
+                color: #fff;
+            }
+
+        .dontext h1 {
+            font-size: 100px;
+            color: white;
+        }
+
+        .dontext {
+            width: 100%;
+            margin: 600px auto 231px auto;
+            text-align: center;
+        }
+
+            .dontext h3 {
+                color: rgb(161, 123, 123);
+            }
+
+        .amount {
+            position: relative;
+            top: -66px;
+            display: flex;
+            width: 1280px;
+            background: #fff;
+            box-shadow: 0px 0px 10px rgba(0,0,0.5);
+            margin: auto;
+        }
+
+            .amount > li {
+                flex: 1;
+                height: 132px;
+            }
+
+                .amount > li > div {
+                    text-align: center;
+                    margin-top: 37px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    height: 57 px;
+                }
+
+                    .amount > li > div:not(:not-last-child) > div {
+                        border-right: 1px solid rgb(0, 0, 0);
+                    }
+
+        .contents1 {
+            font-size: 20px;
+            font-weight: lighter;
+        }
+
+        .result {
+            font-size: 24px;
+        }
+
+        /* main_text 0*/
+        .main_text0 {
+            width: 100%;
+            height: 690px;
+            margin-top: -132px;
+            background: rgb(92, 83, 83);
+        }
+
+            .main_text0 > h1 {
+                padding-top: 116px;
+                text-align: center;
+            }
+
+            .main_text0 > .contents1 {
+                text-align: center;
+            }
+
+        .icons {
+            display: flex;
+            width: 1000px;
+            height: 302px;
+            margin: auto;
+        }
+
+            .icons > li {
+                flex: 1;
+                background: white;
+                margin-top: 49px;
+                height: 302px;
+                text-align: center;
+                border-radius: 20px;
+            }
+
+                .icons > li:not(:last-child) {
+                    margin-right: 20px;
+                }
+
+        .icons2 {
+            display: flex;
+            width: 600px;
+            height: 302px;
+            text-align: 400px;
+        }
+
+            .icons2 > img {
+                flex: 1;
+                background: white;
+                margin-top: 200px;
+                height: 502px;
+                width: 700;
+                border-radius: 5px;
+            }
+
+            .icons2 > li:not(:last-child) {
+                margin-right: 20px;
+            }
+
+        .icons > li > .icon_img {
+            margin-top: 36px;
+            margin-left: 36px;
+            width: 100%;
+        }
+
+        .icons > .contents1 {
+            width: 10px;
+        }
+
+        .second {
+            margin-top: 20px;
+        }
+
+        .bg2 > .footer > .dona > img {
+            flex: 1;
+            background: white;
+            margin-top: 85px;
+            height: 600px;
+            width: 800px;
+            border-radius: 5px;
+            margin-right: -400px;
+        }
+
+        .footer {
+            display: flex;
+            width: 1280px;
+        }
+
+        .bg2 {
+            background-color: black;
+            height: 800px;
+            width: 100%;
+        }
+
+        .donaexp h3 {
+            flex: 1;
+        }
+
+        .dona > img {
+            width: 390px;
+            height: 400px;
+            flex: left;
+        }
+
+        #im3 {
+            margin-top: 400px;
+        }
+
+            #im3 p {
+                text-align: center;
+                margin-left: -400px;
+                width: 500px;
+                font-size: 20px;
+            }
+
+        #im1 {
+            margin-top: 200px;
+        }
+
+            #im1 p {
+                text-align: center;
+                margin-left: 500px;
+                width: 500px;
+                font-size: 20px;
+            }
+
+                #im1 p a {
+                    font-weight: bold;
+                    font-size: 30px;
+                }
+    </style>
+
+    <link rel="stylesheet" href="medicstyle.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="intro_bg">
+            <div class="header">
+
+                <div class="intro_text">
+                    <h1><a href="main.html">SMS</a></h1>
+                    <h4 class="contents1">welcome to SMS community center</h4>
+                    <h4>같은 질병을 공유하는 친구를 찾고 서로 보듬어 주는 곳으로</h4>
+                    <h4>당신의 아픔을 흘려보내고 치유해보세요.</h4>
+                </div>
+            </div>
+            <div class="mean">
+                <ul class="amount">
+                    <li>
+                        <div>
+                            <div>투병 </div>
+                            <div>30일 째</div>
+
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>헌혈</div>
+                            <div>2일 째</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>오늘의 방문자 수</div>
+                            <div>1000명</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <div>오늘의 기부자 수</div>
+                            <div>200명</div>
+                        </div>
+                    </li>
+
+                </ul>
+                <!--amount end-->
+                <div class="main_text0">
+                    <h1>WE PROVIDE</h1>
+                    <div class="contents1">아래의 sms community 서비스들을 경험해보세요</div>
+                    <ul class="icons">
+                        <li>
+                            <br>
+                            <br>
+                            <div class="contents1_bold">
+
+                                ME
+                            </div>
+                            <div class="contents2">
+                                나의 감정 표현 <br>&<br>감정 test로<br>나를 보살피자
+                                <div class="contents1_bold"><a href="#">+</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon_img">
+                                <!--img src="jindan.png"-->
+                            </div>
+                            <div class="contents1_bold">
+                                FIND
+                            </div>
+                            <div class="contents2">
+                                나와 비슷한 <br>아픔을 가진 친구를<br>찾아보자<br>
+                                <div class="contents1_bold"><a href="#">+</a></a></div>
+                            </div>
+                        </li>
+                        <li>
+
+                            <div class="icon_img">
+                                <!--img src="smiley-2979107_1920"-->
+                            </div>
+                            <div class="contents1_bold">
+                                SHARE
+                            </div>
+                            <div class="contents2">
+                                나의 기부활동으로<br>온기를<br>나누어보자<br>
+                                <div class="contents1_bold"><a href="#">+</a></a></a></div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="icons2">
+                        <img src=smiley-2979107_1920.jpg width:600px; height:500px;>
+                    </div>
+
+                    <ul class="nav2">
+                        <li><div class="icons3">2021년 11월 21일</div></li>
+                        <li>나는 잘해내왔고 나아질 것입니다</li>
+                        <li>당신의 힘들고 아픈, 그러나 살아있음에 </li>
+                        <li>행복하고 소중한 투병 생활을 기록해보세요</li>
+                        <li>그 속의 나를 기억하며 들여다봐요
+                        <li>
+                            <br>
+                            <br>
+                            <br>
+                        <li><a href="#">추가하러 가기 ></a></li>
+                    </ul>
+                    <div class="icons4">
+                        <img src=light-4297386_1920.jpg>
+                    </div>
+
+                </div>
+
+                <ul class="dontext">
+                    <li><h1><a href="#">FIND</a></h1></li>
+                    <li><h3>당신이 겪은 희귀병의 이야기를 공유하세요</h3></li>
+
+                    <li>
+                        <h3>
+                            거리, 나이 순으로 함께 소통하며<br>
+                            의지를 다질 모임을 연결해드립니다
+                        </h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg2">
+                <div class="footer">
+                    <div class="dona">
+                        <img src="child-2093023_1920.jpg">
+
+                    </div>
+                    <div id="im1">
+                        <p>"한개의 촛불로서 많은 촛불에 불을 붙여도</p>
+                        <p> 처음의 촛불의 빛은 약해지지 않는다"</p>
+                        <p>   - 탈무드 -</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p>특이한 혈액형 보유자의 응급알람을 설정해 헌혈하고  </p>
+                        <p>국가 지원 자격 미달로 의료시설을 이용하지 못하는  </p>
+                        <p>이웃을</p>
+
+                        <p>도와 작은 온기로 사회를 따뜻하게 만들어봅시다</p>
+                        <br>
+                        <br>
+                        <p><a href="#">DONATE</a></p>
+
+
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

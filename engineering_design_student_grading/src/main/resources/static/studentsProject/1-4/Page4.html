@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link type="text/css" rel="stylesheet" href="Page_style.css" />
+	<style>
+		a:link,
+		a:visited,
+		a:hover {
+			text-decoration: none;
+			color: black;
+		}
+
+		p {
+			margin: 0px;
+		}
+
+		ul {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+
+		.color_cts {
+			width: 100%;
+			position: relative;
+		}
+
+		.color_cts_main_ul {
+			margin: 20px auto 0px auto;
+			padding: 70px 20px;
+			display: grid;
+			width: 100%;
+			grid-template-columns: repeat(3, 1fr);
+			row-gap: 60px;
+			border-top: 1px solid rgb(148, 148, 148);
+			border-bottom: 1px solid rgb(148, 148, 148);
+		}
+
+			.color_cts_main_ul > li > h2 {
+				margin: 0px;
+				margin-bottom: 30px;
+				font-size: 22px;
+				color: rgb(14, 85, 117);
+			}
+
+		.color_cts_sub_ul > li {
+			margin-bottom: 40px;
+			display: flex;
+			align-items: center;
+			line-height: 15px;
+			font-size: 18px;
+		}
+
+			.color_cts_sub_ul > li > div {
+				transition: 300ms;
+				cursor: pointer;
+				margin-left: 25px;
+				width: 20px;
+				height: 20px;
+			}
+
+				.color_cts_sub_ul > li > div:hover {
+					cursor: zoom-in;
+					transition: 300ms;
+					transform: scale(3);
+				}
+
+		.color_btn {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 600px;
+		}
+
+			.color_btn > div {
+				display: flex;
+			}
+
+				.color_btn > div > button {
+					transition: 300ms;
+					cursor: pointer;
+					width: 200px;
+					height: 80px;
+					border-radius: 3px;
+					border: 1px solid rgba(0, 0, 0, 0);
+				}
+
+					.color_btn > div > button > p:nth-child(1) {
+						font-size: 16px;
+					}
+
+					.color_btn > div > button:nth-child(1) {
+						transition: 300ms;
+						margin-right: 20px;
+						background-color: rgb(233, 233, 233);
+					}
+
+					.color_btn > div > button:nth-child(2) {
+						transition: 300ms;
+						background-color: rgb(193, 218, 240);
+					}
+
+					.color_btn > div > button:hover {
+						border: 1px solid black;
+					}
+	</style>
+	<title>Colorcode-색상코드</title>
+	
+</head>
+	<body>
+		<section class="main_nav">
+			<div class="Logo" onclick="location.href = 'main.html'">Colorcode</div>
+			<div class="Words">사진 하나로 자유롭게 벽지를 바꾸자!</div>
+		</section>
+
+		<section class="color_cts">
+			<h2>벽지의 색상코드를 확인해 보세요.</h2>
+			<ul class="color_cts_main_ul">
+				<li>
+					<h2>Living room</h2>
+					<ul class="color_cts_sub_ul">
+						<li>
+							<span>거실1: </span>
+							<div></div>
+						</li>
+						<li>
+							<span> 거실2: </span>
+							<div></div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Kitchen</h2>
+					<ul class="color_cts_sub_ul">
+						<li>
+							<span> 주방1: </span>
+							<div></div>
+						</li>
+						<li>
+							<span> 주방2: </span>
+							<div></div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Room1</h2>
+					<ul class="color_cts_sub_ul">
+						<li>
+							<span> 안방1: </span>
+							<div></div>
+						</li>
+						<li>
+							<span> 안방2: </span>
+							<div></div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Room2</h2>
+					<ul class="color_cts_sub_ul">
+						<li>
+							<span> 방1: </span>
+							<div></div>
+						</li>
+						<li>
+							<span> 방2: </span>
+							<div></div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h2>Library</h2>
+					<ul class="color_cts_sub_ul">
+						<li>
+							<span> 서재1: </span>
+							<div></div>
+						</li>
+						<li>
+							<span> 서재2: </span>
+							<div></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+		<section class="color_btn">
+			<div>
+				<button><p>인쇄하기</p>
+				</button>
+				<button type="button" onclick="location.href = 'main.html'">
+					<p>작업 마치기</p>
+				</button>
+			</div>
+		</section>
+
+	</body>
+	
+</html>
+<script defer>
+	const color = [
+		'#CDC6B4',
+		'#616066',
+		'#8BBAB4',
+		'#DCD9C6',
+		'#DDD6BC',
+		'#000093',
+		'#DB3838',
+		'#D9BEB5',
+		'#6E8781',
+		'#C0B9AC',
+	];
+
+	const colorCtn = [
+		...document.querySelectorAll('.color_cts_sub_ul > li > div'),
+	];
+	const colorItm = [
+		...document.querySelectorAll('.color_cts_sub_ul > li> span'),
+	];
+	color.map((el, idx) => {
+		colorItm[idx].innerText += ' ' + el;
+		colorCtn[idx].style.backgroundColor = el;
+	});
+</script>

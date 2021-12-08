@@ -1,0 +1,162 @@
+@font-face {
+  font-family: "SF";
+  src: url("SFNSDisplay-Regular.ttf") format("truetype");
+}
+body {
+  font-family: "SF";
+  margin: 0 auto;
+  width: 95%;
+}
+
+/* header */
+
+header {
+  width: 100%;
+  height: 180px;
+}
+
+.header_1st_align {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+.footer_align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img_size {
+  width: 250px;
+  height: 100px;
+}
+
+.header_nav_align {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  align-items: center;
+}
+
+.header_2nd_size {
+  margin-left: 5.6rem;
+  width: 68%;
+}
+
+.header_search_align {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  height: 50%;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header_nav_1st_align {
+}
+
+.header_nav_2nd_align {
+}
+
+.header_1st_align a {
+  margin-right: 5px;
+}
+
+.header_nav_2nd_align a {
+  margin-left: 5px;
+}
+
+.footer_align {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0;
+}
+
+footer {
+  width: 100%;
+}
+
+/* #nav {
+    margin: 0;
+  } */
+
+/* #nav li {
+  float: left;
+  position: relative;
+} */
+
+#nav li ul {
+  display: none;
+}
+
+#nav li:hover ul {
+  display: flex;
+  position: absolute;
+  /* top: 18px; */
+  width: 500px;
+}
+
+/* #nav li:hover ul li {
+    overflow: visible;
+    padding: 0;
+    width: 100%; 설정필요
+  } */
+
+#nav li > ul > li:hover,
+.move_page:hover {
+  color: red;
+}
+
+/* #nav_li {
+    position: absolute;
+    width: 300px;
+  } */
+
+.header_nav_align_left {
+  display: flex;
+}
+
+.header_nav_align_left ul li {
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+#first {
+  background-color: rgba(250, 226, 137, 0.5);
+}
+
+#second {
+  background-color: rgba(224, 224, 224, 0.5);
+}
+#third {
+  background-color: rgba(242, 156, 78, 0.3);
+}
+
+ul {
+  padding-inline-start: 10px;
+}
+#nav ul,
+#nav {
+  list-style-type: none;
+  margin-left: 25px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+.ahover a:hover {
+  color: black;
+}

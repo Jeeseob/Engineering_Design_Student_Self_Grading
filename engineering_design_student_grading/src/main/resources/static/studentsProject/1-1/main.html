@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/db685bf63d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>I'AM</title>
+    <script>
+      function dropdown() {
+        var now = document.querySelector(".timetable");
+        if (getComputedStyle(now).display == "none") {
+          now.style.display = "block";
+        } else {
+          now.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!--header 영역-->
+    <header>
+      <div class="header_1st_align">
+        <div style="margin-right: 2rem; margin-top: 1rem">
+          <a href="main.html"><img class="img_size" src="logo.jpg" alt="" /></a>
+        </div>
+        <div style="margin-right: 1rem" class="header_2nd_size">
+          <div class="header_nav_align">
+            <div class="header_nav_align_left">
+              <div>
+                <ul id="nav">
+                  <li>
+                    <a href="">MBTI별 게시판</a>
+                    <ul>
+                      <li>
+                        <a class="move_page" href="HTMLPage.html"
+                          ><span style="color: red">E</span>OOO</a
+                        >
+                      </li>
+                      <li>
+                        <a class="move_page" href="HTMLPage_I.html"
+                          ><span style="color: red">I</span>OOO</a
+                        >
+                      </li>
+                      <li>O<span style="color: red">N</span>OO</li>
+                      <li>O<span style="color: red">S</span>OO</li>
+                      <li>OO<span style="color: red">T</span>O</li>
+                      <li>OO<span style="color: red">F</span>O</li>
+                      <li>OOO<span style="color: red">J</span></li>
+                      <li>OOO<span style="color: red">P</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="nav">
+                  <li class="ahover" id="nav_li">
+                    <a href="">실생활 게시판</a>
+                    <!-- <ul>
+                      <li>자유게시판</li>
+                      <li>학교생활</li>
+                      <li>연애</li>
+                      <li>패션/뷰티</li>
+                      <li>연예/방송</li>
+                      <li>취미생활</li>
+                    </ul> -->
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="nav">
+                  <li>
+                    <a
+                      href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC"
+                      >MBTI 테스트하기</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="header_nav_2nd_align">
+              <a style="color: red" href="E_writing_board.html">글쓰기</a>
+              <a href="">로그아웃</a>
+            </div>
+          </div>
+          <div class="header_search_align">
+            <div style="margin-left: 2rem">ㅣ</div>
+            <div style="margin-right: 2rem">
+              <i class="fas fa-search fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--contents-->
+    <div class="main">
+      <div class="sidebar">
+        <aside>
+          <div class="school">
+            <ul>
+              <div class="school_container">
+                <li><i class="far fa-calendar-alt"></i> 시간표</li>
+
+                <li><i class="fas fa-utensils"></i> 학식</li>
+                <li><i class="far fa-clipboard"></i> 강의실 정보</li>
+              </div>
+            </ul>
+          </div>
+          <div class="menu_nav">
+            <ul class="bbs ahover">
+              <div class="bbs_name">
+                <i class="fas fa-align-justify"></i> 실생활 게시판
+              </div>
+
+              <li><a href="">-자유게시판</a></li>
+              <li><a href="">-학교생활</a></li>
+              <li><a href="">-연애</a></li>
+              <li><a href="">-패션/뷰티</a></li>
+              <li><a href="">-연예/방송</a></li>
+              <li><a href="">-취미생활</a></li>
+            </ul>
+            <ul class="mbti">
+              <div class="bbs_name">
+                <i class="far fa-user"></i> MBTI 게시판
+              </div>
+
+              <li class="textunderline">
+                <a href="HTMLPage.html"
+                  >-<span class="red_color">E</span>OOO
+                </a>
+              </li>
+              <li class="textunderline">
+                <a href="HTMLPage_I.html"
+                  >-<span class="red_color">I</span>OOO</a
+                >
+              </li>
+              <li>-O<span class="red_color">N</span>OO</li>
+              <li>-O<span class="red_color">S</span>OO</li>
+              <li>-OO<span class="red_color">T</span>O</li>
+              <li>-OO<span class="red_color">F</span>O</li>
+              <li>-OOO<span class="red_color">J</span></li>
+              <li>-OOO<span class="red_color">P</span></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="content_wrap">
+        <div class="awards">
+          <div class="content_title">AWARDS</div>
+          <div class="best_content">
+            <div id="first" class="rank">
+              <div class="award_title">
+                <div><img src="gold.png" alt="" /></div>
+                <div class="best_title">
+                  <a href="HTMLPage.html">
+                    <h2><span class="red_color">E</span>OOO(외향형)</h2>
+                  </a>
+                  <a href="post1.html"> 날씨 화창하다 ヾ(＾-＾)ノ </a>
+                </div>
+              </div>
+              <a href="post1.html">
+                <div class="award_content">
+                  놀러가기 좋은 날씨구만<br />
+                  그런 의미에서 같이 놀러갈 사람~~
+                </div>
+              </a>
+              <div class="award_view">
+                <div>
+                  <i style="margin-right: 5px" class="far fa-eye"></i>51
+                </div>
+                <div class="like_comment">
+                  <div>
+                    <i style="margin-right: 5px" class="far fa-thumbs-up"></i>
+                    16
+                    <i style="margin: 0 5px" class="far fa-comment-alt"></i>
+                    4
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="second" class="rank">
+              <div class="award_title">
+                <div><img src="silver.png" alt="" /></div>
+                <div class="best_title">
+                  <a href="HTMLPage.html">
+                    <h2><span class="red_color">E</span>OOO(외향형)</h2>
+                  </a>
+                  <a href="post2.html"> 같이 콘서트 갈 사람!! </a>
+                </div>
+              </div>
+              <a href="post2.html">
+                <div class="award_content">
+                  이 가수 내한한다는데 같이 갈사람 있어??
+                </div>
+              </a>
+              <div class="award_view">
+                <div>
+                  <i style="margin-right: 5px" class="far fa-eye"></i>45
+                </div>
+                <div class="like_comment">
+                  <div>
+                    <i style="margin-right: 5px" class="far fa-thumbs-up"></i>
+                    10
+                    <i style="margin: 0 5px" class="far fa-comment-alt"></i>
+                    2
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="third" class="rank">
+              <div class="award_title">
+                <div><img src="bronze.png" alt="" /></div>
+                <div class="best_title">
+                  <a href="HTMLPage_I.html">
+                    <h2><span class="red_color">I</span>OOO(내향형)</h2>
+                  </a>
+                  <a href="I_Left_Post.html"> 아싸 약속 취소됨 </a>
+                </div>
+              </div>
+              <a href="I_Left_Post.html">
+                <div class="award_content">
+                  친구들이랑 약속 있었는데 취소됨<br />
+                  날도 추워서 나가기 귀찮았는데 다행...
+                </div>
+              </a>
+              <div class="award_view">
+                <div>
+                  <i style="margin-right: 5px" class="far fa-eye"></i>201
+                </div>
+                <div class="like_comment">
+                  <div>
+                    <i style="margin-right: 5px" class="far fa-thumbs-up"></i>
+                    9
+                    <i style="margin: 0 5px" class="far fa-comment-alt"></i>
+                    2
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mbti_bbs">
+          <div class="content_title">MBTI 게시판</div>
+          <div class="divide_content">
+            <div>
+              <div class="bbs_title">
+                <a class="board_name" href="HTMLPage.html" target="_self"
+                  ><i class="fas fa-users" id="title_margin"></i> &nbsp;<span
+                    style="color: red"
+                    >E</span
+                  >OOO(외향형)</a
+                >
+              </div>
+              <ul>
+                <li>
+                  <span class="list_mbti">ESFP</span>
+                  <div>새 친구 사귀는게 너무 재밌어</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >3
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>1
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="list_mbti">ENTP</span>
+                  <div>동기들이랑 술게임하다가</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >2
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>1
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="white_space"></div>
+            <div>
+              <div class="bbs_title">
+                <a class="board_name" href="HTMLPage_I.html" target="_self"
+                  ><i class="fas fa-user-lock" id="title_margin"></i>
+                  &nbsp;<span style="color: red">I</span>OOO(내향형)</a
+                >
+              </div>
+              <ul>
+                <li>
+                  <span class="list_mbti">ISFJ</span>
+                  <div>에휴 아무도 조별과제 팀장 안 하길래 내가 함</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >2
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>5
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="list_mbti">INTP</span>
+                  <div>겨울엔 침대에 누워서 게임하는 게 극락</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >3
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>2
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="free_bbs">
+          <div class="content_title">실생활 게시판</div>
+          <div class="divide_content">
+            <div>
+              <div class="bbs_title">자유게시판</div>
+              <ul>
+                <li>
+                  <span class="list_mbti">ESFP</span>
+                  <div>코로나 걸린다는 마인드로 나가서 노는거 인정?</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >3
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>5
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="list_mbti">ESTP</span>
+                  <div>오늘 학식 같이 먹을 분?</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >3
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>5
+                    </div>
+                  </div>
+                </li>
+                <!-- <li>
+                  <span class="list_mbti">ESFP</span>
+                  <div>오늘 학식 같이 먹을 분?</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >0
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>10
+                    </div>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+            <div class="white_space"></div>
+            <div>
+              <div class="bbs_title">학교생활</div>
+              <ul>
+                <li>
+                  <span class="list_mbti">INFP</span>
+                  <div>아... 대면수업 실화인가;;;</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >1
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>6
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <span class="list_mbti">ISFJ</span>
+                  <div>야 나 학교에서 길 잃었다</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >3
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>5
+                    </div>
+                  </div>
+                </li>
+                <!-- <li>
+                  <span class="list_mbti">ESFP</span>
+                  <div>야 나 학교에서 길 잃었다</div>
+                  <div class="like_comment">
+                    <div>
+                      <i style="margin-right: 5px" class="far fa-thumbs-up"></i
+                      >0
+                    </div>
+                    <div>
+                      <i style="margin: 0 5px" class="far fa-comment-alt"></i>9
+                    </div>
+                  </div>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--footer 영역-->
+    <footer class="footer_align">
+      <div>
+        <h4 style="color: gray">Copyright © 2020 I’AM. All rights reserved</h4>
+      </div>
+      <div style="display: flex">
+        <h4 style="margin-right: 7px"><i class="fab fa-facebook fa-lg"></i></h4>
+        <h4><i class="fab fa-instagram fa-lg"></i></h4>
+      </div>
+    </footer>
+  </body>
+</html>

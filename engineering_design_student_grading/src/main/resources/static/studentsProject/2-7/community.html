@@ -1,0 +1,912 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>패션피플</title>
+        <link rel="icon" href="img/favicon.png">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <!-- themify CSS -->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- flaticon CSS -->
+        <link rel="stylesheet" href="css/flaticon.css">
+        <!-- fontawesome CSS -->
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <!-- magnific CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/gijgo.min.css">
+        <!-- niceselect CSS -->
+        <link rel="stylesheet" href="css/nice-select.css">
+        <!-- slick CSS -->
+        <link rel="stylesheet" href="css/slick.css">
+        <!-- style CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <style>
+            img.card-img {
+                width: 280px;
+                height: 300px;
+                object-fit: cover;
+            }
+
+            img.pop-img {
+                width: 100px;
+                height: 150px;
+                object-fit: cover;
+            }
+
+            h2.d-inline-block{
+                font-size: x-small;
+            }
+
+            .container{
+                max-width: 1400px;
+            }
+            .blog_details {
+                padding: 20px 10px 10px 10px;
+            }
+
+            .blog_container{
+                display: flex;
+                margin-top: 30px;
+            }
+
+            .blog_item{
+                margin : 0px 10px;
+            }
+            .breadcrumb_bg {
+                background-image: url(./img/banner_bg.webp) !important;
+                background-position: center;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script src="js/common.js"></script>
+    </head>
+
+    <body>
+        <!--::header part start::-->
+        <header class="main_menu">
+            <div class="main_menu_iner">
+                <div class="container">
+                    <div class="row align-items-center ">
+                        <div class="col-lg-12">
+                            <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                                <a class="navbar-brand" href="main.html"> <img src="img/logo.png" width="105" height="50" class="logo_img" alt="logo"> </a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+
+                                <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                     id="navbarSupportedContent">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="community.html" id="navbarDropdown"
+                                               role="button" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">
+                                                쇼핑
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                <ul>
+                                                    <span class="dropdown-item-header">아우터</span>
+                                                    <li><a class="dropdown-item" href="./shop.html">재킷 / 코트</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">캐주얼 아우터</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">다운</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">울트라라이트다운</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <span class="dropdown-item-header">상의</span>
+                                                    <li><a class="dropdown-item" href="./shop.html">후리스</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">니트</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">캐시미어</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">스웨트셔츠 / 후디</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">셔츠 / 블라우스</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">티셔츠</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">UT(그래픽 티셔츠)</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <span class="dropdown-item-header">하의</span>
+                                                    <li><a class="dropdown-item" href="./shop.html">진</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">히트텍팬츠</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">스마트팬츠</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">캐주얼팬츠</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">레깅스팬츠</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">스커트</a></li>
+                                                </ul>
+                                                <ul>
+                                                    <span class="dropdown-item-header">액세서리</span>
+                                                    <li><a class="dropdown-item" href="./shop.html">벨트</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">가방</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">신발</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">우산</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">모자</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">스카프</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">넥워머</a></li>
+                                                    <li><a class="dropdown-item" href="./shop.html">삭스</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="cody_suggestion.html">코디 추천</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="community.html">커뮤니티</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="mypage.html">마이페이지</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="./cart.html"><img src="./img/cart.jpg" alt="" style = "margin-left : 100px; width : 50px; height : 50px "></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="login.html" style = "float: right">로그인/로그아웃</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Header part end-->
+        <!-- breadcrumb start-->
+        <section class="breadcrumb breadcrumb_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb_iner">
+                            <div class="breadcrumb_iner_item text-center">
+                                <h2>커뮤니티</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb start-->
+        <!--================Blog Area =================-->
+        <section class="blog_area section_padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="photo-container" style = "float: right">
+                            <a href='javascript:void(0);'>
+                                <img class="small-img" src="./img/question.png">
+                                <span style="width : 300px">유저들의 다양한 코디를 한 번에 확인할 수 있으며 </br>게시글의 이미지를 클릭하면 상세 게시글 화면으로 이동함.</span>
+                            </a>
+                        </div>
+                        <div class="blog_left_sidebar">
+                            <div class="blog_container">
+                                <!--
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일1.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>ootd_j</h2>
+                                        </a>
+                                        <p>캐주얼룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 312</a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 109 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일6.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>hamm_</h2>
+                                        </a>
+                                        <p>댄디룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 202 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 82 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+
+                                <article class="blog_item">
+
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일3.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>rlo_hsa</h2>
+                                        </a>
+                                        <p>미니멀룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 313</a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 104 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일4.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>smoooongi</h2>
+                                        </a>
+                                        <p>캐쥬얼룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 308 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 172 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일5.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>moly_96</h2>
+                                        </a>
+                                        <p>모던룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 189 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 111 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일11.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>helloworld</h2>
+                                        </a>
+                                        <p>미니멀룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 523 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 327 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일15.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>somethingspecial</h2>
+                                        </a>
+                                        <p>놈코어룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 310 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 132 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일14.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>jiwoo_00</h2>
+                                        </a>
+                                        <p>캐쥬얼룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 391 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 138 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일16.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>giwoong_94</h2>
+                                        </a>
+                                        <p>댄디룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 482 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 218 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일12.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>fashionista_</h2>
+                                        </a>
+                                        <p>사파리룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 371 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 238 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일17.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>pyo_jji</h2>
+                                        </a>
+                                        <p>캐쥬얼룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 283 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 128 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일13.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>yeji0_0</h2>
+                                        </a>
+                                        <p>페미닌룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 218 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 120 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일18.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>yolo_life</h2>
+                                        </a>
+                                        <p>댄디룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 309 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 119 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일19.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>yummy_3</h2>
+                                        </a>
+                                        <p>정장룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 219 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 159 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일20.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>jerry_01</h2>
+                                        </a>
+                                        <p>놈코어룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 211 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 143 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="blog_container">
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일21.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>hannaprincess</h2>
+                                        </a>
+                                        <p>캐주얼룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 341 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 198 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일23.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>forever_young</h2>
+                                        </a>
+                                        <p>댄디룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 290 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 117 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="img/community/스타일22.png" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>teddy_bear</h2>
+                                        </a>
+                                        <p>캐주얼룩</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 259 </a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 147 </a></li>
+                                        </ul>
+                                    </div>
+                                </article>
+                                -->
+                            </div>
+                        </div>
+
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href='javascript:void(0);' class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href='javascript:void(0);' class="page-link">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href='javascript:void(0);' class="page-link">2</a>
+                                </li>
+                                </li>
+                                <li class="page-item active">
+                                    <a href='javascript:void(0);' class="page-link">3</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href='javascript:void(0);' class="page-link">4</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href='javascript:void(0);' class="page-link">5</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href='javascript:void(0);' class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="blog_right_sidebar">
+
+                            <aside class="single_sidebar_widget search_widget">
+                                <div class="form-group">
+                                    <div >
+                                        <div class="form-group">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder='검색어를 입력하세요'
+                                                       onfocus="this.placeholder = ''"
+                                                       onblur="this.placeholder = '검색어를 입력하세요'">
+                                                <div class="input-group-append">
+                                                    <button class="btn" type="button"><i class="ti-search"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="button rounded-0 primary-bg text-white w-100 btn_1 search_btn"type="submit">검색</button>
+                                    </div>
+                                </div>
+                            </aside>
+
+                            <aside class="single_sidebar_widget post_category_widget">
+                        <h4 class="widget_title">스타일 카테고리</h4>
+                        <ul class="list cat-list">
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>캐주얼룩</p>
+                                    <p>(37)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>정장룩</p>
+                                    <p>(10)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>빈티지룩</p>
+                                    <p>(59)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>스트릿룩</p>
+                                    <p>(47)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>모던룩</p>
+                                    <p>(73)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>스포티</p>
+                                    <p>(11)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>미니멀룩</p>
+                                    <p>(62)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>맥시멀룩</p>
+                                    <p>(09)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>클래식룩</p>
+                                    <p>(42)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>댄디룩</p>
+                                    <p>(39)</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href='javascript:void(0);' class="d-flex">
+                                    <p>페미닌룩</p>
+                                    <p>(49)</p>
+                                </a>
+                            </li>
+                        </ul>
+                        </aside>
+
+                            <aside class="single_sidebar_widget popular_post_widget">
+                                <h3 class="widget_title">인기있는 게시물</h3>
+                                <div class="media post_item">
+                                    <a href="single-community.html"><img class="pop-img" src="img/community/스타일7.png" alt="post"></a>
+                                    <div class="media-body">
+                                        <a href="single-community.html">
+                                            <h3>monster79</h3>
+                                        </a>
+                                        <p>2021년 11월 28일</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <a href="single-community.html"><img class="pop-img" src="img/community/스타일8.png" alt="post"></a>
+                                    <div class="media-body">
+                                        <a href="single-community.html">
+                                            <h3>hari_9</h3>
+                                        </a>
+                                        <p>2시간 전</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <a href="single-community.html"><img class="pop-img" src="img/community/스타일9.png" alt="post"></a>
+                                    <div class="media-body">
+                                        <a href="single-community.html">
+                                            <h3>bangmini96</h3>
+                                        </a>
+                                        <p>17시간 전</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <a href="single-community.html"><img class="pop-img" src="img/community/스타일10.png" alt="post"></a>
+                                    <div class="media-body">
+                                        <a href="single-community.html">
+                                            <h3>kassy02</h3>
+                                        </a>
+                                        <p>1일 전</p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--================Blog Area =================-->
+        <!-- footer part start-->
+        <footer class="footer-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-sm-6 col-md-5">
+                        <div class="single-footer-widget footer_icon">
+                            <h4>프로젝트 정보</h4>
+                            <p>
+                                상명대학교 공학설계입문 프로젝트<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                        <div class="single-footer-widget footer_icon">
+                            <h4>Contact Us</h4>
+                            <p>
+                                주소 : 서울시 종로구 홍지문2길 20 상명대학교 (제1공학관 G101-2호) <br>
+                                TEL. 02-2287-5292 FAX. 02-2287-0072
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-5">
+                        <div class="single-footer-widget">
+                            <h4>팀원 정보</h4>
+                            <ul style = "color : #fff">
+                                <li>201911010 정성우</li>
+                                <li>201411087 길민호</li>
+                                <li>202110902 권연정</li>
+                                <li>202110959 이다솔</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const data_list = [{
+                url : "img/community/스타일1.png",
+                id : "ootd_j",
+                style : "캐주얼룩",
+                like_num : "312",
+                comment : "109"
+            }, {
+                url : "img/community/스타일6.png",
+                id : "hamm_",
+                style : "댄디룩",
+                like_num : "202",
+                comment : "82"
+            }, {
+                url : "img/community/스타일3.png",
+                id : "rlo_hsa",
+                style : "미니멀룩",
+                like_num : "313",
+                comment : "104"
+            }, {
+                url : "img/community/스타일4.png",
+                id : "smoooongi",
+                style : "캐주얼룩",
+                like_num : "308",
+                comment : "172"
+            }, {
+                url : "img/community/스타일5.png",
+                id : "moly_96",
+                style : "모던룩",
+                like_num : "189",
+                comment : "111"
+            }, {
+                url : "img/community/스타일11.png",
+                id : "helloworld",
+                style : "미니멀룩",
+                like_num : "523",
+                comment : "327"
+            }, {
+                url : "img/community/스타일15.png",
+                id : "somethingspecial",
+                style : "놈코어룩",
+                like_num : "310",
+                comment : "132"
+            }, {
+                url : "img/community/스타일14.png",
+                id : "jiwoo_00",
+                style : "캐주얼룩",
+                like_num : "391",
+                comment : "138"
+            }, {
+                url : "img/community/스타일16.png",
+                id : "giwoong_94",
+                style : "댄디룩",
+                like_num : "482",
+                comment : "218"
+            }, {
+                url : "img/community/스타일12.png",
+                id : "fashionista_",
+                style : "사파리룩",
+                like_num : "371",
+                comment : "238"
+            }, {
+                url : "img/community/스타일17.png",
+                id : "pyo_jji",
+                style : "캐주얼룩",
+                like_num : "283",
+                comment : "128"
+            }, {
+                url : "img/community/스타일3.png",
+                id : "yeji0_0",
+                style : "페미닌룩",
+                like_num : "218",
+                comment : "120"
+            }, {
+                url : "img/community/스타일18.png",
+                id : "yolo_life",
+                style : "댄디룩",
+                like_num : "309",
+                comment : "119"
+            }, {
+                url : "img/community/스타일19.png",
+                id : "yummy_3",
+                style : "정장룩",
+                like_num : "219",
+                comment : "159"
+            }, {
+                url : "img/community/스타일20.png",
+                id : "jerry_01",
+                style : "놈코어룩",
+                like_num : "211",
+                comment : "143"
+            }, {
+                url : "img/community/스타일21.png",
+                id : "hannaprincess",
+                style : "캐주얼룩",
+                like_num : "341",
+                comment : "198"
+            }, {
+                url : "img/community/스타일23.png",
+                id : "forever_young",
+                style : "댄디룩",
+                like_num : "290",
+                comment : "117"
+            }, {
+                url : "img/community/스타일22.png",
+                id : "teddy_bear",
+                style : "캐주얼룩",
+                like_num : "259",
+                comment : "147"
+            }];
+
+            function shuffle_post(){
+                let start = 0
+                const $blog_left_sidebar = $(".blog_left_sidebar")
+                $blog_left_sidebar.empty();
+
+                shuffle(data_list)
+                while(!(start >= data_list.length)){
+                    const temp_data_list = data_list.slice(start, start + 3)
+                    const  $blog_container = $("<div class = 'blog_container'></div>")
+
+                    for (let temp_data of temp_data_list){
+                        $blog_container.append(`
+                        <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="single-community.html"><img class="card-img" src="${temp_data.url}" alt=""></a>
+                                    </div>
+
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="single-community.html">
+                                            <h2>${temp_data.id}</h2>
+                                        </a>
+                                        <p>${temp_data.style}</p>
+                                        <ul class="blog-info-link">
+                                            <li><a href='javascript:void(0);'><i class="far fa-user"></i> 좋아요 ${temp_data.like_num}</a></li>
+                                            <li><a href='javascript:void(0);'><i class="far fa-comments"></i> 댓글 ${temp_data.comment} </a></li>
+                                        </ul>
+                                    </div>
+                                </article>`)
+                    }
+
+                    $blog_left_sidebar.append($blog_container)
+                    start += 3
+                }
+            }
+            (function initialize(){
+                shuffle_post()
+            })()
+
+            $(".search_btn").on("click", () => {
+                shuffle_post()
+            })
+
+            $(".cat-list").on("click", (event) => {
+                const target = event.target
+
+                $(".cat-list p").css("color", "#a2a2a2")
+                $(target).closest("a").children("p").css("color", "#ff7e5f")
+
+                shuffle_post()
+            })
+
+            $(".page-item").on("click", (event) =>{
+                const target = event.target
+
+                $(".page-item").addClass("active")
+                $(target).closest(".page-item").removeClass("active")
+                shuffle_post()
+            })
+        </script>
+        <!-- footer part end-->
+        <!-- jquery plugins here-->
+        <script src="js/jquery-1.12.1.min.js"></script>
+        <!-- popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- magnific js -->
+        <script src="js/jquery.magnific-popup.js"></script>
+        <!-- swiper js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- masonry js -->
+        <script src="js/masonry.pkgd.js"></script>
+        <!-- masonry js -->
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/gijgo.min.js"></script>
+        <!-- contact js -->
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/contact.js"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+    </body>
+
+</html>

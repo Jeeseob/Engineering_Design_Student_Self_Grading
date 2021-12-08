@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="Page_style.css" />
+    <title>Colorcode-결제완료</title>
+    <style>
+        .Content {
+            text-align:center;
+        }
+
+        #CheckMark {
+            margin-top:12px;
+            margin-left:24px;
+        }
+
+        .HomeBtn {
+            text-align:center;
+        }
+        #GoHome {
+            transition: 300ms;
+            cursor: pointer;
+            width: 200px;
+            height: 80px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            transition: 300ms;
+            margin-top: 5%;
+            background-color: rgb(193, 218, 240);
+            font-size: 20px;
+        }
+        #GoHome:hover {
+            border:1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <section class="main_nav">
+        <div class="Logo" onclick="location.href = 'main.html'">Colorcode</div>
+        <div class="Words">사진 하나로 자유롭게 벽지를 바꾸자!</div>
+    </section>
+    <section>
+        <div class="Content">
+            <img id="CheckMark" src="img/source/CheckMark.png" width="480" height="260" />
+            <h1>결제가 완료되었습니다</h1>
+            <h4>구매해주셔서 감사합니다</h4>
+        </div>
+        <div class="HomeBtn">
+            <button id="GoHome" type="button" onclick="location.href = 'main.html'">
+                홈으로 가기
+            </button>
+        </div>
+    </section>
+    
+</body>
+</html>

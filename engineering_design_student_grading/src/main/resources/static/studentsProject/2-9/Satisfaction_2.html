@@ -1,0 +1,342 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS shop</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 100%;
+            background: white;
+            position: fixed;
+            font-weight: bold;
+            font-size: 15pt;
+            height: 50px;
+            padding-top: 10px;
+        }
+
+            .nav > div {
+                float: right;
+            }
+
+            .nav > ul {
+                float: left;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .nav > ul > li {
+                    display: inline-block;
+                    padding: 0;
+                }
+
+            .nav a {
+                display: block;
+                text-decoration: none;
+                padding: 10px 20px;
+                color: black;
+            }
+
+                .nav a:hover {
+                    background: white;
+                }
+
+        .img {
+            display: block;
+            margin: auto;
+        }
+        .minibox{
+             width: 1300px;
+            height: 500px;
+            border: 1px solid black;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-left: 50px;
+        }
+        .box {
+            width: 75%;
+            height: 800px;
+            border: 1px solid black;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-left: 270px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        .picture {
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-left: 90px;
+        }
+
+        #content {
+            width: 100%;
+            background-color: white;
+            float: right;
+            height: 1000px;
+            color: black;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .form {
+            font-size: 15px;
+        }
+
+        .cs {
+            padding-right: 150px;
+        }
+
+        .name {
+            padding-left: 35px;
+            padding-top: 0px;
+            font-size: 50px;
+            width: 140px;
+            height: 80px;
+            font-weight: bold;
+        }
+
+        .privacy {
+            padding-left: 300px;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+        #footer {
+            background-color: black;
+            height: 300px;
+            clear: both;
+            color: white;
+        }
+
+        .ftcolor {
+            color: gray;
+        }
+
+        table {
+            width: 100%;
+            padding: 10px 0;
+            border-collapse: collapse;
+        }
+
+            table th {
+                text-align: center;
+                font-weight: 300;
+                color: #fff;
+                padding: 5px 0;
+                background-color: #808080;
+            }
+
+            table td {
+                text-align: center;
+                padding: 5px 0;
+                border-bottom: 1px solid #B5B5B5;
+            }
+
+        .page {
+            text-align: center;
+            width: 100%;
+        }
+
+        .pagination {
+            list-style: none;
+            display: inline-block;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+            .pagination li {
+                display: inline;
+                text-align: center;
+            }
+
+        //숫자 스타일
+        .pagination a {
+            float: left;
+            display: block;
+            font-size: 14px;
+            color: #96a0ad;
+            line-height: 1.5;
+        }
+
+        .first {
+            margin-right: 15px;
+        }
+
+        .last {
+            margin-left: 15px;
+        }
+
+            .first:hover, .last:hover, .right:hover {
+                color: #2e9cdf;
+            }
+
+        .pagination a.active {
+            cursor: default;
+            color: #ffffff;
+        }
+
+        .pagination a:active {
+            outline: none;
+        }
+
+        .modal .num {
+            margin-left: 3px;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            -moz-border-radius: 100%;
+            -webkit-border-radius: 100%;
+            border-radius: 100%;
+        }
+
+            .modal .num:hover {
+                background-color: #2e9cdf;
+                color: #ffffff;
+            }
+
+            .modal .num.active, .modal .num:active {
+                background-color: #2e9cdf;
+                cursor: pointer;
+            }
+        .writer{
+          margin-left=1400px;
+        }
+        .arrow-left {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="nav" style="top: 0px;">
+            <ul>
+                <li><a href="about_2.html">ABOUT</a></li>
+                <li><a href="Shop_2.html">SHOP</a></li>
+                <li><a href="Community_2.html">COMMUNITY</a></li>
+                <li><a href="survey_2.html">SURVEY</a></li>
+            </ul>
+
+            <div><a href="main.html">로그아웃</a></div>
+            <div><a href="Cart_2.html">CART</a></div>
+            <div><a href="MyPage_2.html">MY PAGE</a></div>
+            <div><a href="MyPage_2.html">홍길동</a></div>
+            <a href="main_2.html">
+                <center>
+                    <div>
+                        <img src=CS.png
+                             width="150" height="50" style="padding-right : 150px">
+                    </div>
+                </center>
+            </a>
+        </nav>     
+        
+                   <div id="content">
+            <h2 style="margin: 50px 60px 0px 0px; ">Review</h2>
+            <div class="box" style="padding: 10px 10px 10px 10px;">
+                <form action="proc_form.jsp" style="margin-right:80px;">
+                    <div class="star-ratings">
+	<div style="padding-right: 55px;">
+		<span>★</span><span>★</span><span>☆</span><span>☆</span><span>☆</span>
+	</div>
+</div>
+                    <div style="padding-left: 1230px; font-size: 15px;"> 작성자: 장현호</div>
+                </form><br /><br />              
+                <form style="float: left; padding-left: 50px;">
+                    제목:
+                    <label for="male">데님 청자켓 상품 XXL 사이즈가 맞지 않습니다.</label>                  
+                </form> <br /><br />
+                <form style="float: left;">
+                    <div class="minibox"> 
+                        본문: 데님 청자켓 상품 XXL사이즈를 입어 봤는데 사이즈가 맞지 않습니다.
+                               불편합니다.                   
+                    </div>
+                <div style="padding-left: 1100px;">
+                    2021-11-26 15:22:45
+                </div>
+                </form> <br /><br /><br />
+            </div>
+
+            <button class="button" onClick="location.href='Community_2.html'"> 돌아가기 </button>
+
+        </div>
+    </div>
+    <div id="footer">
+        <div class="name" style="float: left;">
+            <div><h2>CS</h2></div>
+        </div>
+        <div class="privacy" style="float: left;">
+            <h2>CS Center</h2><br>
+            <div class="ftcolor">
+                02- 2238-3804<br>
+                평일 AM 10:00- PM 4:00<br>
+                점심 PM 1:00- PM 2:00<br>
+                휴무 주말&공휴일 휴무
+            </div>
+
+
+        </div>
+        <div class="privacy" style="float: left;">
+            <h2>Bank Info</h2>
+            <div class="ftcolor">
+                상명은행 123-45678-90123<br>
+                CS은행 454645-01-123123<br>
+                예금주 : 공설입<br><br>
+            </div>
+
+            <strong>배송안내</strong><br><br>
+            <div class="ftcolor">
+                CS택배 1234-1234
+            </div>
+        </div>
+
+        <div class="privacy" style="float: left;">
+            <h2>Company Info</h2><br>
+            <div class="ftcolor">
+                CS SHOP | 대표자 상명대<br>
+                주소 : 서울캠퍼스 (03016) 서울시 종로구 홍지문 2길 10 상명대학교 <br>
+                사업자등록번호 : 없음
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

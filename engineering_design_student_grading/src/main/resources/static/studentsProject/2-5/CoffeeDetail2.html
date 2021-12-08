@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>main</title>
+
+    <style>
+        body {
+            background-color: #25274d;
+        }
+
+        con1 {
+        }
+
+        .newsletter {
+            padding: 30px 0;
+            background: #25274d;
+        }
+
+            .newsletter .content {
+                max-width: 650px;
+                margin: 0 auto;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+
+                .newsletter .content h2 {
+                    color: #ff9b00;
+                    margin-bottom: 40px;
+                }
+
+                .newsletter .content .form-control {
+                    height: 50px;
+                    border-color: #ffffff;
+                    border-radius: inherit;
+                }
+
+                    .newsletter .content.form-control:focus {
+                        box-shadow: none;
+                        border: 2px solid #243c4f;
+                    }
+
+                .newsletter .content .btn {
+                    min-height: 50px;
+                    border-radius: 0;
+                    background: #ff9b00;
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+        #target1 {
+            margin: 3px;
+            padding: 10px;
+            background-color: #ff9b00;
+            border: 1px solid black;
+        }
+
+        #nav {
+            width: 39%;
+            background-color: #ff9b00;
+            height: 650px;
+            float: left;
+            border: 1px solid black;
+        }
+
+        #content {
+            width: 60.5%;
+            float: right;
+            height: 650px;
+            background-color: #ff9b00;
+            float: right;
+            border: 1px solid black;
+        }
+
+        p.date {
+            text-align: right;
+            color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="content">
+                        <h2>CO.IN map</h2>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="주소 혹은 이름을 입력하세요">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit" onclick="alert('검색되었습니다.')">검색</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p id="target1">
+        <b>어디에 가려고 하시나요?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <button onclick="location.href = 'main_coffee.html'"> 커피/디저트 </button>
+        <button onclick="location.href = 'main_restaurant.html'"> 식당 </button>
+        <button onclick="location.href = 'main_hotel.html'"> 숙소 </button>
+        <button onclick="location.href = 'main_scene.html'"> 자연 명소 </button>
+        <button onclick="location.href = 'main_medi.html'"> 병원/약국 </button>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주변에 가볼 만한 곳을 추천받고 싶다면?</a><a href="회원가입.html" class="button">회원가입</a>
+
+
+
+
+
+
+
+    </p>
+    <div id="nav">
+        <h1>&nbsp;Information</h1>
+
+        <p><h1>&nbsp;2. 자문밖커피문</h1></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서울 종로구 부암동 185-5</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10:00~22:00</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel)02-394-0534</h3></p>
+        <hr />
+        <p><h2>&nbsp;좌석 현황</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4인석 -- 6석</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2인석 -- 0석</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자유(1인) -- 1석</h3></p>
+        <hr />
+        <input type='button'
+               value='4인석 예약'
+               onclick='alert("4인석 예약되었습니다.")' />
+        <input type='button'
+               value='2인석 예약'
+               onclick='alert("남아있는 2인석이 없습니다.")' />
+        <input type='button'
+               value='1인석 예약'
+               onclick='alert("1인석 예약되었습니다.")' />
+
+    </div>
+    <div id="content">
+        <h1>&nbsp;교통 정보</h1>
+        <p><h2>&nbsp;버스</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7016 (1분 후, 잔여 좌석 4) -- 30분</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1711 (5분 후, 잔여 좌석 9) -- 34분</h3></p>
+        <p><h2>&nbsp;택시</h2></p>
+        <p>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;택시비 9200원(정체) -- 22분</h3><input type='button'
+                                                                          value='콜택시 예약'
+                                                                          onclick='alert("택시 예약 완료되었습니다.")' />
+        </p>
+        <hr />
+        <p><h2>&nbsp;메뉴</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아메리카노 -- 3.0</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;에스프레소 -- 3.0</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;카페라뗴 -- 4.0</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;캬라멜마끼아또 -- 4.8</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;라떼(초코,그린티) -- 4.0</h3></p>
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>

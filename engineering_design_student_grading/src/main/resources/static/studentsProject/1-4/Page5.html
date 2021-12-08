@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colorcode-벽지구매</title>
+    <link type="text/css" rel="stylesheet" href="Page_style.css" />
+    <style>
+        table.Purchase {
+            width: 70%;
+            border-collapse: collapse;
+            background-color: white;
+            border: 2px solid #2D2D2D;
+        }
+        td.Purchase, tr.Purchase {
+            text-align:center;
+        }
+        td.Purchase {
+            padding: 10px;
+        }
+        .WallpaperImage {
+            padding: 4px 4px 0px 4px;
+        }
+        td.indiv_cost {
+            width:100px;
+        }
+
+        table.Cost {
+            width: 30%;
+            margin: 5% auto auto auto;
+        }
+        td.TotalPay {
+            padding-top: 10px;
+            font-size: 18px;
+        }
+
+        .Body_Btn {
+            display: flex;
+            flex-direction: column;
+            align-items:end;
+        }
+        #BuyNow {
+            transition: 300ms;
+            cursor: pointer;
+            width: 200px;
+            height: 80px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            transition: 300ms;
+            margin-right: 15%;
+            margin-bottom: 10%;
+            background-color: rgb(193, 218, 240);
+            font-size: 20px;
+        }
+        #BuyNow:hover {
+            border: 1px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <section class="main_nav">
+        <div class="Logo" onclick="location.href = 'main.html'">Colorcode</div>
+        <div class="Words">사진 하나로 자유롭게 벽지를 바꾸자!</div>
+    </section>
+
+    <section>
+        <table class="Purchase" border="0" align="center">
+            <!--Gray-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/gray.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Gray] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Gray (#CDC6B4)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="gray_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="gray_cost">\0</a></td>
+            </tr>
+
+            <!--Dark Grey-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/darkgrey.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Dark Grey] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: DarkGrey (#616066)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="darkgrey_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="darkgrey_cost">\0</a></td>
+            </tr>
+
+            <!--Ash Sky Blue-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/ashskyblue.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Ash Sky Blue] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: AshSkyBlue (#8BBAB4)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="ashskyblue_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="ashskyblue_cost">\0</a></td>
+            </tr>
+
+            <!--Light Grey-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/lightgrey.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Light Grey] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: LightGrey (#DCD9C6)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="lightgrey_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="lightgrey_cost">\0</a></td>
+            </tr>
+
+            <!--Beige-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/beige.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Beige] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Beige (#DDD6BC)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="beige_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="beige_cost">\0</a></td>
+            </tr>
+
+            <!--Indigo-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/indigo.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Indigo] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Indigo (#000093)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="indigo_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="indigo_cost">\0</a></td>
+            </tr>
+
+            <!--Red-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/red.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Red] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Red (#DB3838)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="red_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="red_cost">\0</a></td>
+            </tr>
+
+            <!--Rose Ash Light-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/roseashlight.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Rose Ash Light] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Rose Ash Light (#DB3838)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="roseashlight_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="roseashlight_cost">\0</a></td>
+            </tr>
+
+            <!--Khaki-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/khaki.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Khaki] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Khaki (#6E8781)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="khaki_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="khaki_cost">\0</a></td>
+            </tr>
+
+            <!--Grey-->
+            <tr>
+                <td class="WallpaperImage" rowspan="2" width="10%"><img src="img/source/grey.jpg" width="120" height="90" /> </td>
+                <td colspan="4">[Grey] 벽지 1m</td>
+            </tr>
+            <tr>
+                <td text-align: center>색상: Grey (#6E8781)</td>
+                <td>벽높이: 230cm</td>
+                <td><input id="grey_input" type="number" name="number" min="0" max="100" step="1" /> 개</td>
+                <td class="indiv_cost"><a id="grey_cost">\0</a></td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <table class="Cost" border="0" align="center">
+            <tr>
+                <td align="left">총 상품금액</td>
+                <td align="right"><a id="total_goods">0</a> 원</td>
+            </tr>
+
+            <tr>
+                <td align="left">총 배송비</td>
+                <td align="right">+ 15000 원</td>
+            </tr>
+
+            <tr>
+                <td align="left">총 할인금액</td>
+                <td align="right">- 5000 원</td>
+            </tr>
+
+            <tr>
+                <td class="TotalPay" align="left"><b>결제금액</b></td>
+                <td class="TotalPay" align="right"><b><a id="total_pay">0</a> 원</b></td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="Body_Btn">
+        <button id="BuyNow" type="button" onclick="location.href = 'Page6.html'">
+            바로구매
+        </button>
+    </section>
+</body>
+</html>
+
+<script type="text/javascript">
+    document.getElementById("gray_input").addEventListener("keyup", Gray);
+    document.getElementById("darkgrey_input").addEventListener("keyup", DarkGrey);
+    document.getElementById("ashskyblue_input").addEventListener("keyup", AshSkyBlue);
+    document.getElementById("lightgrey_input").addEventListener("keyup", LightGrey);
+    document.getElementById("beige_input").addEventListener("keyup", Beige);
+    document.getElementById("indigo_input").addEventListener("keyup", Indigo);
+    document.getElementById("red_input").addEventListener("keyup", Red);
+    document.getElementById("roseashlight_input").addEventListener("keyup", RoseAshLight);
+    document.getElementById("khaki_input").addEventListener("keyup", Khaki);
+    document.getElementById("grey_input").addEventListener("keyup", Grey);
+
+    var _CDC6B4 = 0; var _616066 = 0; // Living room
+    var _8BBAB4 = 0; var _DCD9C6 = 0; // Kitchen
+    var _DDD6BC = 0; var _000093 = 0; // Room1
+    var _DB3838 = 0; var _D9BEB5 = 0; // Room2
+    var _6E8781 = 0; var _C0B9AC = 0; // Library
+    
+    function Gray() {
+        var elementValue = document.getElementById("gray_input").value;
+        _CDC6B4 = (elementValue * 2800);
+        document.getElementById("gray_cost").innerText = "\\" + _CDC6B4;
+        UpdateTotal();
+    }
+    function DarkGrey() {
+        var elementValue = document.getElementById("darkgrey_input").value;
+        _616066 = (elementValue * 3300);
+        document.getElementById("darkgrey_cost").innerText = "\\" + _616066;
+        UpdateTotal();
+    }
+    function AshSkyBlue() {
+        var elementValue = document.getElementById("ashskyblue_input").value;
+        _8BBAB4 = (elementValue * 3050);
+        document.getElementById("ashskyblue_cost").innerText = "\\" + _8BBAB4;
+        UpdateTotal();
+    }
+    function LightGrey() {
+        var elementValue = document.getElementById("lightgrey_input").value;
+        _DCD9C6 = (elementValue * 2950);
+        document.getElementById("lightgrey_cost").innerText = "\\" + _DCD9C6;
+        UpdateTotal();
+    }
+    function Beige() {
+        var elementValue = document.getElementById("beige_input").value;
+        _DDD6BC = (elementValue * 2500);
+        document.getElementById("beige_cost").innerText = "\\" + _DDD6BC;
+        UpdateTotal();
+    }
+    function Indigo() {
+        var elementValue = document.getElementById("indigo_input").value;
+        _000093 = (elementValue * 3000);
+        document.getElementById("indigo_cost").innerText = "\\" + _000093;
+        UpdateTotal();
+    }
+    function Red() {
+        var elementValue = document.getElementById("red_input").value;
+        _DB3838 = (elementValue * 2800);
+        document.getElementById("red_cost").innerText = "\\" + _DB3838;
+        UpdateTotal();
+    }
+    function RoseAshLight() {
+        var elementValue = document.getElementById("roseashlight_input").value;
+        _D9BEB5 = (elementValue * 3000);
+        document.getElementById("roseashlight_cost").innerText = "\\" + _D9BEB5;
+        UpdateTotal();
+    }
+    function Khaki() {
+        var elementValue = document.getElementById("khaki_input").value;
+        _6E8781 = (elementValue * 2850);
+        document.getElementById("khaki_cost").innerText = "\\" + _6E8781;
+        UpdateTotal();
+    }
+    function Grey() {
+        var elementValue = document.getElementById("grey_input").value;
+        _C0B9AC = (elementValue * 2700);
+        document.getElementById("grey_cost").innerText = "\\" + _C0B9AC;
+        UpdateTotal();
+    }
+
+    var T_goods = 0;
+    var T_cost = 10000;
+
+    // Total Cost
+    function TotalGoods() {
+        return _CDC6B4 + _616066 + _8BBAB4 + _DCD9C6 + _DDD6BC + _000093 + _DB3838 + _D9BEB5 + _6E8781 + _C0B9AC;
+    }
+    function TotalCost(t_goods) {
+        return t_goods + 10000;
+    }
+
+    // Update Total values
+    function UpdateTotal() {
+        T_goods = TotalGoods();
+        document.getElementById("total_goods").innerText = T_goods;
+        T_cost = TotalCost(T_goods);
+        document.getElementById("total_pay").innerText = T_cost;
+    }
+
+</script>

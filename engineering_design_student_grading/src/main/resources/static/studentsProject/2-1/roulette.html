@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Roulette</title>
+    <link type="text/css" rel="stylesheet" href="css/roulette.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Gowun Dodum', sans-serif;
+      }
+    </style>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script defer src="js/roulette.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <img src="logo.png" style="float:left;" width="60" height="60">
+            <a class="header" aria-current="page" href="main.html">할일 은행</a>
+            <div class="btnGroup" style="margin-left: auto;">
+                <a class="chkBtn" type="button" onclick="location.href='login.html'">로그인</a>
+            </div>
+        </nav>
+        <div class="content">
+            <h2 style="text-align: center; font-weight: bold;">룰렛을 돌려보세요!</h2>
+            <div id="wrap">
+                <div id="gameContainer">
+                    <div class="board_start join">시작 버튼</div>
+                    <div class="board_on obj"></div>
+                </div>
+                <div id="popup_gift" class="popup">
+                    <div class="lottery_present"></div>
+                    <a href="javascript:;" class="close">닫기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

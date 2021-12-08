@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>사용자 진단 결과 및 병원정보 페이지</title>
+
+  <!-- 부트스트랩 기본 css-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="bootstrap2/assets/favicon.ico" />
+  <!-- Bootstrap Icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+    rel="stylesheet" type="text/css" />
+  <!-- SimpleLightbox plugin CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="bootstrap2/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Headerbar -->
+  <header class="row p-2 bg-dark text-white">
+    <!-- 메뉴 아이콘 및 목록 -->
+    <div class="col-sm-5 align-content-start container">
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <h4 class="bi bi-list mt-1"></h4>
+      </a>
+  
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset col-md-4 col-md-offset-11" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <ul>
+          <h4><a href="https://www.naver.com" class="nav-link px-2 text-secondary">병원 검색하기</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="/views/UserDiagnosis.html" class="nav-link px-2 text-secondary">진단 해보기</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="/views/All_Symptom.html" class="nav-link px-2 text-secondary">모든 증상</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="https://www.safekorea.go.kr/idsiSFK/neo/sfk/cs/contents/prevent/SDIJK14433.html?cd1=33&cd2=99&pagecd=SDIJK144.33&menuSeq=128" class="nav-link px-2 text-secondary">응급 상황</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="/views/Introduction.html" class="nav-link px-2 text-secondary">서비스 소개</a></h4>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- 로고 -->
+    <div class="col-sm-5 align-content-center">
+      <a href="/views/Main.html">
+        <img src="/assets/logo.png" width="100"></img>
+      </a>
+    </div>
+  
+    <!-- 장애인 음성 인식 아이콘 -->
+    <div class="col-sm-1 align-content-end">
+      <p>
+        <button type="button" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill"
+            viewBox="0 0 16 16">
+            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"></path>
+            <path
+              d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z">
+            </path>
+          </svg>
+        </button>
+      </p>
+    </div>
+  
+    <!-- 언어 선택 버튼 -->
+    <div class="col-sm-1 align-content-end dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        언어선택
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">한국어</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">中國語</a></li>
+        <li><a class="dropdown-item" href="#">español</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ***************************************************************************************** -->
+
+  <div class="back">
+    <div class="container-fluid ms-5">
+      <h4 class="mt-5">환자분의 증상을 토대로 의심되는 병명을 찾았습니다. 추가로 해당 병명 병원들을 찾아드렸습니다.</h4>
+      </br>
+
+      <!-- 병명 목록 -->
+      <h1 class="mt-5 mb-0">의심 병명 목록</h1>
+      <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+      <h3><strong>간염(급성)</strong></h3>
+      <h5 class="text-muted mb-3">: 
+        간염은 간질환의 가장 큰 원인으로 간세포가 파괴되어 간에 염증을 일으키는 질병입니다. 질병의 원인, 증상에 따라서 급성간염과 만성간염으로 나뉘며, 급성간염은 대부분 바이러스의 감염으로 발병되며 6개월 이하
+        만성간염은 간염 급성기 발병 후 6개월 이상 지속되는 경우를 말합니다.
+      </h5>
+      <h3><strong>간세포성 암종</strong></h3>
+      <h5 class="text-muted mb-3">: 
+        간에서 발생하는 악성 종양의 약 90%는 간세포암이고, 약 10%는 담관세포암이며, 그 외 아주 일부가 기타 암입니다. 간세포암이 가장 흔하므로 흔히 '간암'이라고 하면 간세포암을 지칭합니다.
+        간암은 특히 우리나라와 일본, 동남아시아나 중국, 아프리카 등지에서 많이 발생합니다.</br> 간암은 우리나라 남성의 암 사망 원인 중 3위를 차지하며, 특히 40~50대 남성의 암 사망 원인 중 1위를 차지합니다.</h5>
+      <h3><strong>간농양</strong></h3>
+      <h5 class="text-muted mb-3">: 
+        간농양이란 세균이나 기생충이 간에서 증식하여 농양을 형성하여 질병을 일으키는 것을 말합니다.</h5>
+      <h3><strong>복막염(결핵성)</strong></h3>
+      <h5 class="text-muted mb-3">: 체내의 복강 및 복강 내 장기를 덮고 있는 얇은 막을 복막이라고 하는데 복막염이란 이곳에 염증이 생긴 것을 말합니다. 주로 복강 속에 장액, 섬유소, 세포, 고름 등이 고여서 생기며, 경과에 따라 급성 또는 만성으로 나눌 수 있고, 복부 전체 또는 부분적으로 나타날 수 있습니다.</h5>
+      <h3><strong>급성 담낭염</strong></h3>
+      <h5 class="text-muted mb-3">: 급성 담낭염은 담석, 종양 혹은 담낭의 기능 이상 등으로 인해 담낭관이 부분적이거나 완전히 좁아지면서 담낭 내에 기계적, 화학적 또는 세균성 염증이 발생한 질환을 의미합니다.</h5>
+      <h3><strong>위장 장애</strong></h3>
+      <h5 class="text-muted mb-3">: 기능성 위장 장애는 특별한 원인 없이 소화불량, 속 쓰림, 더부룩함, 구토, 부글거림 등 여러 가지 위장관 증상이 3개월 이상 지속되는 만성 질환을 의미합니다</h5>
+      <h3><strong>최장염</strong></h3>
+      <h5 class="text-muted mb-3">: 췌장염은 췌장 효소(주로 트립신)에 의해 췌장 분비샘이 파괴되거나 췌장에 국소적 혹은 전체적으로 염증이 발생하는 질환을 의미합니다. 췌장염은 급성과 만성 췌장염으로 구분할 수 있습니다. 급성 췌장염은 췌장에 급성 염증이 생기지만 회복 후 췌장이 정상 기능으로 돌아올 수 있는 경우입니다.</br> 만성 췌장염은 췌장의 염증이 계속 반복되면서 비가역적으로 췌장의 외분비 및 내분비 기능에 장애가 초래되는 경우입니다.</h5>
+
+
+
+    <!-- 병원 추천 -->
+    <h1 class="mt-5 mb-0">병원 추천</h1>
+    <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+    <div class="row container ps-0 mb-5 pb-3">
+      <div class="col-2">
+        <h4 class="col"><strong>종로 내,외과 병원</strong></h4>
+      </div> 
+      <div class="col-3">
+        <h6>주소 : 서울특별시 종로구 20</h6>
+        <h6>전화번호 : 02-2222-5114</h6>
+        <h6>운영시간: 평일 9:00 ~ 18:00 점심시간 12:00 ~ 13:00</h6> 
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-xl" href="/views/Appointment.html">예약하기</a>
+      </div>
+    </div>
+    <div class="row container ps-0 mb-5 pb-3">
+      <div class="col-2">
+        <h4 class="col"><strong>상명 대학교 병원</strong></h4>  
+      </div> 
+      <div class="col-3">
+        <h6>주소 : 서울특별시 종로구 홍지문2길</h6>
+        <h6>전화번호 : 02-1111-5114</h6>
+        <h6>운영시간: 평일 9:00 ~ 18:00 점심시간 12:00 ~ 13:00 주말 휴일</h6> 
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-xl" href="/views/Appointment.html">예약하기</a>
+      </div>
+    </div>
+    <div class="row container ps-0 mb-5 pb-3">
+      <div class="col-2">
+        <h4 class="col"><strong>홍지문 병원</strong></h4> 
+      </div> 
+      <div class="col-3">
+        <h6>주소 : 서울특별시 종로구 홍지문2길 120</h6>
+        <h6>전화번호 : 02-3333-5114</h6>
+        <h6>운영시간: 평일 9:00 ~ 18:00 주말 10:00 ~ 15:00 점심시간 12:00 ~ 13:00</h6> 
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-xl" href="/views/Appointment.html">예약하기</a>
+      </div>
+    </div>
+    <div class="row container ps-0 mb-5 pb-3">
+      <div class="col-2">
+        <h4 class="col"><strong>쌍화차 내,외과 병원</strong></h4> 
+      </div> 
+      <div class="col-3">
+        <h6>주소 : 서울특별시 종로구 쌍지문3길 20</h6>
+        <h6>전화번호 : 02-3333-5114</h6>
+        <h6>운영시간: 평일 9:00 ~ 18:00 주말 10:00 ~ 15:00 점심시간 12:00 ~ 13:00</h6> 
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-xl" href="/views/Appointment.html">예약하기</a>
+      </div>
+    </div>
+    <div class="row container ps-0 mb-5 pb-3">
+      <div class="col-2">
+        <h4 class="col"><strong>명의 내,외과 병원</strong></h4>  
+      </div> 
+      <div class="col-3">
+        <h6>주소 : 서울특별시 종로구 12길 13</h6>
+        <h6>전화번호 : 02-3333-5114</h6>
+        <h6>운영시간: 평일 9:00 ~ 18:00 주말 10:00 ~ 15:00 점심시간 12:00 ~ 13:00</h6> 
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-xl" href="/views/Appointment.html">예약하기</a>
+      </div>
+    </div>
+    <div class="row container ps-0 mb-5 pb-3">
+      <div class="col-2">
+        <h4 class="col"><strong>자하문 종합 병원</strong></h4>  
+      </div> 
+      <div class="col-3">
+        <h6>주소 : 서울특별시 종로구 자하문2길 10</h6>
+        <h6>전화번호 : 02-3333-5114</h6>
+        <h6>운영시간: 평일 9:00 ~ 18:00 주말 10:00 ~ 15:00 점심시간 12:00 ~ 13:00</h6> 
+      </div>
+      <div class="col">
+        <a class="btn btn-primary btn-xl" href="/views/Appointment.html">예약하기</a>
+      </div>
+    </div>
+
+  <!-- ************************************************************ -->
+  <!-- Footer-->
+  <footer class="bg-light py-4">
+    <div class="container px-4 px-lg-5">
+      <div class="small text-center text-muted">DANTA (2-3)</div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SimpleLightbox plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+</body>
+</html>

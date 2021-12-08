@@ -1,0 +1,40 @@
+﻿/*공통적으로 적용되는 css 코드는 여기에 적어놓음*/
+
+section {
+    position: relative;
+    margin: 0px auto 80px auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+body {
+    background-color: #FFFAF0;
+}
+
+.main_nav {
+    display:flex;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #9D9067;
+    margin-top:30px;
+    margin-bottom: 35px;
+    color: #9D9067;
+}
+
+.Logo {
+    font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+}
+    .Logo:hover {
+        cursor:pointer;
+    }
+
+.Words {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:300;
+    font-size:14px;
+    text-align:start;
+
+    margin-left:12px;
+    margin-top:18px;
+}

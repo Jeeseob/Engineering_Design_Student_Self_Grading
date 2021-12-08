@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+        .jg {
+            font-family: 'Jeju Gothic', sans-serif;
+            font-size: 1.8rem;
+        }
+        .ng {
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 1.8rem;
+        }
+        .ns {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.8rem;
+        }
+
+        #t_btn_control, #d_btn_control, #w_btn_control, #share_btn {
+            background: #FFFFFF;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+            #t_btn_control.active, #d_btn_control.active, #w_btn_control.active {
+                background: #045FB4;
+                outline: 0;
+                color: white;
+            }
+
+        #layerPop {
+            position: absolute;
+            border: 4px solid #5a8080;
+            background: #fff;
+            display: none;
+            z-index: 5;
+            /*z-index: 100;*/
+        }
+
+            #layerPop .close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+
+        #deemed, #dim_bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: opacity(50%);
+            opacity: 0.5;
+            background: #000;
+            z-index: 1;
+        }
+
+        #tu_ment {
+            position: fixed;
+            top: 200px;
+            left: 300px;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: white;
+            line-height: 180%;
+        }
+
+/*        #tu_ment {
+            position: fixed;
+            top: 200px;
+            left: 300px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+
+            border-style: solid;
+            border-width: 0 0 0 8px;
+            padding: 12px;
+            word-break: break-all;
+            border-color: #5a8080;
+            background-color: #d2d2d0;
+            border-radius: 0 10px 10px 0;
+        }
+            #tu_ment.right {
+                position: fixed;
+                top: 200px;
+                left: 300px;
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 1.5rem;
+                font-weight: 400;
+                border-style: solid;
+
+                border-width: 0 8px 0 0;
+                padding: 12px;
+                word-break: break-all;
+                border-color: #5a8080;
+                background-color: #d2d2d0;
+                border-radius: 10px 0 0 10px;
+            }*/
+
+        #wrap {
+            z-index: 100;
+        }
+
+        #tu_ment_logo {
+            position: fixed;
+            top: 200px;
+            left: 300px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+        #tu_title {
+            position: fixed;
+            top: 10px;
+            left: 850px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-align: center;
+
+            border: 5px solid #5a8080;
+            padding: 0.3em 1em;
+            border-radius: 2px;
+        }
+
+        .dim-layer {
+            /*display: none;*/
+            position: fixed;
+            _position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+        }
+            .dim-layer .tu_div_tab {
+                position: fixed;
+                width: 200px;
+                height: 500px;
+                top: 100px;
+                left: 60px;
+                box-shadow: 0 0 0 100vmax rgba(0,0,0,.6);
+                pointer-events: none;
+
+            }
+
+            .dim-layer .tu_div_logo {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                /*background: rgba(0,0,0,.6);*/
+                pointer-events: none;
+            }
+
+            .dim-layer .tu_div_search {
+                position: fixed;
+                width: 500px;
+                height: 100px;
+                top: 100px;
+                left: 230px;
+                box-shadow: 0 0 0 100vmax rgba(0,0,0,.6);
+                pointer-events: none;
+            }
+
+            .dim-layer .tu_div_r_popup1 {
+                position: fixed;
+                width: 550px;
+                height: 100px;
+                top: 50px;
+                left: 1200px;
+                box-shadow: 0 0 0 100vmax rgba(0,0,0,.6);
+                pointer-events: none;
+            }
+
+            .dim-layer .tu_div_r_popup2 {
+                position: fixed;
+                width: 550px;
+                height: 400px;
+                top: 500px;
+                left: 1200px;
+                box-shadow: 0 0 0 100vmax rgba(0,0,0,.6);
+                pointer-events: none;
+            }
+
+            .dim-layer .tu_div_r_popup3 {
+                position: fixed;
+                width: 550px;
+                height: 400px;
+                top: 100px;
+                left: 1200px;
+                box-shadow: 0 0 0 100vmax rgba(0,0,0,.6);
+                pointer-events: none;
+            }
+
+
+            .dim-layer .pop-layer {
+                display: block;
+            }
+
+        #tu_btn_next {
+            position: fixed;
+            top: 920px;
+            left: 1300px;
+            cursor: pointer;
+            border-radius: 5em;
+            padding: 0.6em 1em;
+            background: #F9F9F9;
+            box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+            margin-left: 5px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #tu_btn_before {
+            position: fixed;
+            top: 920px;
+            left: 500px;
+            cursor: pointer;
+            border-radius: 5em;
+            padding: 0.6em 1em;
+            background: #F9F9F9;
+            box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+            margin-left: 5px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #tu_btn_close {
+            position: fixed;
+            top: 30px;
+            left: 1800px;
+            cursor: pointer;
+            border-radius: 5em;
+            padding: 0.6em 1em;
+            background: #F9F9F9;
+            box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+            margin-left: 5px;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        #wrap_logo {
+            background-color: black;
+            background: rgba(0,0,0,.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div id="img_wrapp">
+
+        <p><img style="padding: 0; top: 0; left: 0; width: 1800px; height: 900px;" src="layout.jpg" id="background_img" alt="배경 이미지" /></p>
+
+    </div>
+
+    <div id="tuu_layer">
+        <div class="dim-layer" id="tu_layer">
+            <div id="tu_div_main" class="tu_div_logo"></div>
+            <div id="layer1" class="pop-layer">
+                <div id="wrap_logo">
+                    <div id="tu_btn_next" style="top: 800px; left: 850px;" onclick="tu_close1('wrap_logo', 'tu_div_main','tu_layer', 'tuu_layer','tuu_layer1')">웹사이트 설명</div>
+                    <p id="logo_img"><img style="padding-top: 150px; padding-left: 650px; width:600px; height:360px;" src="popu_logo.png" id="pre_img" alt="로고 이미지" /></p>
+                    <p id="tu_ment_logo" style="top :600px; left : 400px;"><span style="border-radius: 5px; padding: 0.6em 1em; background: #d2d2d0;">코로나 방역을 위해 현재 인구 밀집도를 알려주고, 미래의 인구 밀집도를 예측하여 알려주는 웹 사이트 입니다.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tuu_layer1" style="visibility: hidden;">
+        <div class="dim-layer" id="tu_layer">
+            <div id="tu_div_main" class="tu_div_search"></div>
+            <div id="layer1" class="pop-layer">
+                <div id="wrap">
+                    <div id="tu_btn_next" onclick="tu_next('tu_div_main','tu_ment','tu_title', 'tu_btn_close', 'tu_btn_next', 'tu_btn_before')">다음</div>
+                    <p id="tu_title">검색 설명</p>
+                    <p id="tu_ment">검색창에서 원하는 지역을 검색 할 수 있습니다.</p>
+                    <div id="tu_btn_before" style="visibility: hidden;" onclick="tu_before('tu_div_main','tu_ment','tu_title','tu_btn_close', 'tu_btn_next', 'tu_btn_before')">이전</div>
+                    <div id="tu_btn_close" style="visibility: hidden;" onclick="tu_close('wrap', 'tu_div_main','tu_layer', 'tuu_layer1')" class="close">닫기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="share_wrap">
+        <div id="share_btn" class="t_btn_control" onclick="openLayer('layerPop', 450, 400)">공유</div>
+        <div id="layerPop">
+            <div id="close_btn" onclick="closeLayer('layerPop')" class="close">닫기</div>
+            <p id="share_img"><img style="padding-top: 30px; padding-left: 5px; padding-right: 5px; width: 350px;" src="share_img.jpg" id="share_img" alt="공유 이미지" /></p>
+        </div>
+    </div>
+
+
+    <script>
+        function dEI(elementID) {
+            return document.getElementById(elementID);
+        }
+
+        //레이어 팝업 열기
+        function openLayer(IdName, popupWidth, popupHeight) {
+            var pop = dEI(IdName);
+
+            var popupX = (window.screen.width / 2) - (popupWidth / 2);
+            // 만들 팝업창 width 크기의 1/2 만큼 보정값으로 빼주었음
+            var popupY = (window.screen.height / 3) - (popupHeight / 3);
+            pop.style.top = popupY + "px";
+            pop.style.left = popupX + "px";
+            pop.style.display = "block";
+
+            var wrap = dEI("share_wrap");
+            var reservation = document.createElement("div");
+            reservation.setAttribute("id", "deemed");
+            wrap.appendChild(reservation);
+        }
+
+        //레이어 팝업 닫기
+        function closeLayer(IdName) {
+            var pop = dEI(IdName);
+            pop.style.display = "none";
+            var clearEl = parent.dEI("deemed");
+            var momEl = parent.dEI("share_wrap");
+            momEl.removeChild(clearEl);
+        }
+
+        //튜토 레이어 팝업 닫기
+        function tu_close1(IdName, p1, p2, pp, next) {
+            var pop = dEI(IdName);
+            pop.style.display = "none";
+            var clearEl = parent.dEI(p1);
+            var momEl = parent.dEI(p2);
+            momEl.removeChild(clearEl);
+            var clearEl = parent.dEI(p2);
+            var momEl = parent.dEI(pp);
+            momEl.removeChild(clearEl);
+            var pop = dEI(next);
+            pop.style.visibility = "visible";
+        }
+
+        function tu_close(IdName, p1, p2, pp) {
+            var pop = dEI(IdName);
+            pop.style.display = "none";
+            var clearEl = parent.dEI(p1);
+            var momEl = parent.dEI(p2);
+            momEl.removeChild(clearEl);
+            var clearEl = parent.dEI(p2);
+            var momEl = parent.dEI(pp);
+            momEl.removeChild(clearEl);
+        }
+
+        function tu_next(casee, ment, title, close, next, before) {
+            var state = dEI(casee);
+            var change = dEI(ment);
+            var title_vh = dEI(title);
+            var pop = dEI(ment);
+            var close_btn = dEI(close);
+            var next_btn = dEI(next);
+            var before_btn = dEI(before);
+
+            switch (state.className) {
+
+                case 'tu_div_search':
+                    state.className = "tu_div_tab"
+                    title_vh.innerText = "탭 설명"
+                    change.innerHTML = "5개의 탭이 있습니다.<br><br>현재 인구 밀집도를 보여줍니다.<br><br>거주구역 내의 인구 밀집도를 보여줍니다.<br><br>유흥업소 내의 인구 밀집도를 보여줍니다.<br><br>현재 인구 밀집도가 가장 많은 장소 5곳을 알려줍니다.<br><br>현재 위치를 공유 할 수 있습니다."
+                    pop.style.top = 80 + "px";
+                    pop.style.left = 270 + "px";
+                    pop.style.display = "block";
+                    before_btn.style.visibility = "visible";
+                    break;
+                case 'tu_div_tab':
+                    state.className = "tu_div_r_popup1";
+                    title_vh.innerText = "우측 팝업 설명";
+                    change.innerHTML = "우측 팝업은 접거나,<br>더욱 자세한 도표를 보기 위해 늘릴 수 있습니다.";
+                    change.className = "right";
+                    pop.style.top = 80 + "px";
+                    pop.style.left = 1000 + "px";
+                    pop.style.display = "block";
+                    break;
+                case 'tu_div_r_popup1':
+                    state.className = "tu_div_r_popup2";
+                    change.innerHTML = "아래에는 현재 지도에 표시되는 지역의<br>인구 밀집도를 나타내는 도표를 보여줍니다.";
+                    pop.style.top = 600 + "px";
+                    pop.style.left = 800 + "px";
+                    pop.style.display = "block";
+                    break;
+                case 'tu_div_r_popup2':
+                    title_vh.innerText = "우측 팝업 - 혼잡도 예측";
+                    state.className = "tu_div_r_popup3";
+                    change.innerHTML = "이곳은 미래의 혼잡도를 예측 하여 보여주는 공간입니다.<br>내일, 모레, 주간 버튼을 눌러<br>현재 보고 있는 위치의 미래의 혼잡도를 알 수 있습니다.<br><br>인구 밀집도가 가장 많은 장소 5곳의 탭에서는<br>마커를 클릭하면 그 장소의 미래 혼잡도를 알려줍니다.";
+                    pop.style.top = 500 + "px";
+                    pop.style.left = 1000 + "px";
+                    pop.style.display = "block";
+                    close_btn.style.visibility = "visible";
+                    next_btn.style.visibility = "hidden";
+                    break;
+
+            }
+
+        }
+
+        function tu_before(casee, ment, title, close, next, before) {
+            var state = dEI(casee);
+            var change = dEI(ment);
+            var title_vh = dEI(title);
+            var pop = dEI(ment);
+            var close_btn = dEI(close);
+            var next_btn = dEI(next);
+            var before_btn = dEI(before);
+
+            switch (state.className) {
+
+                case 'tu_div_tab':
+                    state.className = "tu_div_search";
+                    title_vh.innerText = "검색 설명";
+                    change.innerHTML = "검색창에서 원하는 지역을 검색 할 수 있습니다.";
+                    pop.style.top = 200 + "px";
+                    pop.style.left = 300 + "px";
+                    pop.style.display = "block";
+                    before_btn.style.visibility = "hidden";
+                    break;
+                case 'tu_div_r_popup1':
+                    state.className = "tu_div_tab"
+                    title_vh.innerText = "탭 설명"
+                    change.innerHTML = "5개의 탭이 있습니다.<br><br>현재 인구 밀집도를 보여줍니다.<br><br>거주구역 내의 인구 밀집도를 보여줍니다.<br><br>유흥업소 내의 인구 밀집도를 보여줍니다.<br><br>현재 인구 밀집도가 가장 많은 장소 5곳을 알려줍니다.<br><br>현재 위치를 공유 할 수 있습니다."
+                    change.className = "";
+                    pop.style.top = 80 + "px";
+                    pop.style.left = 270 + "px";
+                    pop.style.display = "block";
+                    break;
+                case 'tu_div_r_popup2':
+                    state.className = "tu_div_r_popup1"
+                    title_vh.innerText = "우측 팝업 설명"
+                    change.innerHTML = "우측 팝업은 접거나,<br>더욱 자세한 도표를 보기 위해 늘릴 수 있습니다."
+                    pop.style.top = 80 + "px";
+                    pop.style.left = 1000 + "px";
+                    pop.style.display = "block";
+                    break;
+                case 'tu_div_r_popup3':
+                    state.className = "tu_div_r_popup2"
+                    change.innerHTML = "아래에는 현재 지도에 표시되는 지역의<br>인구 밀집도를 나타내는 도표를 보여줍니다."
+                    pop.style.top = 600 + "px";
+                    pop.style.left = 800 + "px";
+                    pop.style.display = "block";
+                    close_btn.style.visibility = "hidden";
+                    next_btn.style.visibility = "visible";
+                    break;
+
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

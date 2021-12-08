@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Colorcode-결제하기</title>
+    <link type="text/css" rel="stylesheet" href="Page_style.css" />
+    <style>
+        .Info {
+            float: left;
+            padding-bottom:5%;
+            margin-bottom:5%;
+            width: 70%;
+            height: auto;
+            border-right: 1px solid black;
+        }
+        .Cost {
+            float:right;
+            margin:0px 0px 0px 0px;
+            width:27%;
+            height:auto;
+        }
+
+        .InfoType {
+            font-size:20px;
+            font-weight:600;
+            padding:2px 2px 0px 2px;
+        }
+        .subInfoType {
+            font-size:17px;
+            font-weight:600;
+            padding:2px 2px 2px 2px;
+        }
+        .subInfoType > input {
+            margin-left:8px;
+        }
+        .subInfoType > a {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        td.attribute > a {
+            color:red;
+        }
+
+        form {
+            display:inline;
+        }
+
+        table.PayMethod {
+            font-size:16px;
+            border-collapse:collapse;
+            border-color:black;
+            background-color:white;
+        }
+
+        table.CostTable {
+            width: 90%;
+            margin: 10% 0px auto 0px;
+        }
+        td.TotalPay {
+            padding-top: 30px;
+            font-size: 18px;
+        }
+
+        label {
+            vertical-align:middle;
+            line-height:36px;
+        }
+
+
+        #PayNow {
+            transition: 300ms;
+            
+            cursor: pointer;
+            width: 200px;
+            height: 80px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            transition: 300ms;
+            margin-top:150%;
+            background-color: rgb(193, 218, 240);
+            font-size: 20px;
+        }
+
+        #PayNow:hover {
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="main_nav">
+        <div class="Logo" onclick="location.href = 'main.html'">Colorcode</div>
+        <div class="Words">사진 하나로 자유롭게 벽지를 바꾸자!</div>
+    </section>
+
+    <section class="Body">
+        <div class="Info">
+            <p class="InfoType">주문자 정보</p>
+            <table class="OderingInfo" border="0" cellpadding="5">
+                <tr>
+                    <td class="attribute"><a>*</a>이름</td>
+                    <td><input type="text" placeholder="홍길동" required /></td>
+                </tr>
+                <tr>
+                    <td class="attribute"><a>*</a>휴대전화</td>
+                    <td><input type="tel" placeholder="01012345678" required /></td>
+                </tr>
+                <tr>
+                    <td class="attribute">이메일</td>
+                    <td><input type="email" placeholder="colorcode@email.com" /></td>
+                </tr>
+            </table>
+
+            <p class="subInfoType">
+                배송지 정보 <input type="checkbox" name="Identical_info" value="identical"><a>주문자와 동일</a>
+            </p>
+            <p class="InfoType">받는 사람</p>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td class="attribute"><a>*</a>연락처</td>
+                    <td align="right">
+                        <form action="" display="inline">
+                            <select name="front_tel">
+                                <option value="010" selected>010</option>
+                                <option value="02">02</option>
+                                <option value="070">070</option>
+                                <option value="080">080</option>
+                            </select>
+                        </form>
+                    </td>
+                    <td>
+                        <input type="text" size="4" required />
+                        <input type="text" size="4" required />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="attribute" rowspan="2"><a>*</a>주소</td>
+                    <td>
+                        <button type="button"
+                                onclick="window.open('https://www.epost.go.kr/search.RetrieveIntegrationNewZipCdList.comm',
+                                        '주소찾기', 'width=430,height=500,location=no,status=no,scrollbars=yes')">
+                            주소 찾기
+                        </button>
+                    </td>
+                    <td>
+                        <input type="text" size="19" readonly />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="text" size="32" placeholder="상세주소" required /></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><textarea name="comment" rows="3" cols="41" placeholder="배송시 요청사항"></textarea><br></td>
+                </tr>
+            </table>
+
+            <p class="InfoType">결제 수단</p>
+            <form action="proc_form.jsp">
+                <input type="radio" name="payment_mthd" id="card" value="카드">
+                <label for="male" >카드</label><br />
+
+                <input type="radio" name="payment_mthd" id="account" value="계좌이체">
+                <label for="female">계좌이체</label><br />
+
+                <input type="radio" name="payment_mthd" id="Npay" value="네이버페이">
+                <label for="female"><img src="img/source/NPay.jpg" width="70" height="27" /></label><br />
+
+                <input type="radio" name="payment_mthd" id="kakaopay" value="카카오페이">
+                <label for="female"><img src="img/source/KakaoPay.png" width="80" height="30" /></label><br />
+
+                <input type="radio" name="payment_mthd" id="tosspay" value="토스결제">
+                <label for="female"><img src="img/source/TossPay.png" width="70" height="20" /></label><br />
+            </form>
+
+        </div>
+
+        <div class="Cost">
+            <table class="CostTable" border="0" align="center" cellpadding="5" cellspacing="5">
+                <tr>
+                    <td align="left">총 상품금액</td>
+                    <td align="right"><a id="total_goods">115000</a> 원</td>
+                </tr>
+
+                <tr>
+                    <td align="left">총 배송비</td>
+                    <td align="right">+ 15000 원</td>
+                </tr>
+
+                <tr>
+                    <td align="left">총 할인금액</td>
+                    <td align="right">- 5000 원</td>
+                </tr>
+
+                <tr>
+                    <td class="TotalPay" align="left"><b>최종결제금액</b></td>
+                    <td class="TotalPay" align="right"><b><a id="total_pay">125000</a> 원</b></td>
+                </tr>
+            </table>
+
+            <button id="PayNow" type="button" onclick="location.href = 'Page7.html'">
+                결제하기
+            </button>
+        </div>
+    </section>
+</body>
+</html>
+
+<script>
+    // Skip due to export problem
+    /*
+    import { T_goods, T_cost } from 'Page5.html';
+
+    document.getElementById("total_goods").innerText = T_goods;
+    document.getElementById("total_pay").innerText = T_cost;
+    */
+</script>

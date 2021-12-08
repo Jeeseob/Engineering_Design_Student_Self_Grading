@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>코로나 인구 밀집도 </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <div class="dim-layer"> <!--딤처리 미완-->
+        <div class="dimBg"></div>
+        <div id="popup1"> <!--튜토리얼 1-->
+            <TABLE width="250" HEIGHT="0" cellspacing="0" cellpadding="0" align="center" VALIGN="TOP"> <!--창 크기, 글자 정연-->
+                <TR>
+                    <TD style="border-bottom: none"> <!--창안 내용-->
+                        <h2> &nbsp;탭 사용법에 대해서</h2>
+                        <p>
+                            &nbsp;현재 사람들이 어디에
+                            많이 모여 &nbsp;있는지 보여줍니다.
+                        </p>
+                        <p>
+                            &nbsp;지도 상의 거주구역이
+                            어디에 모 &nbsp; &nbsp;여 있는지 보여줍니다.
+                        </p>
+                        <p>
+                            &nbsp;유흥업소가 어디어 많이 모여
+                            있 &nbsp; 는지 보여 줍니다.
+                        </p>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD>
+                        <TABLE cellSpacing=0 cellPadding=0 width="98%" height="0" border=0>
+                            <TBODY>
+                                <TR>
+                                    <TD width=65 height=25 VALIGN="BOTTOM">
+                                        <A onclick="document.all.popup1.style.visibility='hidden';" href="javascript:;" onfocus='this.blur()'> <!--창닫기-->
+                                            <IMG src="close.png" width=30 HEIGHT="30" align="right">
+                                        </A>
+                                    </TD>
+                                </TR>
+                            </TBODY>
+                        </TABLE>
+                    </TD>
+                </TR>
+            </TABLE>
+        </div>
+    </div>
+    <div id="popup2"> <!--튜토리얼 2-->
+        <TABLE width="220" HEIGHT="180" cellspacing="0" cellpadding="0" align="center" VALIGN="TOP"><!--창 크기, 글자 정연-->
+            <TR>
+                <TD style="border-bottom: none; "><!--창안 내용-->
+                    <h2> &nbsp; 버튼을 누르면</h2>
+                    <p>
+                        &nbsp;가까운 미래의 미래예측도와 &nbsp;날씨를
+                        도표와 함께 자세하게 &nbsp;알려드립니다.
+                    </p>
+                </TD>
+            </TR>
+            <TR>
+                <TD>
+                    <TABLE cellSpacing=0 cellPadding=0 width="98%" height=25 border=0>
+                        <TBODY>
+                            <TR>
+                                <TD width=65 height=25 VALIGN="BOTTOM">
+                                    <A onclick="document.all.popup2.style.visibility='hidden';" href="javascript:;" onfocus='this.blur()'><!--창닫기-->
+                                        <IMG src="close.png" width=30 HEIGHT="30" align="right">
+                                    </A>
+                                </TD>
+                            </TR>
+                        </TBODY>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+    <div id="popup3"> <!--튜토리얼 2-->
+        <TABLE width="250" HEIGHT="0" cellspacing="0" cellpadding="0" align="center" VALIGN="TOP"><!--창크기 글자정연-->
+            <TR>
+                <TD style="border-bottom: none; "><!--창안 내용-->
+                    <h2> &nbsp;지도 속 마크</h2>
+                    <p>
+                        &nbsp; 마커를 누르면 상세정보를 알 수 있습니다.
+                    </p>
+                </TD>
+            </TR>
+            <TR>
+                <TD style="PADDING-RIGHT: 10px; border-top: none;" align=right height=35 VALIGN="BOTTOM">
+                    <TABLE cellSpacing=0 cellPadding=0 width="98%" height=25 border=0>
+                        <TBODY>
+                            <TR>
+                                <TD width=65 height=25 VALIGN="BOTTOM">
+                                    <A onclick="document.all.popup3.style.visibility='hidden';" href="javascript:;" onfocus='this.blur()'><!--창닫기-->
+                                        <IMG src="close.png" width=30 HEIGHT="30" align="right">
+                                    </A>
+                                </TD>
+                            </TR>
+                        </TBODY>
+                    </TABLE>
+                </TD>
+            </TR>
+        </TABLE>
+    </div>
+        <div id="header">
+            <div class="vl"></div> <!--해더와날씨를 나누는 선-->
+            <p id="imfor"><strong> 서울<br />기온: 15C</strong></p> <!--기온 설명-->
+            <h1 id="name">어서오세요, 인구의 숲에!</h1> <!--제목-->
+            <img id="weather" src="cloud.png" width="130" height="130" /> <!--날씨 구름-->
+            <div class="search"> <!--전체 검색창-->
+                <input type="text" placeholder="어느 구역의 밀집도를 알고 싶으신가요?."> <!--검색 부분만--> 
+                <button type="submit"><img src="search.png" witdh="35" height="35" /></button> <!--돋보기 버튼-->
+            </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="Script.js"></script>
+</body>
+</html>

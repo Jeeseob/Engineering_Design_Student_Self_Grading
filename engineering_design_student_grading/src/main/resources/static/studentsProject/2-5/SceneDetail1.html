@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>main</title>
+
+    <style>
+        body {
+            background-color: #25274d;
+        }
+
+        con1 {
+        }
+
+        .newsletter {
+            padding: 30px 0;
+            background: #25274d;
+        }
+
+            .newsletter .content {
+                max-width: 650px;
+                margin: 0 auto;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+
+                .newsletter .content h2 {
+                    color: #ff9b00;
+                    margin-bottom: 40px;
+                }
+
+                .newsletter .content .form-control {
+                    height: 50px;
+                    border-color: #ffffff;
+                    border-radius: inherit;
+                }
+
+                    .newsletter .content.form-control:focus {
+                        box-shadow: none;
+                        border: 2px solid #243c4f;
+                    }
+
+                .newsletter .content .btn {
+                    min-height: 50px;
+                    border-radius: 0;
+                    background: #ff9b00;
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+        #target1 {
+            margin: 3px;
+            padding: 10px;
+            background-color: #ff9b00;
+            border: 1px solid black;
+        }
+
+        #nav {
+            width: 39%;
+            background-color: #ff9b00;
+            height: 650px;
+            float: left;
+            border: 1px solid black;
+        }
+
+        #content {
+            width: 60.5%;
+            float: right;
+            height: 650px;
+            background-color: #ff9b00;
+            float: right;
+            border: 1px solid black;
+        }
+
+        p.date {
+            text-align: right;
+            color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="content">
+                        <h2>CO.IN map</h2>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="주소 혹은 이름을 입력하세요">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit" onclick="alert('검색되었습니다.')">검색</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p id="target1">
+        <b>어디에 가려고 하시나요?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <button onclick="location.href = 'main_coffee.html'"> 커피/디저트 </button>
+        <button onclick="location.href = 'main_restaurant.html'"> 식당 </button>
+        <button onclick="location.href = 'main_hotel.html'"> 숙소 </button>
+        <button onclick="location.href = 'main_scene.html'"> 자연 명소 </button>
+        <button onclick="location.href = 'main_medi.html'"> 병원/약국 </button>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주변에 가볼 만한 곳을 추천받고 싶다면?</a><a href="회원가입.html" class="button">회원가입</a>
+
+
+
+
+
+
+
+    </p>
+    <div id="nav">
+        <h1>&nbsp;Information</h1>
+
+        <p><h1>&nbsp;1. 상명대학교 서울캠퍼스</h1></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서울 종로구 문2길 20</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel)02-2287-5114</h3></p>
+        <hr />
+        <p><h2>&nbsp;중앙도서관 좌석 현황</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;정보검색존 -- 40석</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1열람실 -- 257석</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2열람실 -- 251석</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3열람실 -- 62석</h3></p>
+
+        <hr />
+        <input type='button'
+               value='1열람실 예약'
+               onclick='alert("1열람실 예약되었습니다.")' />
+        <input type='button'
+               value='2열람실 예약'
+               onclick='alert("2열람실 예약되었습니다.")' />
+        <input type='button'
+               value='3열람실 예약'
+               onclick='alert("3열람실 예약되었습니다.")' />
+
+    </div>
+    <div id="content">
+        <h1>&nbsp;교통 정보</h1>
+        <p><h2>&nbsp;버스</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7016 (곧 도착, 잔여 좌석 7) -- 종로13(18분 후, 잔여 좌석 13) -- 31분</h3></p>
+        <p><h2>&nbsp;택시</h2></p>
+        <p>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;택시비 8400원(원활) -- 22분</h3><input type='button'
+                                                                          value='콜택시 예약'
+                                                                          onclick='alert("택시 예약 완료되었습니다.")' />
+        </p>
+        <hr />
+        <p><h2>&nbsp;자연경관 Spot 추천</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;미래백년관(R) 옥상</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;부속 유치원-초등학교 내리막길</h3></p>
+        <hr />
+        <p><h2>&nbsp;커뮤니티</h2></p>
+        <p><a href="https://www.smu.ac.kr/ko/index.do" class="button">상명대학교 홈페이지</a></p>
+        <a href="https://smu.everytime.kr/" class="button">상명대학교 에브리타임</a>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>

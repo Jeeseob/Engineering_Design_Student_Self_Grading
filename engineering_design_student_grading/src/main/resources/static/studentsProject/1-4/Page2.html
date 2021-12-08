@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Colorcode-작업하기</title>
+    <link type="text/css" rel="stylesheet" href="Page_style.css" />
+    <style>
+
+        #aside {
+            width: 60%;
+            height: 700px;
+            float: left;
+        }
+        .picture {
+            margin-top:5%;
+        }
+
+        #contents {
+            width: 40%;
+            height: 700px;
+            float: left;
+            text-align: left;
+            font-family: 'Segoe UI Black', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        table.rooms_name, tr.rooms_name, td.rooms_name {
+            border: 2px solid #9D9067;
+            border-collapse:collapse;
+            background-color: #9D9067;
+        }
+        table.rooms_name {
+            width: auto;
+            height:auto;
+        }
+        td.rooms_name {
+            align-items:center;
+        }
+
+        #pic_input {
+            display: inline-block;
+            position:relative;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+        .RoomPicBtn {
+            margin-left: 2px;
+            margin-right: 2px;
+            width: 80px;
+            height: 50px;
+            background-color: #FFFAF0;
+            border-color: #FFFAF0;
+            border-radius: 4px;
+            font-family: 'Bahnschrift', Arial, sans-serif;
+        }
+
+        #Pic {
+            width: 540px;
+            height: 450px;
+            
+        }
+        #picture {
+            position: relative;
+            margin:5% auto auto 0%;
+        }
+
+        #Next {
+            margin-top: 30%;
+        }
+
+        #NextBtn {
+            transition: 300ms;
+            cursor: pointer;
+            width: 200px;
+            height: 80px;
+            font-size: 22px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 0, 0, 0);
+            background-color: rgb(193, 218, 240);
+        }
+
+            #NextBtn:hover {
+                border: 1px solid black;
+            }
+        
+    </style>
+</head>
+<body>
+    <section class="main_nav">
+        <div class="Logo" onclick="location.href = 'main.html'">Colorcode</div>
+        <div class="Words">사진 하나로 자유롭게 벽지를 바꾸자!</div>
+    </section>
+
+    <section>
+        <div id="aside">
+            <div id="pic_input">
+                <div><input type="file" name="file" id="imageFileOpenInput" accept="image/*"></div>
+            </div>
+            <br /><br />
+            <table class="rooms_name" border="0">
+                <tr>
+                    <td><button class="RoomPicBtn" type="button" onclick="Click(1)">Living Room</button></td>
+                    <td><button class="RoomPicBtn" type="button" onclick="Click(2)">Kitchen</button></td>
+                    <td><button class="RoomPicBtn" type="button" onclick="Click(3)">Library</button></td>
+                    <td><button class="RoomPicBtn" type="button" onclick="Click(4)">Inner room</button></td>
+                    <td><button class="RoomPicBtn" type="button" onclick="Click(5)">Room</button></td>
+                    <td><button class="RoomPicBtn" type="button">+</button></td>
+                </tr>
+            </table>
+            <div class="picture"><img id="Pic" src="./img/source/livingroom_purple.jpg"/></div>
+        </div>
+        <div id="contents">
+            <br /><br /><br />
+            <p style="color: #9D9067; font-size: 2.5em;">Color</p>
+            <input type="color" name="color" />
+            <br />
+            <br />
+            <p style="color: #9D9067; font-size: 2.5em;">Texture</p>
+            <select name="texture">
+                <option value="기본">기본</option>
+                <option value="콘크리트">콘크리트</option>
+                <option value="나무">나무</option>
+                <option value="캔버스">캔버스</option>
+                <option value="대리석">대리석</option>
+                <option value="페인트">페인트</option>
+            </select>
+
+            <div id="Next">
+                <button id="NextBtn" type="button" onclick="location.href = 'Page3.html'">
+                    다음
+                </button>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+<script>
+    // The source of the room images
+    let image = ['./img/source/livingroom_purple.jpg', './img/source/kitchen.jpg', './img/source/library.jpg', './img/source/innerroom.jpg', './img/source/room.jpg']
+
+    function Click(room_num) {
+        // Change to the the next image
+        let img = document.querySelector('#Pic');
+        img.src = image[room_num - 1];
+    }
+
+        
+    
+</script>

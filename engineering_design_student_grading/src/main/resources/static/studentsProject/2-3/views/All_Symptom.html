@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>모든 증상</title>
+
+  <!-- 부트스트랩 기본 css-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="bootstrap2/assets/favicon.ico" />
+  <!-- Bootstrap Icons-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+    rel="stylesheet" type="text/css" />
+  <!-- SimpleLightbox plugin CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="bootstrap2/css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Headerbar -->
+  <header class="row p-2 bg-dark text-white">
+    <!-- 메뉴 아이콘 및 목록 -->
+    <div class="col-sm-5 align-content-start container">
+      <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+        aria-controls="offcanvasExample">
+        <h4 class="bi bi-list mt-1"></h4>
+      </a>
+  
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close text-reset col-md-4 col-md-offset-11" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <ul>
+          <h4><a href="https://www.naver.com" class="nav-link px-2 text-secondary">병원 검색하기</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="/views/UserDiagnosis.html" class="nav-link px-2 text-secondary">진단 해보기</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="/views/All_Symptom.html" class="nav-link px-2 text-secondary">모든 증상</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="https://www.safekorea.go.kr/idsiSFK/neo/sfk/cs/contents/prevent/SDIJK14433.html?cd1=33&cd2=99&pagecd=SDIJK144.33&menuSeq=128" class="nav-link px-2 text-secondary">응급 상황</a></h4>
+        </ul>
+        <ul>
+          <h4><a href="/views/Introduction.html" class="nav-link px-2 text-secondary">서비스 소개</a></h4>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- 로고 -->
+    <div class="col-sm-5 align-content-center">
+      <a href="/views/Main.html">
+        <img src="/assets/logo.png" width="100"></img>
+      </a>
+    </div>
+  
+    <!-- 장애인 음성 인식 아이콘 -->
+    <div class="col-sm-1 align-content-end">
+      <p>
+        <button type="button" class="btn btn-secondary">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic-fill"
+            viewBox="0 0 16 16">
+            <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"></path>
+            <path
+              d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z">
+            </path>
+          </svg>
+        </button>
+      </p>
+    </div>
+  
+    <!-- 언어 선택 버튼 -->
+    <div class="col-sm-1 align-content-end dropdown">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        언어선택
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">한국어</a></li>
+        <li><a class="dropdown-item" href="#">English</a></li>
+        <li><a class="dropdown-item" href="#">日本語</a></li>
+        <li><a class="dropdown-item" href="#">中國語</a></li>
+        <li><a class="dropdown-item" href="#">español</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ***************************************************************************************** -->
+  
+  <div class="back">
+    <div class="container px-6 px-lg-5">
+      <div class="row gx-4 gx-lg-5">
+        <h1 class="container-fluid  mt-5"><strong>모든 증상</strong></h1>
+
+        <!-- 머리 -->
+        <h1 class="mt-5 mb-0">머리</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>고혈압</strong></h3>
+        <h5 class="text-muted mb-3">: 혈압이 여러 원인으로 인해 높아진 상태를 의미합니다.</h5>
+        <h3><strong>근육 긴장성 두통</strong></h3>
+        <h5 class="text-muted mb-3">: 두통이 머리에 띠를 두른 것처럼 양측성으로 나타나는 가장 흔하고, 일반적으로 스트레스, 피로, 수면 부족 등의 요인에 의해 발생하는 가벼운 두통입니다.</h5>
+        <h3><strong>금단현상</strong></h3>
+        <h5 class="text-muted mb-3">: 특정 약물이나 대상, 행위를 충동적, 습관적으로 하게 되며, 이를 중단할 경우 정신적, 물리적 여러 증상이 나타나는 것을 의미합니다.</h5>
+        <h3><strong>뇌경색</strong></h3>
+        <h5 class="text-muted mb-3">: 뇌혈관이 막혀 뇌의 일부가 손상되는 질환을 의미합니다.</h5>
+        <h3><strong>기뇌증</strong></h3>
+        <h5 class="text-muted mb-3">: 공기가 있으면 안 되는 뇌에 어떤 요인으로 인해 뇌에 공기가 들어가 뇌혈관이 막히거나 뇌조직이 압박되어서 발생하는 질환입니다.</h5>
+        <h3><strong>뇌졸증</strong></h3>
+        <h5 class="text-muted mb-3">: 뇌의 일부분에 혈액을 공급하는 혈관이 막히거나(뇌경색) 터짐(뇌출혈)으로써 그 부분의 뇌가 손상되어 나타나는 신경학적 증상을 말합니다.</h5>
+        <h3><strong>미니 뇌졸증</strong></h3>
+        <h5 class="text-muted mb-3">: 뇌졸중 증상이 본격적으로 나타나기 24시간 전에 아주 드물게 나타나는 전조 현상입니다. (사지부분 마비, 언어장애, 인지장애)</h5>
+        <h3><strong>저혈압</strong></h3>
+        <h5 class="text-muted mb-3">: 혈압이 여러 원인으로 인해 낮아진 상태를 의미합니다.</h5>
+
+        <!-- 목 -->
+        <h1 class="mt-5 mb-0">목</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>갑상선 기능 저하증</strong></h3>
+        <h5 class="text-muted mb-3">: 우리 몸에 필요한 갑상선호르몬이 부족하여 신체 내, 외부적으로 면역력이 떨어지는 질환을 의미합니다.</h5>
+        <h3><strong>갑상선 결절</strong></h3>
+        <h5 class="text-muted mb-3">: 목 한가운데에서 앞으로 튀어나온 물렁뼈의 아래쪽에 있는 내분비선인 갑상선 이곳이 부분적으로 커져서 생기는 병입니다.</h5>
+        <h3><strong>구강염</strong></h3>
+        <h5 class="text-muted mb-3">: 일반적으로 구강 내의 점막(혀, 잇몸, 입술과 뺨 안쪽 등)에 생긴 염증성 질환을 통틀어 말합니다.</h5>
+        <h3><strong>인후두염</strong></h3>
+        <h5 class="text-muted mb-3">: 바이러스로 인해 인두, 후두를 포함한 상기도 점막에 생기는 염증성 반응을 말합니다. 감기, 목 감기, 상기도 감염에 해당하는 질병이며, 흔히 목감기라고 합니다.</h5>
+        <h3><strong>후비루</strong></h3>
+        <h5 class="text-muted mb-3">: 코 주위의 공기 주머니인 부비강에서 분비하는 분비물의 양이 증가하거나, 분비물이 끈끈해 지거나, 목 근육 혹은 삼키는 운동의 이상으로 인해 분비물이 목에 고이거나, 코 뒤에서 분비물이 목으로 넘어가는 질환을 의미합니다.</h5>
+
+      
+        <!-- 가슴 -->
+        <h1 class="mt-5 mb-0">가슴</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>심근경색</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          급성 심근경색증은 심장 근육을 먹여 살리는 관상동맥이 갑작스럽게 완전히 막혀서 심장 근육이 죽어가는 질환입니다. '혈전'이라는 피떡이 심장에 혈액을 공급하는 관상동맥을 갑자기 막아서 심장 근육으로 혈액이 공급되지 않아서 발생합니다. 협심증과는 다릅니다.</br>
+          심근경색증이 발생하면 1/3은 병원에 도착하기 이전에 사망합니다. 병원에 도착하여 적절한 치료를 받더라도 사망률이 5~10%에 이르는 무서운 질환입니다.</h5>
+        <h3><strong>기흉</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          폐의 일부가 약해지면서 폐 표면에 작은 기포들 즉 폐 기포(Bulla)가 형성되고 그 기포의 파열로 폐 속의 공기가 늑막(폐를 감싸고 있는 두 겹의 얇은 막)강내에 공기나 가스가 축적되어 늑막내압이 상승하고 폐의 허탈 정도에 따라 폐활량이 감소하는 현상을 말합니다.</h5>
+        <h3><strong>후비루</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          코 주위의 공기주머니인 부비강에서 분비하는 분비물의 양이 증가하거나, 분비물이 끈끈해지거나, 목 근육 혹은 삼키는 운동의 이상으로 인해 분비물이 목에 고이거나, 코 뒤에서 분비물이 목으로 넘어가는 질환을 의미합니다.</h5>
+        <h3><strong>늑막염</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          늑막에 염증이 생겨 발생하는 질환을 의미합니다. 우리 몸의 폐는 두 층의 늑막(흉막)에 둘러싸여 흉벽과 분리됩니다. 정상적으로 호흡할 때는 두 층의 늑막이 서로 미끄러져서 폐가 부드럽게 팽창하고 수축할 수 있습니다.</h5>
+        <h3><strong>과호흡 증후군</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          과도한 호흡을 하여 이산화탄소가 과도하게 배출되면서 동맥혈의 이산화탄소가 정상범위 아래로 떨어진는 상태를 말합니다. 동맥혈의 이산화탄소가 정상 범위 아래로 떨어지게 되면 호흡곤란, 어지럼증, 저림, 실신 등의 증상이 나타납니다. 신체적인 원인과 정신적인 원인이 있습니다.</h5>
+        <h3><strong>기관 협착</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          선천적 혹은 후천적인 요인으로 인해 기관이 완전 또는 불완전하게 폐색된 상태를 의미합니다.</h5>
+        <h3><strong>특정 식품 알레르기</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          식품알레르기란 식품에 있는 일부 단백질에 반응하여 무해한 특정 음식에 대해 우리 몸의 면역체계가 체내에 유해한 것으로 판단하여 이를 삼켰을 때 비정상적 혹은 부적절하게 과민반응을 나타내는 것으로, 식품 속의 단백질은 대부분 조리과정이나 소화과정에서 분해되는데 분해되지 않고</br> 체내로 흡수되는 일부 단백질이 알레르기를 일으키게 됩니다.</h5>
+
+        <!-- 팔 -->
+        <h1 class="mt-5 mb-0">팔</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>관절염</strong></h3>
+        <h5 class="text-muted mb-3">: 관절 연골이 파괴되고 관절에 염증성 변화가 일어나는 질환을 의미합니다.</h5>
+        <h3><strong>골절</strong></h3>
+        <h5 class="text-muted mb-3">: 외상으로 인해 뼈가 부러지는 질환을 의미합니다.</h5>
+        <h3><strong>실금</strong></h3>
+        <h5 class="text-muted mb-3">: 외상으로 인해 뼈에 1단계~3단계로 금이 가는 질환을 의미합니다.</h5>
+        <h3><strong>근육통</strong></h3>
+        <h5 class="text-muted mb-3">: 지속적인 움직임으로 인해 근육이 풀어지지 않고 단단하게 굳거나, 근육의 미세파열로 인해 여러가지 통증을 유발하는 질환입니다.</h5>
+        <h3><strong>골수염</strong></h3>
+        <h5 class="text-muted mb-3">: 여러 원인으로 골수에 균이 침입하여 염증이 생긴 질환을 의미합니다.</h5>
+      
+
+        <!-- 배 -->
+        <h1 class="mt-5 mb-0">배</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>간염(급성)</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          간염은 간질환의 가장 큰 원인으로 간세포가 파괴되어 간에 염증을 일으키는 질병입니다. 질병의 원인, 증상에 따라서 급성간염과 만성간염으로 나뉘며, 급성간염은 대부분 바이러스의 감염으로 발병되며 6개월 이하
+          만성간염은 간염 급성기 발병 후 6개월 이상 지속되는 경우를 말합니다.
+        </h5>
+        <h3><strong>간세포성 암종</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          간에서 발생하는 악성 종양의 약 90%는 간세포암이고, 약 10%는 담관세포암이며, 그 외 아주 일부가 기타 암입니다. 간세포암이 가장 흔하므로 흔히 '간암'이라고 하면 간세포암을 지칭합니다.
+          간암은 특히 우리나라와 일본, 동남아시아나 중국, 아프리카 등지에서 많이 발생합니다.</br> 간암은 우리나라 남성의 암 사망 원인 중 3위를 차지하며, 특히 40~50대 남성의 암 사망 원인 중 1위를 차지합니다.</h5>
+        <h3><strong>간농양</strong></h3>
+        <h5 class="text-muted mb-3">: 
+          간농양이란 세균이나 기생충이 간에서 증식하여 농양을 형성하여 질병을 일으키는 것을 말합니다.</h5>
+        <h3><strong>복막염(결핵성)</strong></h3>
+        <h5 class="text-muted mb-3">: 체내의 복강 및 복강 내 장기를 덮고 있는 얇은 막을 복막이라고 하는데 복막염이란 이곳에 염증이 생긴 것을 말합니다. 주로 복강 속에 장액, 섬유소, 세포, 고름 등이 고여서 생기며, 경과에 따라 급성 또는 만성으로 나눌 수 있고, 복부 전체 또는 부분적으로 나타날 수 있습니다.</h5>
+        <h3><strong>급성 담낭염</strong></h3>
+        <h5 class="text-muted mb-3">: 급성 담낭염은 담석, 종양 혹은 담낭의 기능 이상 등으로 인해 담낭관이 부분적이거나 완전히 좁아지면서 담낭 내에 기계적, 화학적 또는 세균성 염증이 발생한 질환을 의미합니다.</h5>
+        <h3><strong>위장 장애</strong></h3>
+        <h5 class="text-muted mb-3">: 기능성 위장 장애는 특별한 원인 없이 소화불량, 속 쓰림, 더부룩함, 구토, 부글거림 등 여러 가지 위장관 증상이 3개월 이상 지속되는 만성 질환을 의미합니다</h5>
+        <h3><strong>최장염</strong></h3>
+        <h5 class="text-muted mb-3">: 췌장염은 췌장 효소(주로 트립신)에 의해 췌장 분비샘이 파괴되거나 췌장에 국소적 혹은 전체적으로 염증이 발생하는 질환을 의미합니다. 췌장염은 급성과 만성 췌장염으로 구분할 수 있습니다. 급성 췌장염은 췌장에 급성 염증이 생기지만 회복 후 췌장이 정상 기능으로 돌아올 수 있는 경우입니다.</br> 만성 췌장염은 췌장의 염증이 계속 반복되면서 비가역적으로 췌장의 외분비 및 내분비 기능에 장애가 초래되는 경우입니다.</h5>
+
+      
+        <!-- 다리 -->
+        <h1 class="mt-5 mb-0">다리</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>봉와직염</strong></h3>
+        <h5 class="text-muted mb-3">: 세균이 피부의 진피와 피하 조직을 침범하여 생기는 염증 반응을 의미합니다.</h5>
+        <h3><strong>통풍성 관절염</strong></h3>
+        <h5 class="text-muted mb-3">: 요산이 관절 주변 조직에 쌓여 염증을 일으키는 것을 의미합니다.</h5>
+        <h3><strong>골관절염</strong></h3>
+        <h5 class="text-muted mb-3">: 뼈의 끝부분을 덮고 있어 뼈를 보호해주는 연골(물렁뼈)이 닳아서 없어지는 상태를 가리키는 말로, 관절 질환 중 가장 흔한 질환을 의미합니다.</h5>
+        <h3><strong>류마티스 관절염</strong></h3>
+        <h5 class="text-muted mb-3">: 체내 면역체계의 오류로 자신의 몸을 공격하여 관절 내에 염증이 발생하고 지속되어 점차 관절이 파괴되는 질환입니다.</h5>
+        <h3><strong>베이커 낭종</strong></h3>
+        <h5 class="text-muted mb-3">:무릎 뒤 안쪽에 생긴 물혹을 의미합니다.</h5>
+      
+        <!-- 발 -->
+        <h1 class="mt-5 mb-0">발</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>염좌</strong></h3>
+        <h5 class="text-muted mb-3">: 인대가 사고나 외상 등에 의해 손상된 것을 의미합니다.</h5>
+        <h3><strong>족저 근막염</strong></h3>
+        <h5 class="text-muted mb-3">: 종골에서 시작하여 발바닥 앞쪽으로 5개의 분지를 내어 발가락 기저부에 부착되는 강인하고 두꺼운 섬유띠가 피로파열로 인해 염증이 생겨 통증 때문에 걷기가 힘들어지는 질환입니다.</h5>
+        <h3><strong>아킬레스건 염증</strong></h3>
+        <h5 class="text-muted mb-3">: 아킬레스 건에 염증이 생겨 통증과 부종이 생기는 질환을 의미합니다.</h5>
+        <h3><strong>발목 힘줄 손상</strong></h3>
+        <h5 class="text-muted mb-3">: 신체 무게를 지탱하는 발목에 외상 혹은 피로파열로 인해 손상이 가는 질환이다.</h5>
+        <h3><strong>당뇨병</strong></h3>
+        <h5 class="text-muted mb-3">: 당 수치가 높아져서 여러가지 내 외부적 질환을 일으키는 질환입니다. (사지 부분 마비, 발 저림, 삼다 현상: 다식, 다뇨, 다음)</h5>
+        <h3><strong>통풍</strong></h3>
+        <h5 class="text-muted mb-3">: 요산이라는 물질이 몸밖으로 빠져나가지 못하고 과도하게 축적되어 발생하는 질환입니다. 다른 사람이 지나가면서 일으킨 바람을 맞아도 아플 정도라고 하여 통풍이라고 합니다.</h5>
+        <h3><strong>무지외반증</strong></h3>
+        <h5 class="text-muted mb-3">: 족부 질환의 일종으로 엄지발가락이 둘째발가락 쪽으로 심하게 휘어져서 엄지발가락 관절이 안쪽으로 돌출된 상태를 의미합니다.</h5>
+
+
+        <!-- 전체 -->
+        <h1 class="mt-5 mb-0">전체</h1>
+        <hr class="mt-0" style="color: rgb(228, 105, 24); height: 2px; width: 1400px;"/>
+
+        <h3><strong>간염</strong></h3>
+        <h5 class="text-muted mb-3">: 간세포 조직에 염증이 생긴 것을 의미합니다.</h5>
+        <h3><strong>간경화</strong></h3>
+        <h5 class="text-muted mb-3">: 간세포 손상(간염)이 장기간 지속되면 간에 흉터가 쌓이는 간섬유화증이 진행되며, 간섬유화증이 간 전반에 걸쳐 진행되면 간경변증을 일으키는 질환입니다.</h5>
+        <h3><strong>급성 a형 간염</strong></h3>
+        <h5 class="text-muted mb-3">: 간염 바이러스의 한 종류인 A형 간염 바이러스(hepatitis A virus. HAV) 감염되어 발생하는 급성 간염의 한 종류입니다.</h5>
+        <h3><strong>바이러스 간염</strong></h3>
+        <h5 class="text-muted mb-3">: 바이러스에 감염되어 발생하는 급성 간염의 한 종류입니다.</h5>
+        <h3><strong>간 농양</strong></h3>
+        <h5 class="text-muted mb-3">: 세균이나 기생충에 의해 간 안에 고름집(농양)이 생기는 것을 의미합니다.</h5>
+        <h3><strong>지방간</strong></h3>
+        <h5 class="text-muted mb-3">: 지방이 간에 침착 된 정도가 간 무게의 5% 이상인 경우를 의미합니다.</h5>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ************************************************************ -->
+  <!-- Footer-->
+  <footer class="bg-light py-4">
+    <div class="container px-4 px-lg-5">
+      <div class="small text-center text-muted">DANTA (2-3)</div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SimpleLightbox plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
+  <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
+
+<style>
+  .c {
+    background-color: blue;
+  }
+  .b {
+    background-color: rgb(255, 0, 106);
+  }
+</style>

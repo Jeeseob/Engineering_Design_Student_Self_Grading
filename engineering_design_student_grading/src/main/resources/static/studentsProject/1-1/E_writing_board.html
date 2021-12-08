@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>글쓰기 게시글</title>
+    <link type="text/css" rel="stylesheet" href="write.css" />
+    <link type="text/css" rel="stylesheet" href="header.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/db685bf63d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function dropdown() {
+        var now = document.querySelector(".timetable");
+        if (getComputedStyle(now).display == "none") {
+          now.style.display = "block";
+        } else {
+          now.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_1st_align">
+        <div style="margin-right: 2rem; margin-top: 1rem">
+          <a href="main.html"><img class="img_size" src="logo.jpg" alt="" /></a>
+        </div>
+        <div style="margin-right: 1rem" class="header_2nd_size">
+          <div class="header_nav_align">
+            <div class="header_nav_align_left">
+              <div>
+                <ul id="nav">
+                  <li>
+                    <a href="">MBTI별 게시판</a>
+                    <ul>
+                      <li>
+                        <a class="move_page" href="HTMLPage.html"
+                          ><span style="color: red">E</span>OOO</a
+                        >
+                      </li>
+                      <li>
+                        <a class="move_page" href="HTMLPage_I.html"
+                          ><span style="color: red">I</span>OOO</a
+                        >
+                      </li>
+                      <li>O<span style="color: red">N</span>OO</li>
+                      <li>O<span style="color: red">S</span>OO</li>
+                      <li>OO<span style="color: red">T</span>O</li>
+                      <li>OO<span style="color: red">F</span>O</li>
+                      <li>OOO<span style="color: red">J</span></li>
+                      <li>OOO<span style="color: red">P</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="nav">
+                  <li id="nav_li">
+                    <a href="">실생활 게시판</a>
+                    <ul>
+                      <li>자유게시판</li>
+                      <li>학교생활</li>
+                      <li>연애</li>
+                      <li>패션/뷰티</li>
+                      <li>연예/방송</li>
+                      <li>취미생활</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="nav">
+                  <li>
+                    <a
+                      href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC"
+                      >MBTI 테스트하기</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="header_nav_2nd_align">
+              <a style="color: red" href="E_writing_board.html">글쓰기</a>
+              <a href="">로그아웃</a>
+            </div>
+          </div>
+          <div class="header_search_align">
+            <div style="margin-left: 2rem">ㅣ</div>
+            <div style="margin-right: 2rem">
+              <i class="fas fa-search fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="writebox">
+        <a class="board_name" href="HTMLPage.html" target="_self"
+          ><i class="fas fa-users" id="title_margin"></i>
+          &nbsp;<span>E</span>OOO(외향형)</a
+        >
+      </div>
+
+      <form name="title" action="gettitle" method="post">
+        <div class="write_title">
+          <input
+            type="text"
+            name="title"
+            placeholder="글의 제목을 입력하세요."
+          />
+        </div>
+
+        <div class="write_content">
+          <textarea
+            name="content"
+            col="5"
+            placeholder="글의 내용을 입력하세요."
+          ></textarea>
+          <button
+            class="end"
+            type="button"
+            style="cursor: pointer"
+            onclick="location.href='HTMLPage.html'"
+          >
+            작성완료
+          </button>
+          <!--추후 좌표 수정-->
+        </div>
+      </form>
+    </section>
+
+    <footer class="footer_align">
+      <div>
+        <h4 style="color: gray">Copyright © 2020 I’AM. All rights reserved</h4>
+      </div>
+      <div style="display: flex">
+        <h4 style="margin-right: 7px"><i class="fab fa-facebook fa-lg"></i></h4>
+        <h4><i class="fab fa-instagram fa-lg"></i></h4>
+      </div>
+    </footer>
+  </body>
+</html>

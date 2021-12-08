@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .header {
+            margin-bottom: 1em;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+            display: flex;
+        }
+
+            .header .HomeButton {
+                position: fixed;
+                left: 35%;
+                margin-top: 10px;
+            }
+
+            .header .nav {
+                display: flex;
+                position: fixed;
+                left: 65%;
+            }
+
+
+        .chips {
+            width: 62%;
+            height: 600px;
+            float: left;
+        }
+
+            .chips * {
+                margin-top: 20px;
+                display: flex;
+            }
+
+            
+
+        #select {
+            font-size: 20pt;
+            margin-left: 15pt;
+        }
+
+        .x {
+            align-items:center;
+            width: 38%;
+            float: right;
+            height: 600px;
+            margin-top: 40px;
+        }
+        .x #game{
+            margin:10px;
+        }
+        .x #bench{
+            margin-left:30px;
+        }
+
+
+        #target {
+            margin-left: 605px;
+        }
+        
+
+        #footer {
+            text-align: center;
+            margin-top: 100px;
+            clear: both;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--여기 이후에 배경을 지정하겠습니다. Css로 반복없이 전체화면으로 적용해보았습니다.-->
+
+    <body background="https://i.imgur.com/BDc3689.png">
+
+        <div class="header">
+            <div class="slogan">
+                <img src="../../아이콘/슬로건.png" width="400" hegiht="98">
+                <!--위 코드는 imgur에 올린 이미지파일중 슬로건이 될 부분의 이미지를 업로딩 한 것입니다. default위치값이 마음에 들게 나와서 그냥 그대로 적용하기로 했습니다..-->
+            </div>
+            <div class="HomeButton">
+
+                <!--
+          이곳은 imgur에 올린 이미지파일중 ☆콤퓨-타 이미지를 버튼화시켜놓은 것입니다. 해당 영역은 콤퓨타, 즉 누르면 홈화면으로 링크시켰기에 다시 홈으로 돌아가는 동작을 하게만듭니다.
+        -->
+                <a href="../../main.html"><input type="image" src="../../아이콘/콤퓨타.png" width="500" hegiht="98"></a>
+
+            </div>
+            <div class="nav">
+                <div class="Custom">
+                    <!--이곳은 imgur에 올린 이미지파일중 커스텀 이미지를 버튼화시켜놓은 것입니다. onclick버튼을 사용하고 그걸 다시 커스텀 body코드와 연결시키면 될듯 합니다.-->
+                    
+                    <a href="../../main.html"><input type="image" src="../../아이콘/커스텀.png" width="240" hegiht="59"></a>
+                </div>
+
+                <div class="Benchmark">
+                    <input type="image" src="../../아이콘/별.png" width="75" hegiht="49" />
+                    <!--이곳은 imgur에 올린 이미지파일중 벤치마크 이미지를 버튼화시켜놓은 것입니다. onclick버튼을 사용하고 그걸 다시 벤치마크 body코드와 연결시키면 될듯 합니다.-->
+                    <a href="../Homepage_bench.html"><input type="image" src="../../아이콘/벤치마킹.png" width="200" hegiht="49"></a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="main">
+            <div class="chips">
+                <div class="CPU">
+                    <img src="../../아이콘/씨피유.png" width="250" height="80">
+                    <img src="../../아이콘/씨피유아이콘.png" width="50" hight="59"> <!--CPU 이미지입니다.-->
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value=""selected disabled>I5-11500</option>
+                        <option value="">I7-11700</option>
+                        
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+
+                <div class="GPU">
+                    <img src="../../아이콘/지피유.png" width="250" height="80">
+                    <img src="../../아이콘/지피유아이콘.png" width="50" height="59"> <!--GPU 이미지입니다.-->
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        
+                        <option value=""selected disabled>RTX 3070</option>
+                        <option value="">RTX 3080</option>
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+
+                <div class="Ram">
+                    <img src="../../아이콘/램.png" width="250" height="80">
+                    <img src="../../아이콘/램아이콘.png" width="50" height="59"> <!--RAM 이미지입니다.-->
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value=""selected disabled>8GB</option>
+                        <option value="">16GB</option>
+                        
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+            </div>
+        <div class="x">
+            <img src="../../사진/그림1.png" id="bench" width="500" height="250">
+            <img src="../../사진/배틀필드.png" id="game" width="259" height="150">
+            <img src="../../사진/사이버펑크.png" id="game" width="259" height="150">
+            <img src="../../사진/파밍시뮬레이터.png" id="game" width="259" height="150">
+            <img src="../../사진/어쎄신크리드.png" id="game"  width="259" height="150">
+
+
+        </div>
+
+        <div id="footer">
+            Copyright 2021. ★compu-ta All rights reserved.
+        </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</body>
+</html>

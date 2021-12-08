@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Well-Known</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "style.css" type="text/css">
+
+        <!--부트스트랩-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        
+        <header class = "top-header">
+            <nav class="top-nav">
+                <div class="upper_left_img_wrap">
+                    <a href="../../../kim/main.html">
+                        <img src="../../../kim/very_small_letter_50h.jpg" width="110%" height="190%">
+                    </a>
+                </div>
+                <form action="../../../kim/page2_src/page2.html" method="post" name="search-area" id="action-area">
+                    <div class="small_searchbar_wrap pt-2">
+                        <i class="fas fa-search"></i>
+                        <input class="search-input " type="text" placeholder="검색할 내용 혹은 태그를 입력하세요." onkeypress="JavaScript:press(this.form)" size="30"/>
+                        <button id="go_next_page" style="border: 0; background-color: white" type="button" title="submit" onclick="location.href='../../../kim/page2_src/page2.html'"><a id="submit-form"><i class="far fa-paper-plane"></i></a></button>
+                    </div>
+                </form>
+                <div class="profile_img_wrap">
+                    <img src="../../../kim/deer.jpg">
+                </div>
+                <ul>
+                    <li>수뭉이님 환영합니다</li>
+                </ul>
+            </nav>
+    
+            <hr width="100%" color="black" size="1">
+        </header>
+    <div class="all pt-1">
+            <div class="out"> 
+                <section class = "question">
+                    <div class="text-center pt-5 questiontitle">
+                        <img src="../../file/question.png" width="100px">
+                        벡터장의 유량문제 너무 어려워요 도와주세요.<br>
+                        곡면 S : r(Φ, θ) = (2 sinΦcosθ)i+ (2sinΦsinθ)j+ (2cosΦ)k, 0≤Φ≤π/2 ,    <br>  
+                        0≤ θ ≤2π의 바깥 방향으로 벡터장 F=(y^2)i+ (z^2)j+(x)k의 curl에 대한 유량을 구하시오.<br>
+
+                    </div>
+                    <div class="pt-5 questionsub"> 
+                        #미적분학, #벡터장, #유량
+                    </div>
+                </section>
+                <section class = "answer borderline">
+                    주어진 곡면은 반지름이 2인 구의 북반구에 해당합니다.<br>
+                    S’ : z=0의 곡면을 생각하여 S∪S’은 폐곡면이므로 발산 정리를 이용할 수 있습니다. <br>
+                    이때 div (curlF) = 0를 이용합니다. <br>
+                    하지만 curl에 대한 유량이므로 스토크스 정리를 생각해 볼 수 있습니다. <br>
+                    스토크스 정리를 이용하여 풀면 아래 식과 같이 됩니다.<br>
+                    <img src="../../file/1.jpg" height="60%" width="100%">
+                    
+                </section>
+                <br>
+                <section class = "answer1 borderline">
+                    <h2>켈빈-스토크스 정리: </h2>
+                    스토크스 정리의 고전적인 형태로서 3차원 공간상의 폐곡선에서 수행되는 선적분은 <br>
+                    스토크스의 정리에 의해 주어진 폐곡선이 둘러싼 임의의 곡면 R에서의 면적분으로 <br>
+                    변환될 수 있으며 역 과정 또한 가능하다.
+                    <img src="../../file/answer8_1.jpg">
+                    <img src="../../file/answer8_2.jpg"  height= "60%" width="100%" >
+                </section>
+                <div class="button col-10 pt-3">
+                    <img src="../../file/professor.png" style="width: 45px;"> <span style="font-size: 20px; font-weight: bold;">스피드웨건 전문가</span>
+                    <button type="button" class="btn float-right" onclick="location.href='../quiz8_1/page4_quiz8_1.html'">다음</button>
+                </div>
+            </div>
+            
+        </div>
+        <footer>
+            <div class="country">
+                <span>현재 접속 국가 : 대한민국</span>
+            </div>
+            <div class="foot-links-wrap">
+                <div class="foot-links-wrap-right">
+    
+                </div>
+                <div class="foot-links-wrap-left">
+                    <ul>
+                        <li><a href="#">Well-Known 정보</a></li>
+                        <li><a href="#">이용 약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">게시중단요청서비스</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+            <script>
+                function press(f){
+                    if(f.keyCode == 13){
+                        action.submit();
+                    }
+                }
+            </script>
+  
+        
+    </body>
+</html>

@@ -1,0 +1,75 @@
+body {
+    background: #231f20 !important;
+    color: #fff !important;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.nav {
+    padding: 13px;
+    align-items: center;
+}
+.header {
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 32px;
+    color: #fff;
+    text-decoration:none;
+}
+.header:hover {
+    color: rgba(223,190,106,0.7);
+}
+.chkBtn {
+    color: rgba(223,190,106,0.7);
+    font-weight: 540;
+    border: 1px solid rgba(223,190,106,0.7);
+    background-color: transparent;
+    padding: 8px;
+    margin-left: 6px;
+    background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+}
+.chkBtn:hover {
+    color: #231f20;
+    border: 1px solid #231f20;
+    background-position: 88% 50%;
+}
+.content {
+    padding: 30px;
+}
+.content_section {
+    border: 0.05px solid rgba(223,190,106,0.7);
+    border-radius: 4px;
+    padding: 36px;
+}
+#btn {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    background: transparent;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 0.2em;
+    color: rgba(223,190,106,0.7);
+    padding: 16px 80px 18px;
+    transition: all 0.7s ease-out;
+    background: linear-gradient(270deg, rgba(223,190,106,0.8), rgba(146,111,52,0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    border: 1px solid rgba(223,190,106,0.3);
+  }
+#btn:hover {
+    color: #231f20;
+    border: 1px solid #231f20;
+    background-position: 88% 50%;
+}
+.chkBtn2 {
+    color: rgba(223,190,106,0.7);
+    border: 1px solid rgba(223,190,106,0.7);
+    background-color: transparent;
+    padding: 8px;
+}

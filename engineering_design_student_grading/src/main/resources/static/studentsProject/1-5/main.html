@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPL Crossing</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="text/javascript"
+        src="//dapi.kakao.com/v2/maps/sdk.js?appkey=14860fc0a198e5a1a0c6d923bbcf694e">    </script>
+</head>
+
+<body>
+
+    <div>
+
+        <div id="header">
+            <!-- 로고 -->
+            <div class="vl">
+                <img class="v1" src="img/logo.png" style="width: 150px;">
+            </div>
+            <!-- 검색버튼 -->
+            <div class="search-box">
+
+
+                <input type="text" class="search-txt" name="" placeholder="어느 곳을 알고 싶나요?">
+                <a class="search-btn" href="#">
+                    <i class="fas fa-search"></i>
+                    <img id="search-icon" src="img/search.png">
+                </a>
+            </div>
+
+
+
+
+            <!-- <a href="#pop1" class="btn">지도사용법</a>
+            <div class="popup" id="pop1">
+                <a href="#a">닫기</a>
+                내용내용
+            </div> -->
+            <!-- <div class="dim"></div> -->
+            <!-- <a href="#pop2" class="btn1">탭에관해서</a>
+            <div class="popup1" id="pop2">
+                내용
+                <a href="#a">닫기</a>
+            </div> -->
+            <!-- <div class="dim"></div> -->
+
+
+
+
+            <!-- <p id="oo"><strong>반가워요, OOO님!</strong></p> -->
+            <!-- <p id="imfor">지역: 서울<br />기온: 15C</p> -->
+            <!-- <h1 id="name">모여봐요 인구의숲 -->
+
+            <!-- </h1> -->
+
+            <p class="menu-list">
+                <!-- <button onclick="setOverlayMapTypeId('traffic')">교통정보 보기</button>
+                <button onclick="setOverlayMapTypeId('roadview')">로드뷰 도로정보 보기</button>
+                <button onclick="setOverlayMapTypeId('terrain')">지형정보 보기</button> -->
+                <div class="menu-button-wrapper">
+                    <div class="menu-button" onclick="setFiveMarker('best_img')">
+                        <!--<img class="menu-image" src="img/densely-populated.png">-->
+                        <img class="menu-image" id="best_img" src="img/top_g.png">
+                        <div id="best_five_text">밀도 베스트</div>
+                    </div>
+                </div>
+                <div class="menu-button-wrapper">
+                    <button id="po_bt" onclick="setOverlayMapTypeId('use_district')">
+                        <img class="menu-image" id="popu_img" src="img/popu_g.png">
+                        <div id="popu_text">인구밀집도</div>
+                    </button>
+                </div>
+                <div class="menu-button-wrapper">
+                    <button id="st_bt" onclick="setOverlayMapTypeId('red_heatmap')">
+                        <img class="menu-image" id="store_img" src="img/store_g.png">
+                        <div id="store_text">다중이용시설</div>
+                    </button>
+                </div>
+                <div class="menu-button-wrapper">
+                    <button id="be_bt" onclick="setOverlayMapTypeId('green_heatmap')">
+                        <img class="menu-image" id="beer_img" src="img/beer_g.png">
+                        <div id="beer_text">유흥업소</div>
+                    </button>
+                </div>
+                <div class="menu-button-wrapper">
+                    <div class="menu-button" id="share_click" onclick="openLayer('share_click', 'share_tab_img', 'layerPop', 450, 400)">
+                        <img class="menu-image" id="share_tab_img" src="img/share_g.png">
+                        <div id="share_text">공유하기</div>
+                    </div>
+                </div>
+
+            </p>
+            <!-- <img id="weather" src="weather.png" width="130" height="130" /> -->
+
+        </div>
+    </div>
+
+    <!-- <div class="bg"> -->
+
+
+
+
+    <!-- 지도를 표시할 div 입니다-->
+    <div id="mapWrapper">
+        <div id="map"></div> <!-- 지도를 표시할 div 입니다  -->
+        <div id="marker_conrtol" style="display: none;" onclick="setFiveMarker()"></div>
+    </div>
+
+
+
+    <!-- 검색기능(취소) -->
+
+    <!-- <div class="map_wrap">
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+    
+        <div id="menu_wrap" class="bg_white">
+            <div class="option">
+                <div>
+                    <form onsubmit="searchPlaces(); return false;">
+                        키워드 : <input type="text" value="이태원 맛집" id="keyword" size="15"> 
+                        <button type="submit">검색하기</button> 
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <ul id="placesList"></ul>
+            <div id="pagination"></div>
+        </div>
+    </div> -->
+
+
+    <!--<div id="clickLatlng"></div>-->
+    <!-- </div> -->
+
+
+
+    <!-- <div id="pop-up" class="hide">
+        <div class="content">
+          <p>
+            여기에 팝업창 내용이 나타납니다.
+          </p>
+          <button onclick="closePopup()">닫기</button>
+        </div>
+    </div> -->
+
+
+    <!-- 팝업창 -->
+    <button onclick="showPopup(true)" class="popup-button">
+        <img src="img/arrow-left.png">
+    </button>
+    <div class="container" id="pop-up">
+        <div class="content" id="pop-up-box">
+            <div id="popupHeader">
+                <div id="myBtn" class="extensionBTN toggle-left">
+                    <img id="test" class="toggleBTN" src="img/arrow-left.png">
+                </div>
+
+                <div class="closeBTN toggle-right">
+                    <img class="toggleBTN" onclick="closePopup()" src="img/close.png">
+                    <!--<button onclick="closePopup()">닫기</button>-->
+                </div>
+
+                <div id="location">
+                    서울 특별시 중구
+                </div>
+            </div>
+
+
+
+            <div id="popup-scroll">
+                <!-- <div class="pre_main" id="pre_overlay">
+                   
+                    <div class="div_main_inner"
+                        style="height: 220px; min-height: 220px; width: 330px; min-width: 330px; background-color: rgb(255, 255, 255)"
+                        id="pre_overlay_img">
+                        <p><img style="padding: 15px; width:300px; height:220px;" src="tom_yell_red.png" id="pre_img"
+                                alt="예측 이미지" /></p>
+                    </div>
+
+                    <div id="radioBtn" class="btn-group">
+                        <div id="t_btn_control" class="weather-button" onclick="change_img(0)">내일</div>
+                        <div id="d_btn_control" class="weather-button" onclick="change_img(1)">모레</div>
+                        <div id="w_btn_control" class="weather-button" onclick="change_img(2)">주간</div>
+                    </div> 
+
+                    <div id="radioBtn" class="btn-group">
+                        <div id="t_btn_control" class="weather-button" onclick="change_img(0)">내일</div>
+                        <div id="d_btn_control" class="weather-button" onclick="change_img(1)">모레</div>
+                        <div id="w_btn_control" class="weather-button" onclick="change_img(2)">주간</div>
+                    </div>
+
+                </div> -->
+
+
+
+
+                <!-- 날씨 -->
+
+                <h3>혼잡도 / 날씨 예측</h3>
+                <div class="pre_main" id="pre_overlay">
+                    <!-- <p id="pre_place">서울 특별시 중구</p> -->
+                    
+                    <div class="btn-wrapper">
+                        <div id="t_btn_control" class="t_btn_control active" onclick="control_img(0)"
+                            style="position: relative; margin-right: 2px; padding: 10px; top: -4%; width: 33%; border-top-left-radius: 4px; border-bottom-left-radius: 4px; ">
+                            내일</div>
+                        <div id="d_btn_control" onclick="control_img(1)"
+                            style="position: relative; margin-right: 2px; padding: 10px; top: -4%; width: 33%; ">모레</div>
+                        <div id="w_btn_control" onclick="control_img(2)"
+                            style="position: relative; padding: 10px; top: -4%; width: 33%; border-top-right-radius: 4px; border-bottom-right-radius: 4px; ">
+                            주간</div>
+                    </div>
+                    <div class="div_main_inner" id="pre_overlay_img">
+                        <p><img src="pre_img/tom_yell_red_T.png" id="pre_img" alt="예측 이미지" /></p>
+                    </div>
+                </div>
+
+                <!-- 부트스트랩 -->
+
+                <!-- 막대그래프 -->
+                <div class="col-xl-6 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                        </div>
+                        <div class="card-body">
+                            <div class="row pb-2">
+                                <div class="col-auto m-b-10">
+                                    <h3 class="mb-1">인구분포통계</h3>
+                                </div>
+                            </div>
+                            <div id="account-chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 곡선그래프 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>시간대별 / 성별 인구분포</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="area-chart-1"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 수평 막대그래프 -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>연령대별 인구분포</h3>
+                        </div>
+                        <div class="card-body">
+                            <div id="bar-chart-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- Test -->
+        <!-- <button id="myBtn">Try it</button> -->
+        <!-- <p id="demo"></p>
+
+
+        <div class="infographic">
+            <img src="img/infographic.gif">
+        </div>
+        <a href="folder1/mapTest.html">링크</a>
+        <div class="graph-1">
+            <img class="graph-1" src="img/graph-1.gif">
+        </div>
+        <div class="graph-2">
+            <img class="graph-2" src="img/graph-2.png">
+        </div> -->
+
+
+
+
+
+
+    </div>
+    
+
+
+
+    <!-- 튜토리얼 -->
+    <!-- <div id="img_wrapp">
+
+        <p><img style="padding: 0; top: 0; left: 0; width: 1800px; height: 900px;" src="layout.jpg" id="background_img" alt="배경 이미지" /></p>
+
+    </div> -->
+
+    <div id="tuu_layer">
+        <div class="dim-layer" id="tu_layer">
+            <div id="tu_div_main" class="tu_div_logo"></div>
+            <div id="layer1" class="pop-layer">
+                <div id="wrap_logo">
+                    <p id="logo_img">
+                        <img src="popu_logo.png" id="logo_pre_img" alt="로고 이미지" />
+                    </p>
+
+                    <div id="pre_intro">
+                        <p style="font-size:28px">
+                            코로나 방역을 위해 현재 인구 밀집도를 알려주고, </br>
+                            미래의 인구 밀집도를 예측하여 알려주는 웹 사이트 입니다.
+                        </p>
+                        <p style="font-size:24px">
+                            위의 로고가 잘려 보이시는 분은 웹사이트의 배율을 줄여서 이용해주세요!<br />
+                            공학설계입문 '모여봐요 인구의숲' 조</br>
+                            서형완, 이유정, 임정택, 정주영
+                        </p>
+                        <div id="tu_btn_next" style="top: 300px; left: 50%; font-size: 30px; transform: translate(-50%, 0);width: 300px; text-align: center" onclick="tu_close1('wrap_logo', 'tu_div_main','tu_layer', 'tuu_layer','tuu_layer1')">웹사이트 설명</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tuu_layer1" style="visibility: hidden;">
+        <div class="dim-layer" id="tu_layer">
+            <div id="tu_div_main" class="tu_div_search"></div>
+            <div id="layer1" class="pop-layer">
+                <div id="wrap">
+                    <div id="tu_btn_next" onclick="tu_next('tu_div_main','tu_ment','exp_img', 'tu_btn_close', 'tu_btn_next', 'tu_btn_before')">다음</div>
+                    <p id="ex_img"><img style="visibility: hidden;"  src="ex_img_01.jpg" id="exp_img" alt="설명 이미지" /></p>
+                    <p id="tu_ment">검색창에서 원하는 지역을 검색 할 수 있습니다.</p>
+                    <div id="tu_btn_before" style="visibility: hidden;" onclick="tu_before('tu_div_main','tu_ment','exp_img','tu_btn_close', 'tu_btn_next', 'tu_btn_before')">이전</div>
+                    <div id="tu_btn_close" style="visibility: hidden;" onclick="tu_close('wrap', 'tu_div_main','tu_layer', 'tuu_layer1')" class="close">닫기</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="share_wrap">
+        
+        <div id="layerPop">
+            <div id="close_btn" onclick="closeLayer('share_click', 'share_tab_img','layerPop')" class="close">닫기</div>
+            <p id="share_img"><img style="padding-top: 30px; padding-left: 5px; padding-right: 5px; width: 350px;" src="share_img.jpg" id="share_img" alt="공유 이미지" /></p>
+        </div>
+    </div> 
+
+
+
+
+    <!-- <script>
+        document.getElementById("myBtn").addEventListener("click", function() {
+          document.getElementById("demo").style.width="600px";
+        });
+    </script> -->
+    <script type="text/javascript" src="main.js"></script>
+
+
+    <!--부트스트랩 js -->
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/js/plugins/bootstrap.min.js"></script>
+    <script src="assets/js/plugins/feather.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="assets/js/plugins/clipboard.min.js"></script>
+    <!-- <script src="assets/js/uikit.min.js"></script> -->
+
+    <!-- Apex Chart -->
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+    <!-- <script>
+        $("body").append('<div class="fixed-button active"><a href="https://1.envato.market/VGznk" target="_blank" class="btn btn-md btn-success"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro</a> </div>');
+    </script> -->
+
+
+
+
+
+    <!-- custom-chart js -->
+    <script src="assets/js/pages/dashboard-sale.js"></script>
+    <!-- [ Main Content ] end -->
+    <script src="assets/js/plugins/apexcharts.min.js"></script>
+    <script src="assets/js/pages/chart-apex.js"></script>
+
+</body>
+
+</html>

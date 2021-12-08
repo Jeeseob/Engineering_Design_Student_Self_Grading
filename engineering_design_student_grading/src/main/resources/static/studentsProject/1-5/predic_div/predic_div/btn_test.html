@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+
+    <style>
+
+        #t_btn_control, #d_btn_control, #w_btn_control {
+            background: #FFFFFF;
+            margin: 0;
+            padding: 0.5rem 1rem;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+            #t_btn_control.active, #d_btn_control.active, #w_btn_control.active {
+                background: #045FB4;
+                outline: 0;
+                color: white;
+            }
+
+    </style>
+</head>
+<body>
+
+    <div class="pre_main" style="border:1px solid black; padding-left:30px; padding-top: 20px; padding-bottom :0px; height: 500px; min-height:500px; width: 500px; min-width:500px; background-color: skyblue;" id="pre_overlay">
+        <p>서울 특별시 중구</p>
+
+        <div id="t_btn_control" onclick="change_img(0)">내일</div>
+        <div id="d_btn_control" onclick="change_img(1)">모레</div>
+        <div id="w_btn_control" onclick="change_img(2)">주간</div>
+
+        <div class="div_main_inner" style="height: 330px; min-height: 330px; width: 430px; min-width: 430px; background-color: white" id="pre_overlay_img">
+            <p><img style="padding: 15px; width:400px; height:300px;" src="tom_yell_red.png" id="pre_img" alt="예측 이미지" /></p>
+        </div>
+    </div>
+
+    <script>
+        var num = 1;
+
+        function change_img(index) {
+
+            var t_btn = document.getElementById("t_btn_control");
+            var d_btn = document.getElementById("d_btn_control");;
+            var w_btn = document.getElementById("w_btn_control");;
+            var imgTag = document.getElementById("pre_img");
+
+            switch (index) {
+                case 0:
+                    imgTag.setAttribute("src", "tom_yell_red.png");
+                    t_btn.className = 'active';
+                    d_btn.className = '';
+                    w_btn.className = '';
+                    break;
+                case 1:
+                    imgTag.setAttribute("src", "dafter_gre_red.png");
+                    d_btn.className = 'active';
+                    t_btn.className = '';
+                    w_btn.className = '';
+                    break;
+                case 2:
+                    imgTag.setAttribute("src", "main_week.png");
+                    w_btn.className = 'active';
+                    d_btn.className = '';
+                    t_btn.className = '';
+                    break;
+            }
+        }
+
+    </script>
+
+
+</body>
+</html>

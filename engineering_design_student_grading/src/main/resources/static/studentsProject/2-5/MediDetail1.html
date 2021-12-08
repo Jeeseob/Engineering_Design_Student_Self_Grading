@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>main</title>
+
+    <style>
+        body {
+            background-color: #25274d;
+        }
+
+        con1 {
+        }
+
+        .newsletter {
+            padding: 30px 0;
+            background: #25274d;
+        }
+
+            .newsletter .content {
+                max-width: 650px;
+                margin: 0 auto;
+                text-align: center;
+                position: relative;
+                z-index: 2;
+            }
+
+                .newsletter .content h2 {
+                    color: #ff9b00;
+                    margin-bottom: 40px;
+                }
+
+                .newsletter .content .form-control {
+                    height: 50px;
+                    border-color: #ffffff;
+                    border-radius: inherit;
+                }
+
+                    .newsletter .content.form-control:focus {
+                        box-shadow: none;
+                        border: 2px solid #243c4f;
+                    }
+
+                .newsletter .content .btn {
+                    min-height: 50px;
+                    border-radius: 0;
+                    background: #ff9b00;
+                    color: #fff;
+                    font-weight: 600;
+                }
+
+        #target1 {
+            margin: 3px;
+            padding: 10px;
+            background-color: #ff9b00;
+            border: 1px solid black;
+        }
+
+        #nav {
+            width: 39%;
+            background-color: #ff9b00;
+            height: 650px;
+            float: left;
+            border: 1px solid black;
+        }
+
+        #content {
+            width: 60.5%;
+            float: right;
+            height: 650px;
+            background-color: #ff9b00;
+            float: right;
+            border: 1px solid black;
+        }
+
+        p.date {
+            text-align: right;
+            color: indigo;
+        }
+    </style>
+</head>
+<body>
+    <section class="newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="content">
+                        <h2>CO.IN map</h2>
+                        <div class="input-group">
+                            <input class="form-control" placeholder="주소 혹은 이름을 입력하세요">
+                            <span class="input-group-btn">
+                                <button class="btn" type="submit" onclick="alert('검색되었습니다.')">검색</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <p id="target1">
+        <b>어디에 가려고 하시나요?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+        <button onclick="location.href = 'main_coffee.html'"> 커피/디저트 </button>
+        <button onclick="location.href = 'main_restaurant.html'"> 식당 </button>
+        <button onclick="location.href = 'main_hotel.html'"> 숙소 </button>
+        <button onclick="location.href = 'main_scene.html'"> 자연 명소 </button>
+        <button onclick="location.href = 'main_medi.html'"> 병원/약국 </button>
+        <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주변에 가볼 만한 곳을 추천받고 싶다면?</a><a href="회원가입.html" class="button">회원가입</a>
+
+
+
+
+
+
+
+    </p>
+    <div id="nav">
+        <h1>&nbsp;Information</h1>
+
+        <p><h1>&nbsp;1. 세검약국</h1></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서울 종로구 홍지동 99-3</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9:00~21:00 </h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tel)02-395-9944</h3></p>
+        <hr />
+        <p><h2>&nbsp;마스크 현황</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KF94 -- 35개</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;일반 -- 165개</h3></p>
+        <p><h2>&nbsp;약 현황</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 감기약 -- 23개</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 두통약 -- 11개</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 소화제 -- 3개</h3></p>
+        
+
+    </div>
+    <div id="content">
+        <h1>&nbsp;교통 정보</h1>
+        <p><h2>&nbsp;버스</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1711 (5분 후, 잔여 좌석 2) -- <i>29분</i></h3></p>
+        <p><h2>&nbsp;택시</h2></p>
+        <p>
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;택시비 7800원 -- <i>19분(원활)</i></h3><input type='button'
+                                                                                 value='콜택시 예약'
+                                                                                 onclick='alert("택시 예약 완료되었습니다.")' />
+        </p>
+        <hr />
+        <p><h2>&nbsp;인근 병원</h2></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;장미경소아과의원</h3></p>
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;연세고소아과(02-358-8275)</h3></p>
+        <hr />
+
+        <p><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;상황별 전화연결</h3></p>
+
+        <input type='button'
+               value='긴급 문의'
+               onclick='alert("02-395-9944로 전화를 겁니다.")' />
+        <input type='button'
+               value='간단 처방 상담'
+               onclick='alert("02-395-9944로 전화를 겁니다.")' />
+        </p>
+
+
+
+
+    </div>
+
+
+
+
+</body>
+</html>

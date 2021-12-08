@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        .header {
+            margin-bottom: 1em;
+            width: 100%;
+            height: 100px;
+            align-items: center;
+            display: flex;
+        }
+
+            .header .HomeButton {
+                position: fixed;
+                left: 35%;
+                margin-top: 10px;
+            }
+
+            .header .nav {
+                display: flex;
+                position: fixed;
+                left: 65%;
+            }
+
+
+
+        .chips {
+            width: 70%;
+            height: 600px;
+            float: left;
+        }
+
+            .chips * {
+                margin-top: 5px;
+                display: flex;
+            }
+
+        #select {
+            font-size: 20pt;
+            margin-left: 15pt;
+        }
+
+        .x {
+            width: 30%;
+            float: right;
+            height: 600px;
+            margin-top: 40px;
+        }
+
+
+
+        #target {
+            margin-left: 55px;
+        }
+        
+
+        #footer {
+            text-align: center;
+            margin-top: 100px;
+            clear: both;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--여기 이후에 배경을 지정하겠습니다. Css로 반복없이 전체화면으로 적용해보았습니다.-->
+
+    <body background="../../아이콘/배경.png">
+
+        <div class="header">
+            <div class="slogan">
+                <img src="../../아이콘/슬로건.png" width="400" hegiht="98">
+                <!--위 코드는 imgur에 올린 이미지파일중 슬로건이 될 부분의 이미지를 업로딩 한 것입니다. default위치값이 마음에 들게 나와서 그냥 그대로 적용하기로 했습니다..-->
+            </div>
+            <div class="HomeButton">
+
+                <!--
+          이곳은 imgur에 올린 이미지파일중 ☆콤퓨-타 이미지를 버튼화시켜놓은 것입니다. 해당 영역은 콤퓨타, 즉 누르면 홈화면으로 링크시켰기에 다시 홈으로 돌아가는 동작을 하게만듭니다.
+        -->
+                <a href="../../main.html"><input type="image" src="../../아이콘/콤퓨타.png" width="500" hegiht="98"></a>
+
+            </div>
+            <div class="nav">
+                <div class="Custom">
+                    <!--이곳은 imgur에 올린 이미지파일중 커스텀 이미지를 버튼화시켜놓은 것입니다. onclick버튼을 사용하고 그걸 다시 커스텀 body코드와 연결시키면 될듯 합니다.-->
+                    <input type="image" src="../../아이콘/별.png" width="75" hegiht="49" />
+                    <a href="../../main.html"><input type="image" src="../../아이콘/커스텀.png" width="240" hegiht="59"></a>
+                </div>
+
+                <div class="Benchmark">
+
+                    <!--이곳은 imgur에 올린 이미지파일중 벤치마크 이미지를 버튼화시켜놓은 것입니다. onclick버튼을 사용하고 그걸 다시 벤치마크 body코드와 연결시키면 될듯 합니다.-->
+                    <a href="../Homepage_bench.html"><input type="image" src="../../아이콘/벤치마킹.png" width="200" hegiht="49"></a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="main">
+            <div class="chips">
+                <div class="GPU">
+                    <img src="../../아이콘/지피유.png" width="250" height="80">
+                    <img src="../../아이콘/지피유아이콘.png" width="50" height="59"> <!--GPU 이미지입니다.-->
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value="">(블랙)MSI 지포스 RTX 3070 게이밍 Z 트리오 D6 8GB 트라이프..</option>
+                        <option value=""selected disabled>(화이트)COLORFUL iGAME 지포스 RTX 3070 Ultra OC D6 8GB</option>
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+                <div class="board">
+                    <img src="../../아이콘/보드.png" width="250" height="80">
+                    <img src="../../아이콘/보드아이콘.png" width="50" height="59">
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value=""selected disabled>MSI MAG B560M 박격포</option>
+                        <option value="">ASUS PRIME B560M-A 코잇</option>
+                        <option value="">ASRock B560M PRO4 에즈윈</option>
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+                <div class="cooler">
+                    <img src="../../아이콘/쿨러.png" width="250" height="80">
+                    <img src="../../아이콘/쿨러아이콘.png" width="50" height="59">
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value=""selected disabled>(화이트)앱코 NCORE CL120 AUTO RGB </option>
+                        <option value="">(블랙)잘만 CNPS10X PERFORMA BLACK</option>
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+                <div class="power">
+                    <img src="../../아이콘/파워.png" width="250" height="80">
+                    <img src="../../아이콘/파워아이콘.png" width="50" height="59">
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value="">에너맥스 MAXPRO II EMP700AGT-C 80Plus Standard 230V EU</option>
+                        <option value=""selected disabled>EVGA 600 W2 80PLUS Standard 230V EU</option>
+                        <option value="">쿨러마스터 MWE 600 BRONZE V2 230V</option>
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+                <div class="case">
+                    <img src="../../아이콘/케이스.png" width="250" height="80">
+                    <img src="../../아이콘/케이스아이콘.png" width="50" height="59">
+                    <select class="" id="select">
+                        <option value="">옵션선택</option>
+                        <option value="">(블랙)앱코 NCORE 씨마스터 강화유리</option>
+                        <option value=""selected disabled>(화이트)darkFlash DLX21 RGB MESH 강화유리</option>
+                        <option value="">(레드)Antec P7 WINDOW </option>
+                        <option value="">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </option>
+                    </select>
+                </div>
+
+
+            </div>
+            <div>
+                <div class="Calc_CheGuevara">
+
+                    <!--이곳은 imgur에 올린 이미지파일중 견적내기를 버튼화시켜놓은 것입니다. onclick버튼을 사용하고 그걸 다시 다음의 페이지와 연결시키면 될듯 합니다.-->
+                    
+
+
+                </div>
+            </div>
+        </div>
+        <div class="x">
+            <img src="../../사진/visual/www2.png" width="400" height="450">
+            
+
+        </div>
+
+        <div id="footer">
+            Copyright 2021. ★compu-ta All rights reserved.
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+</body>
+</html>

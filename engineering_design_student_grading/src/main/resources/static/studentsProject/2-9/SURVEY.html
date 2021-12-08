@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS shop</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 100%;
+            background: white;
+            position: fixed;
+            font-weight: bold;
+            font-size: 15pt;
+            height: 50px;
+            padding-top: 10px;
+        }
+
+            .nav > div {
+                float: right;
+            }
+
+            .nav > ul {
+                float: left;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .nav > ul > li {
+                    display: inline-block;
+                    padding: 0;
+                }
+
+            .nav a {
+                display: block;
+                text-decoration: none;
+                padding: 10px 20px;
+                color: black;
+            }
+
+                .nav a:hover {
+                    background: white;
+                }
+
+        .img {
+            display: block;
+            margin: auto;
+        }
+
+        .box {
+            width: 75%;
+            height: 800px;
+            border: 1px solid black;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-left: 270px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        .picture {
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-left: 90px;
+        }
+
+        #content {
+            width: 100%;
+            background-color: white;
+            float: right;
+            height: 1000px;
+            color: black;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: black;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .form {
+            font-size: 15px;
+        }
+
+        .cs {
+            padding-right: 150px;
+        }
+
+        .name {
+            padding-left: 35px;
+            padding-top: 0px;
+            font-size: 50px;
+            width: 140px;
+            height: 80px;
+            font-weight: bold;
+        }
+
+        .privacy {
+            padding-left: 300px;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+        #footer {
+            background-color: black;
+            height: 300px;
+            clear: both;
+            color: white;
+        }
+        .ftcolor {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="nav" style="top: 0px;">
+            <ul>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="Shop.html">SHOP</a></li>
+                <li><a href="Community.html">COMMUNITY</a></li>
+                <li><a href="survey.html">SURVEY</a></li>
+            </ul>
+
+            <div><a href="Cart.html">CART</a></div>
+            <div><a href="MyPage.html">MY PAGE</a></div>
+            <div><a href="join.html">JOIN</a></div>
+            <div><a href="login.html">LOGIN</a></div>
+            <a href="main.html">
+                <center>
+                    <div>
+                        <img src=CS.png
+                             width="150" height="50" style="padding-right : 150px">
+                    </div>
+                </center>
+            </a>
+        </nav>
+        <div id="content">
+            <h2 style="margin: 50px 60px 0px 0px; ">설문조사</h2>
+            <div class="box" style="padding: 10px 10px 10px 10px;">
+                <form action="proc_form.jsp" style="margin-right:80px;">
+                    <label for="male">남성</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="female">여성</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                </form><br /><br />
+
+                <form style="float: left;">
+                    1. 지역 선택:
+                    <label for="male">서울</label>
+                    <input type="radio" name="gender" id="male" value="male">|
+                    <label for="female">경기</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">인천</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">강원</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">충청북도</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">충청남도</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">경상북도</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">경상남도</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">전라북도</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">전라남도</label>
+                    <input type="radio" name="gender" id="female" value="female">|
+                    <label for="female">제주도</label>
+                    <input type="radio" name="gender" id="female" value="female">
+
+                </form> <br /><br /><br />
+                <form style="float: left;">
+                    2. 나이:
+                    <input type="checkbox" name="color" value="apple">10대
+                    <input type="checkbox" name="color" value="grape">20대
+                    <input type="checkbox" name="color" value="orange">30대
+                    <input type="checkbox" name="color" value="orange">40대
+                    <input type="checkbox" name="color" value="orange">50대
+                    <input type="checkbox" name="color" value="orange">60대
+                    <input type="checkbox" name="color" value="orange">70대이상
+                </form>
+                <br /><br /><br />
+
+                <form style="float: left;">
+                    3. 색상 선택:
+                    <input type="checkbox" name="color" value="apple">빨강
+                    <input type="checkbox" name="color" value="grape">초록
+                    <input type="checkbox" name="color" value="orange">파랑
+                    <input type="checkbox" name="color" value="orange">검정
+                    <input type="checkbox" name="color" value="orange">갈색
+                    <input type="checkbox" name="color" value="orange">보라
+                    <input type="checkbox" name="color" value="orange">하늘
+                    <input type="checkbox" name="color" value="orange">분홍
+                    <input type="checkbox" name="color" value="orange">노랑
+                    <input type="checkbox" name="color" value="orange">흰색
+                </form>
+                <br /><br /><br />
+
+                <form style="float: left;">
+                    4. 스타일:
+                    <input type="checkbox" name="color" value="apple">캐주얼
+                    <input type="checkbox" name="color" value="grape">스트릿
+                    <input type="checkbox" name="color" value="orange">빈티지
+                    <input type="checkbox" name="color" value="orange">모던
+                    <input type="checkbox" name="color" value="orange">놈코어
+                    <input type="checkbox" name="color" value="orange">댄디
+                    <input type="checkbox" name="color" value="orange">레이어드
+                    <input type="checkbox" name="color" value="orange">스포티
+                    <input type="checkbox" name="color" value="orange">클래식
+                </form><br /><br /><br />
+
+                <form style="float: left;">
+                    5. 가격:
+                    <input type="checkbox" name="color" value="apple">1만원 이하
+                    <input type="checkbox" name="color" value="grape">1만원 초과 ~ 3만원 이하
+                    <input type="checkbox" name="color" value="orange" /> 3만원 초과 ~ 5만원 이하
+                    <input type="checkbox" name="color" value="orange">5만원 초과 ~ 7만원 이하
+                    <input type="checkbox" name="color" value="orange">7만원 초과 ~ 10만원 이하
+                    <input type="checkbox" name="color" value="orange">10만원 이상
+
+                </form><br /><br /><br />
+                <form style="float: left;">
+                    6. 사이즈:
+                    <input type="checkbox" name="color" value="apple">일자
+                    <input type="checkbox" name="color" value="grape">스키니
+                    <input type="checkbox" name="color" value="orange" /> 오버핏
+                    <input type="checkbox" name="color" value="orange">배기
+                    <input type="checkbox" name="color" value="orange">부츠컷
+                    <input type="checkbox" name="color" value="orange">프리사이즈
+
+                </form><br /><br /><br />
+                                   <form style="float: left;">
+                                       7. 종류:
+                                       <input type="checkbox" name="color" value="apple">아우터
+                                       <input type="checkbox" name="color" value="grape">셔츠
+                                       <input type="checkbox" name="color" value="orange" /> 맨투맨
+                                       <input type="checkbox" name="color" value="orange">후드
+                                       <input type="checkbox" name="color" value="orange">바지
+                                       <input type="checkbox" name="color" value="orange">신발
+                                       <input type="checkbox" name="color" value="orange">악세사리
+
+                                   </form><br /><br /><br />
+            </div>
+
+            <button class="button" onClick="location.href='recommend.html'"> 설문 완료 </button>
+
+        </div>
+
+        <div id="footer">
+            <div class="name" style="float: left;">
+                <div><h2>CS</h2></div>
+            </div>
+            <div class="privacy" style="float: left;">
+                <h2>CS Center</h2><br>
+                <div class="ftcolor">
+                    02- 2238-3804<br>
+                    평일 AM 10:00- PM 4:00<br>
+                    점심 PM 1:00- PM 2:00<br>
+                    휴무 주말&공휴일 휴무
+                </div>
+
+
+            </div>
+            <div class="privacy" style="float: left;">
+                <h2>Bank Info</h2>
+                <div class="ftcolor">
+                    상명은행 123-45678-90123<br>
+                    CS은행 454645-01-123123<br>
+                    예금주 : 공설입<br><br>
+                </div>
+
+                <strong>배송안내</strong><br><br>
+                <div class="ftcolor">
+                    CS택배 1234-1234
+                </div>
+            </div>
+
+            <div class="privacy" style="float: left;">
+                <h2>Company Info</h2><br>
+                <div class="ftcolor">
+                    CS SHOP | 대표자 상명대<br>
+                    주소 : 서울캠퍼스 (03016) 서울시 종로구 홍지문 2길 10 상명대학교 <br>
+                    사업자등록번호 : 없음
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

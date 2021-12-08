@@ -1,0 +1,90 @@
+/*글쓰기 css*/
+
+span {
+  color: red;
+}
+
+.board_name {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-decoration-line: none;
+}
+
+.board_name:hover {
+  color: black;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  padding: 30px;
+}
+.writebox {
+  height: 45px;
+  border-bottom-style: groove;
+  border-bottom-width: thin;
+}
+.write_title {
+  height: 45px;
+  margin-top: 17px;
+  border: 2px solid gray;
+  display: flex;
+}
+
+input[type="text"],
+textarea {
+  border: 0;
+  outline: none;
+}
+
+input[type="text"] {
+  font-weight: bold;
+  font-size: 20px;
+  width: 96.5%;
+  margin: auto;
+}
+
+.write_content {
+  margin-top: 5px;
+  height: 380px;
+  border: 2px solid gray;
+}
+
+textarea {
+  height: 300px;
+  padding: 5px 6px;
+  margin: 10px;
+  resize: none;
+  width: -webkit-fill-available;
+}
+
+textarea,
+input[type="text"] {
+  font-family: "SF";
+}
+
+/*스크롤*/
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+
+.end {
+  height: 25px;
+  background-color: black;
+  color: white;
+  float: right;
+  margin-right: 20px;
+  border: 0px;
+}
+
+footer {
+  width: 100%;
+}

@@ -1,0 +1,425 @@
+﻿﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CS shop</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .nav {
+            display: inline-block;
+            width: 100%;
+            background: white;
+            position: fixed;
+            font-weight: bold;
+            font-size: 15pt;
+            height: 50px;
+            padding-top: 10px;
+        }
+
+            .nav > div {
+                float: right;
+            }
+
+            .nav > ul {
+                float: left;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+                .nav > ul > li {
+                    display: inline-block;
+                    padding: 0;
+                }
+
+            .nav a {
+                display: block;
+                text-decoration: none;
+                padding: 10px 20px;
+                color: black;
+            }
+
+                .nav a:hover {
+                    background: white;
+                }
+
+        .img {
+            display: block;
+            margin: auto;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+        }
+
+
+
+        .picture {
+            padding-top: 50px;
+            padding-right: 30px;
+            padding-left: 100px;
+        }
+
+        .thin {
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .face {
+            float: right;
+            width: 230px; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+            margin: 0 auto;
+            padding: 15px;
+            text-align: center;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .size {
+            float: right;
+            width: 400px; /* 정렬하려는 요소의 넓이를 반드시 지정 */
+            margin: 0 auto;
+            padding: 15px;
+            text-align: center;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .infor {
+            position: sticky;
+            font-size: 13pt;
+            padding-top: 150px;
+            padding-right: 30px;
+            padding-left: 10px;
+            text-align: left;
+        }
+
+        #content {
+            width: 100%;
+            background-color: white;
+            float: left;
+            height: 1000px;
+            color: black;
+            padding-top: 50px;
+            text-align: center;
+            padding-right: 30px;
+        }
+
+        .cs {
+            padding-right: 150px;
+        }
+
+        .name {
+            padding-left: 35px;
+            padding-top: 0px;
+            font-size: 50px;
+            width: 140px;
+            height: 80px;
+            font-weight: bold;
+        }
+
+        .privacy {
+            padding-left: 300px;
+            font-size: 15px;
+            padding-top: 30px;
+        }
+
+        #footer {
+            background-color: black;
+            height: 300px;
+            clear: both;
+            color: white;
+        }
+
+        .ftcolor {
+            color: gray;
+        }
+
+        .popup_btn a {
+            display: inline-block;
+            padding: 5px;
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 900;
+        }
+
+            .overlay:target {
+                visibility: visible;
+                opacity: 1;
+            }
+
+        .popup {
+            position: fixed;
+            width: 1000px;
+            height: 850px;
+            padding: 10px;
+            <!-- max-width: 500px; -->
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, .9);
+            /* "delay" the visibility transition */
+            -webkit-transition: opacity .5s, visibility 0s linear .5s;
+            transition: opacity .5s, visibility 0s linear .5s;
+            z-index: 1;
+        }
+
+            .popup:target {
+                visibility: visible;
+                opacity: 1;
+                /* cancel visibility transition delay */
+                -webkit-transition-delay: 0s;
+                transition-delay: 0s;
+            }
+
+        .popup-close {
+            position: absolute;
+            padding: 10px;
+            max-width: 500px;
+            border-radius: 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, .9);
+        }
+
+        .popup .close {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            padding: 5px;
+            color: #000;
+            transition: color .3s;
+            font-size: 2em;
+            line-height: .6em;
+            font-weight: bold;
+        }
+
+            .popup .close:hover {
+                color: #00E5EE;
+            }
+
+        .popup .content {
+            font-size: 20pt;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="nav" style="top: 0px">
+            <ul>
+                <li><a href="About_2.html">ABOUT</a></li>
+                <li><a href="Shop_2.html">SHOP</a></li>
+                <li><a href="Community_2.html">COMMUNITY</a></li>
+                <li><a href="survey_2.html">SURVEY</a></li>
+            </ul>
+
+            <div><a href="main.html">로그아웃</a></div>
+            <div><a href="Cart_2.html">CART</a></div>
+            <div><a href="MyPage_2.html">MY PAGE</a></div>
+            <div><a href="MyPage_2.html">홍길동</a></div>
+            <a href="main_2.html">
+                <center>
+                    <div>
+                        <img src=CS.png
+                             width="150" height="50" style="padding-right : 150px">
+                    </div>
+                </center>
+            </a>
+        </nav>
+    </div>
+
+
+    <div id="content">
+
+        <div class="picture" style="float: left;">
+            <a href="#">
+                <img src=모습.jpg
+                     width="500" height="750"> <br />
+                <h2><em>++ 옷을 입은 내 모습 (사진 클릭) ++</em></h2>
+
+            </a>
+        </div>
+
+        <div class="picture" style="float: left;">
+            <a href="#">
+                <img src=123.jpg
+                     width="450" height="900">
+
+            </a>
+        </div>
+
+
+
+        <div class="infor" style="float: right;">
+
+            <h3><strong>클래식 시그니쳐 슬림 자켓 <br> (Classic Signatuer Slim Jacket)</strong></h3> <br>
+
+            필로그램의 독점 원단으로 제작 된 클래식 청자켓. <br>
+            사계절 착용에 적합한 중청 컬러. <br>
+            고급원사를 사용해 두께감에 비해 가볍고 착용감이 좋고 부드러움. <br>
+            레귤러 기장감으로 몸에 잘 맞는 슬림한 핏으로 겨울 코트와 코디하기 좋음. <br><br><br>
+
+            <div class="face" , style=" cursor: pointer;"><a href="#pop02">내 사이즈 찾기</a></div>
+
+
+            <div id="pop02" class="overlay">
+                <div class="popup">
+                    <a href="#none" class="close">&times;</a>
+                    <div class="content"> 내 사이즈 찾기 </div>
+                    <br /><br />
+                    <img style="float: left;" src=사이즈.jpg width="550" height="750">
+                    <div>
+                        <p style="padding-left: 13%; float: left;">키(cm)&nbsp;&nbsp;&nbsp;&nbsp;</p> <br />
+                        <input style=" text-align: center; width: 80px; height: 26px;" size="20" value="" type="text" />
+                        <br />
+                        <br />
+                        <p style="padding-left: 10%; float: left;">몸무게(kg)&nbsp;&nbsp;&nbsp;&nbsp;</p> <br />
+                        <input style=" text-align: center; width: 80px; height: 26px;" size="20" value="" type="text" />
+
+
+                    </div>
+                    <br />
+                    <br />
+                    <p class="size" , style=" cursor: pointer;" onclick="alert('당신의 사이즈는 L 입니다.') ">사이즈 검색</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <strong>
+                Price : <strike>117000 won </strike> <br>
+                &emsp;&emsp;&emsp;&nbsp;&nbsp; 72000 won
+            </strong> <br><br><br>
+
+
+            <div class="face" , style=" cursor: pointer;"  onclick="location.href='Cloth_infor_3.html';">얼굴 사진 등록하기</div>
+
+            <form style="float:left;">
+                <strong>SIZE  : </strong>
+                <input type="radio" name="SIZE" value="S">S
+                <input type="radio" name="SIZE" value="M">M
+                <input type="radio" name="SIZE" value="L">L
+                <input type="radio" name="SIZE" value="XL">XL
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+            <form method="post" enctype="multipart/form-data">
+                <div>
+
+                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)" style="float:right;">
+                </div>
+
+            </form>
+
+
+            <br>
+            <br>
+            <hr />
+            <br>
+
+            <p style="text-align:right"><strong>총 상품금액(수량) : 0(0개)</strong></p>
+
+
+
+            <br>
+
+            <div class="thin" , style=" cursor: pointer;" onclick="location.href='Shop Matching_2.html';">Shop Matching</div>
+            <div class="thin" , style=" cursor: pointer;" onclick="location.href='Order List_2.html';">Buy</div>
+            <div class="thin" , style=" cursor: pointer;" onclick="location.href='';">Add to cart</div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <div id="footer">
+        <div class="name" style="float: left;">
+            <div><h2>CS</h2></div>
+        </div>
+        <div class="privacy" style="float: left;">
+            <h2>CS Center</h2><br>
+            <div class="ftcolor">
+                02- 2238-3804<br>
+                평일 AM 10:00- PM 4:00<br>
+                점심 PM 1:00- PM 2:00<br>
+                휴무 주말&공휴일 휴무
+            </div>
+
+
+        </div>
+        <div class="privacy" style="float: left;">
+            <h2>Bank Info</h2>
+            <div class="ftcolor">
+                상명은행 123-45678-90123<br>
+                CS은행 454645-01-123123<br>
+                예금주 : 공설입<br><br>
+            </div>
+
+            <strong>배송안내</strong><br><br>
+            <div class="ftcolor">
+                CS택배 1234-1234
+            </div>
+        </div>
+
+        <div class="privacy" style="float: left;">
+            <h2>Company Info</h2><br>
+            <div class="ftcolor">
+                CS SHOP | 대표자 상명대<br>
+                주소 : 서울캠퍼스 (03016) 서울시 종로구 홍지문 2길 10 상명대학교 <br>
+                사업자등록번호 : 없음
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

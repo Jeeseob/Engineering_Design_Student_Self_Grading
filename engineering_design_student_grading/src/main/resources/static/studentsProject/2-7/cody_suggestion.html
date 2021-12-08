@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>패션피플</title>
+        <link rel="icon" href="img/favicon.png">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- animate CSS -->
+        <link rel="stylesheet" href="css/animate.css">
+        <!-- owl carousel CSS -->
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <!-- themify CSS -->
+        <link rel="stylesheet" href="css/themify-icons.css">
+        <!-- flaticon CSS -->
+        <link rel="stylesheet" href="css/flaticon.css">
+        <!-- fontawesome CSS -->
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <!-- magnific CSS -->
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/gijgo.min.css">
+        <!-- niceselect CSS -->
+        <link rel="stylesheet" href="css/nice-select.css">
+        <!-- slick CSS -->
+        <link rel="stylesheet" href="css/slick.css">
+        <!-- style CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/loading.css">
+        <link rel="stylesheet" href="css/scrollbar.css">
+
+        <style>
+            .client_review img {object-fit:cover;}
+
+            .main_menu_iner{
+                box-shadow: 0px 10px 15px rgb(0 0 0 / 5%);
+            }
+
+            .add-product__row{
+                display : flex;
+                justify-content: center;
+            }
+            .confirm-button{
+                margin-right: 125px;
+            }
+
+            .clothes_container{
+                width : 250px;
+                height : 450px;
+                border : 1px solid lightgray;
+                margin-right : 30px
+            }
+
+            .suggestioned_cody{
+                width : 300px;
+                height : 450px;
+                border : 1px solid lightgray;
+            }
+
+            .owl-prev{
+                display: none;
+            }
+
+            .owl-next{
+                display: none;
+            }
+
+            .client_review_slider img{
+                height : 490px;
+                object-fit: cover;
+            }
+
+            .clothes_desc {
+                margin-top : 5px;
+            }
+
+            .single_review_slider{
+                padding : 10px !important;
+            }
+
+            .selected_clothes{
+                border: 3px solid #b4dbed !important;
+            }
+
+            .wear_clothes{
+                border-bottom : 1px solid lightgray;
+                margin-bottom : 1px;
+            }
+
+            .weather{
+                margin-top : 80px;
+                border-top : 1px solid lightgray;
+                border-bottom : 1px solid lightgray;
+            }
+
+        </style>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+    <header class="main_menu">
+        <div class="main_menu_iner">
+            <div class="container">
+                <div class="row align-items-center ">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                            <a class="navbar-brand" href="main.html"> <img src="img/logo.png" width="105" height="50" class="logo_img" alt="logo"> </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse main-menu-item justify-content-center"
+                                 id="navbarSupportedContent">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="community.html" id="navbarDropdown"
+                                           role="button" data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            쇼핑
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                            <ul>
+                                                <span class="dropdown-item-header">아우터</span>
+                                                <li><a class="dropdown-item" href="./shop.html">재킷 / 코트</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">캐주얼 아우터</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">다운</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">울트라라이트다운</a></li>
+                                            </ul>
+                                            <ul>
+                                                <span class="dropdown-item-header">상의</span>
+                                                <li><a class="dropdown-item" href="./shop.html">후리스</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">니트</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">캐시미어</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">스웨트셔츠 / 후디</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">셔츠 / 블라우스</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">티셔츠</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">UT(그래픽 티셔츠)</a></li>
+                                            </ul>
+                                            <ul>
+                                                <span class="dropdown-item-header">하의</span>
+                                                <li><a class="dropdown-item" href="./shop.html">진</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">히트텍팬츠</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">스마트팬츠</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">캐주얼팬츠</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">레깅스팬츠</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">스커트</a></li>
+                                            </ul>
+                                            <ul>
+                                                <span class="dropdown-item-header">액세서리</span>
+                                                <li><a class="dropdown-item" href="./shop.html">벨트</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">가방</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">신발</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">우산</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">모자</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">스카프</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">넥워머</a></li>
+                                                <li><a class="dropdown-item" href="./shop.html">삭스</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="cody_suggestion.html">코디 추천</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="community.html">커뮤니티</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="mypage.html">마이페이지</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="./cart.html"><img src="./img/cart.jpg" alt="" style = "margin-left : 100px; width : 50px; height : 50px "></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="login.html" style = "float: right">로그인/로그아웃</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <section class="section_padding" style = "padding : 130px 0px 80px 0px">
+            <div class="container">
+                <div class="add-product__row">
+                    <div class = "add-product__row-header">기준일</div>
+                    <input type="date" class= "add-product__input input-large" placeholder="스타일 입력" inputmode="numeric" value = "2021-09-12">
+                </div>
+
+                <div class="add-product__row">
+                    <div class = "add-product__row-header">날씨</div>
+                    <select class= "add-product__input input-large">
+                        <option value="">맑음</option>
+                        <option value="">흐림</option>
+                        <option value="">비</option>
+                        <option value="">천둥비</option>
+                        <option value="">눈보라</option>
+                        <option value="">우박</option>
+                        <option value="">폭풍</option>
+                        <option value="">벚꽃 날림</option>
+                        <option value="">모래폭풍</option>
+                        <option value="">번개</option>
+                        <option value="">눈</option>
+                        <option value="">스모그</option>
+                    </select>
+                </div>
+
+                <div class="add-product__row">
+                    <div class = "add-product__row-header">상황</div>
+                    <select class= "add-product__input input-large">
+                        <option value="">축제</option>
+                        <option value="">상견례</option>
+                        <option value="">회사</option>
+                        <option value="">데이트</option>
+                        <option value="">학교</option>
+                        <option value="">공연</option>
+                        <option value="">동창회</option>
+                        <option value="">결혼식</option>
+                        <option value="">헬스</option>
+                        <option value="">조깅</option>
+                        <option value="">편한 모임</option>
+                        <option value="">격식 모임</option>
+                    </select>
+                </div>
+
+                <div class="add-product__row">
+                    <div class = "add-product__row-header">스타일</div>
+                    <select class= "add-product__input input-large">
+                        <option value="">세련된 스타일</option>
+                        <option value="">격식 있는 스타일</option>
+                        <option value="">힙한 스타일</option>
+                        <option value="">스트릿 스타일</option>
+                        <option value="">믹스매치 스타일</option>
+                        <option value="">자연스럽고 편안한 스타일</option>
+                        <option value="">깔끔한 스타일</option>
+                        <option value="">화려한 스타일</option>
+                    </select>
+                </div>
+
+                <button type="button" class ="confirm-button" data-label = "suggestion_btn" style = "float: right;">코디 추천</button>
+
+                <div class="photo-container" style = "float: right;">
+                    <a href='javascript:void(0);'>
+                        <img class="small-img" src="./img/question.png">
+                        <span style="width : 315px; left : -27.5em">상황, 날씨, 요일, 사용자의 스타일 등에 맞춰 코디를 추천해줌.</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class = "weather" style="display : none; justify-content: center; width : 100%; align-items: center">
+                <h3><strong><span class = "date" style = "margin-right : 90px"></span></strong></h3>
+                <img src="./img/rain.jpeg" alt="">
+            </div>
+        </section>
+
+        <section class="container suggestion" style = "display: none; justify-content: center; padding : 30px 0px 40px 0px">
+            <div class = "clothes_container scrollbar">
+
+            </div>
+
+            <div class="suggestioned_cody" style = "position: relative">
+                <img src="./img/mypage/style1.jpg" alt="" class = "" width="300" height="450">
+                <button type="button" class ="confirm-button none" data-label = "save_cody" style = "float: right; margin : 0px; position : absolute; bottom : 5px; right : 5px">코디 저장</button>
+            </div>
+        </section>
+
+        <section class="client_review none" style = "padding : 0px 0px 50px 0px; border : none">
+            <div class="container">
+                <div style="display: flex">
+                    <h2><span>추천된 코디</span></h2>
+
+                    <div class="photo-container" style = "float: right;">
+                        <a href='javascript:void(0);'>
+                            <img class="small-img" src="./img/question.png">
+                            <span style="width : 490px;">
+                                - 사용자의 옷장이나 쇼핑몰 상품을 기반으로 코디를 추천해줌. <br/>
+                                - 추천받은 코디를 착용한 아바타와 아바타가 착용한 옷의 정보가 나타남. <br/>
+                                - 아바타의 체형은 사용자의 체형에 맞춰 설정됨. <br/>
+                                - 옷 이미지에 마우스를 올리면, 옷장의 옷인지, 어느 쇼핑몰의 옷인지 등 옷에 대한 정보가 나타남. <br/>
+                                - 추천 받은 코디는 오른쪽 하단의 버튼을 통해 저장할 수 있음. <br/>
+                                - 제일 하단에서는 함께 추천 받은 여러 코디들을 확인할 수 있음.<br/> </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="client_review_slider owl-carousel">
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style1.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">세련된 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style2.jpg">
+
+                                <div class = "clothes_desc">
+                                    <div class="style"></div>
+                                    <strong>스타일 : </strong><span class="style">깔끔한 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style3.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">격식 있는 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style4.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">힙한 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style5.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">스트릿 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style6.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">자연스럽고 편안한 스타일</span><br/>
+                                </div>
+                            </div>
+
+                            <div class="single_review_slider">
+                                <img src="img/mypage/style7.jpg">
+
+                                <div class = "clothes_desc">
+                                    <strong>스타일 : </strong><span class="style">화려한 스타일</span><br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="loading-bg dark-bg dark-bg--middle none"></div>
+        <div class="infinityChrome none">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <script>
+            const data_list = [{img_url : "./img/mypage/clothes5.jpg", name : "Mmlg Hood", source : "옷장"},
+                {img_url : "./img/mypage/clothes9.jpg", name : "S.S 체인 목걸이", source : "옷장"},
+                {img_url : "./img/mypage/clothes6.jpg", name : "컷팅 디테일 스트레이트 진", source : "옷장"},
+                {img_url : "./img/mypage/clothes10.jpg", name : "웰던 더비 구두 루시 블랙", source : "Covernat"},
+                {img_url : "./img/mypage/clothes11.jpg", name : "WOMEN 오버핏 무스탕", source : "oioi"}
+            ]
+
+            $(document).on("click", ".single_review_slider", (event) => {
+                const target = event.target
+                const clothes_name = $(target).closest(".single_review_slider").children(".clothes_desc").children(".style")[0].innerText
+
+                $(".single_review_slider").removeClass("selected_clothes")
+
+                for (let slider of $(".single_review_slider")){
+                    if($(slider).children(".clothes_desc").children(".style")[0].innerText === clothes_name){
+                        $(slider).addClass("selected_clothes")
+                    }
+                }
+                const cody_img_src = $(target).closest(".single_review_slider").children("img").prop("src")
+
+                $(".suggestioned_cody").children("img").prop("src", cody_img_src)
+                $(".clothes_container").empty();
+
+                shuffle(data_list)
+
+                for(let data of data_list){
+
+                    if(data.source === "옷장"){
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                </span>
+                            </a>
+                        </div>
+                        `)
+                    }else{
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                    <p style = "float : right">▶</p>
+                                </span>
+                            </a>
+                        </div>
+                        `)
+                    }
+                }
+            })
+
+            $("button[data-label = 'suggestion_btn']").on("click", async (event) => {
+                $(".loading-bg").removeClass("none")
+                $(".infinityChrome").removeClass("none")
+
+                await delay(2000)
+
+                $(".loading-bg").addClass("none")
+                $(".infinityChrome").addClass("none")
+
+                $(".weather").css("display", "flex")
+                console.log($("input[type = 'date']").val())
+                $(".weather .date").text($("input[type = 'date']").val())
+
+                $(".suggestion").css("display", "flex")
+                $("button[data-label = 'save_cody']").css("display", "block")
+                $(".client_review").css("display", "block")
+
+                shuffle(data_list)
+
+                for(let data of data_list){
+
+                    if(data.source === "옷장"){
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                </span>
+                            </a>
+                        </div>
+                        `)
+                    }else{
+                        $(".clothes_container").append(`
+                        <div class="photo-container">
+                            <a href='javascript:void(0);'>
+                                <img src='${data.img_url}'>
+                                <span style="width : 200px; left : 2.5em; padding : 10px 10px 5px 10px"><strong>옷 이름 : </strong> ${data.name}</br> <strong>출처 : </strong> ${data.source}</br>
+                                    <p style = "float : right">▶</p>
+                                </span>
+                            </a>
+                        </div>
+                        `)
+                    }
+                }
+            });
+
+            $(document).on("click", ".clothes_container p", (event) => {
+                window.location.href = "./single-product.html"
+            })
+
+            $("button[data-label = 'save_cody']").on("click", () => {
+                swalAlert({icon : "success", html : "저장되었습니다."})
+            })
+        </script>
+
+
+        <footer class="footer-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-sm-6 col-md-5">
+                        <div class="single-footer-widget footer_icon">
+                            <h4>프로젝트 정보</h4>
+                            <p>
+                                상명대학교 공학설계입문 프로젝트<br>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-6">
+                        <div class="single-footer-widget footer_icon">
+                            <h4>Contact Us</h4>
+                            <p>
+                                주소 : 서울시 종로구 홍지문2길 20 상명대학교 (제1공학관 G101-2호) <br>
+                                TEL. 02-2287-5292 FAX. 02-2287-0072
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-5">
+                        <div class="single-footer-widget">
+                            <h4>팀원 정보</h4>
+                            <ul style = "color : #fff">
+                                <li>201911010 정성우</li>
+                                <li>201411087 길민호</li>
+                                <li>202110902 권연정</li>
+                                <li>202110959 이다솔</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer part end-->
+        <!-- jquery plugins here-->
+        <script src="js/jquery-1.12.1.min.js"></script>
+        <!-- popper js -->
+        <script src="js/popper.min.js"></script>
+        <!-- bootstrap js -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- magnific js -->
+        <script src="js/jquery.magnific-popup.js"></script>
+        <!-- swiper js -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- masonry js -->
+        <script src="js/masonry.pkgd.js"></script>
+        <!-- masonry js -->
+        <script src="js/jquery.nice-select.min.js"></script>
+        <script src="js/gijgo.min.js"></script>
+        <!-- contact js -->
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.form.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/contact.js"></script>
+        <!-- custom js -->
+        <script src="js/custom.js"></script>
+        <script src="js/common.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    </body>
+</html>

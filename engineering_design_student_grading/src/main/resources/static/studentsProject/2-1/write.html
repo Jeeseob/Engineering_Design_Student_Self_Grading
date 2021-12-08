@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Write</title>
+    <link rel="stylesheet" href="css/write.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Gowun Dodum', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <img src="logo.png" style="float:left;" width="60" height="60">
+            <a class="header" aria-current="page" href="home.html">할일 은행</a>
+            <div class="btnGroup" style="margin-left: auto;">
+                <a class="chkBtn" type="button" href="login.html" onclick="alert('로그아웃 하시겠습니까?')">로그아웃</a>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="content_section">
+                <h3 style="font-weight: bold; text-align: center; margin-bottom: 36px;">할 일 추가</h3>
+                <form action="" method="POST" style="margin-bottom: 48px;">
+                    <div class="row mb-3 justify-content-md-center">
+                        <div class="col-md-5">
+                            <label for="inputContent" class="form-label">할 일</label>
+                            <input type="text" autofocus placeholder="할 일 입력" required="required" class="form-control" id="inputContent">
+                        </div>
+                    </div>
+                    <div class="row mb-3 justify-content-md-center">
+                        <div class="col-md-5">
+                            <label for="inputDate" class="form-label">마감 기한</label>
+                            <input class="form-control" min="2021-11-01" type="date" id="inputFile" required="required">
+                        </div>
+                    </div>
+                    <div class="row mb-3 justify-content-md-center">
+                        <div class="col-md-5">
+                            <label for="inputFile" class="form-label">금액</label>
+                            <input class="form-control" type="number" step=1000 id="inputFile" required="required" placeholder="1,000원 단위 입력">
+                        </div>
+                    </div>
+                    <div class="row mb-3 justify-content-md-center">
+                        <div class="col-md-5">
+                            <label for="inputFile" class="form-label">알림 설정</label>
+                            <input class="form-control" type="time" id="inputFile" value="20:00">
+                        </div>
+                    </div>
+                    <div class="row mb-s justify-content-md-center">
+                        <div class="col-md-5">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required="required" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                    알림 설정 안 할게요!
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <a id="btn" href="home.html">할 일 추가하기</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

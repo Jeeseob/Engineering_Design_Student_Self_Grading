@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.css" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Gowun Dodum', sans-serif;
+      }
+    </style>
+</head>
+<body>
+    <div class="container" style="flex: 1; min-height: 100%;">
+        <nav class="nav">
+            <img src="logo.png" style="float:left;" width="60" height="60">
+            <a class="header" aria-current="page" href="home.html">할일 은행</a>
+            <div class="btnGroup" style="margin-left: auto;">
+                <a class="chkBtn" type="button" onclick="location.href='main.html'">메인으로</a>
+                <a class="chkBtn" type="button" onclick="location.href='write.html'">할 일 추가</a>
+                <a class="chkBtn" type="button" onclick="location.href='settings.html'">마이페이지</a>
+                <a class="chkBtn" type="button" href="login.html" onclick="alert('로그아웃 하시겠습니까?')">로그아웃</a>
+            </div>
+        </nav>
+        <div class="category">
+            <div class="category_search">
+                <form class="d-flex">
+                    <input class="form-control me-1" type="search" placeholder="검색할 할 일 입력" aria-label="Search">
+                    <button class="chkBtn" type="button" onclick="alert('검색 결과가 없어요!')">Search</button>
+                  </form>
+            </div>
+            <div class="category_section">
+                <div class="category_section_item" style="border-bottom: 0.05px solid rgba(223,190,106,0.7);">
+                    <div class="category_item">
+                        <a class="category_item" href="home.html">오늘의 할 일</a>
+                    </div>
+                    <div class="category_item">
+                        <a class="category_item" href="home_star.html" style="color: rgba(223,190,106,0.7);">중요한 할 일</a>
+                    </div>
+                    <div class="category_item">
+                        <a class="category_item" href="home_all.html">전체 할 일 조회</a>
+                    </div>
+                </div>
+                <div class="category_section_item">
+                    <div class="category_item">
+                        <a class="category_item" href="home_payback.html">회수한 돈 확인</a>
+                    </div>
+                    <div class="category_item">
+                        <a class="category_item" href="home_donation.html">기부금 확인</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div>
+                <h3 style="font-weight: bold; float: left; margin-right: 16px;">
+                    중요한 할 일</h3>
+                <p style="padding: 6px;">&nbsp</p>
+            </div>
+            <div class="content_section">
+                <div class="content_item">
+                    <div class="card w-90" style="background-color: transparent;">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="contentBtnGroup">
+                                    <span class="material-icons" style="color: rgba(223,190,106,0.7)">star</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">라플라스의 마녀 책 완독하기</h5>
+                                    <p class="card-text">
+                                        <span id=today></span>&nbsp&nbsp|&nbsp&nbsp8,000원
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="contentBtnGroup">
+                                    <a class="chkBtn2" href="certification.html">인증</a>
+                                    <a class="chkBtn2" href="modify.html" style="margin-left: 12px;">수정</a>
+                                    <a class="chkBtn2" href="home_star.html" onclick="alert('해당 할 일을 삭제하시겠습니까?')" style="margin-left: 12px;">삭제</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_item">
+                    <div class="card w-90" style="background-color: transparent;">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="contentBtnGroup">
+                                    <span class="material-icons" style="color: rgba(223,190,106,0.7)">star</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">공학설계입문 최종 프로젝트 발표 잘 마무리하기</h5>
+                                    <p class="card-text">
+                                        <span id=today2></span>&nbsp&nbsp|&nbsp&nbsp15,000원
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="contentBtnGroup">
+                                    <button class="chkBtn3">할 일 완료</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_item">
+                    <div class="card w-90" style="background-color: transparent;">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="contentBtnGroup">
+                                    <span class="material-icons" style="color: rgba(223,190,106,0.7)">star</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">동아리 지원서 작성 및 제출하기</h5>
+                                    <p class="card-text">
+                                        <span id=yesterday></span>&nbsp&nbsp|&nbsp&nbsp20,000원
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="contentBtnGroup">
+                                    <button class="chkBtn3">할 일 완료</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content_item">
+                    <div class="card w-90" style="background-color: transparent;">
+                        <div class="row">
+                            <div class="col-md-1">
+                                <div class="contentBtnGroup">
+                                    <span class="material-icons" style="color: rgba(223,190,106,0.7)">star</span>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">알고리즘 DFS & BFS 정리하기</h5>
+                                    <p class="card-text">
+                                        <span id=twodays></span>&nbsp&nbsp|&nbsp&nbsp10,000원
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="contentBtnGroup">
+                                    <button class="chkBtn3">기부 완료</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        공학설계입문 2-1 큰일났다!! 조
+    </div>
+
+    <script>
+        document.getElementById("today").innerHTML=getToday();
+        document.getElementById("today2").innerHTML=getToday();
+        function getToday(){
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = ("0" + (1 + date.getMonth())).slice(-2);
+            var day = ("0" + date.getDate()).slice(-2);
+            return year + "/" + month + "/" + day;
+        }
+        document.getElementById("yesterday").innerHTML=getYesterday();
+        function getYesterday(){
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = ("0" + (1 + date.getMonth())).slice(-2);
+            var day = ("0" + (date.getDate()-1)).slice(-2);
+            return year + "/" + month + "/" + day;
+        }
+        document.getElementById("twodays").innerHTML=getTwodays();
+        function getTwodays(){
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = ("0" + (1 + date.getMonth())).slice(-2);
+            var day = ("0" + (date.getDate()-2)).slice(-2);
+            return year + "/" + month + "/" + day;
+        }
+    </script>
+</body>
+</html>

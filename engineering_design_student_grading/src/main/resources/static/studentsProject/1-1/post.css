@@ -1,0 +1,162 @@
+/*게시글*/
+section,
+.bulletin_board_name {
+  border-bottom-style: groove;
+  border-bottom-width: thin;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+}
+
+.bulletin_board_name {
+  width: 100%;
+  height: 45px;
+}
+
+span {
+  color: red;
+}
+
+.board_name {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  text-decoration-line: none;
+}
+
+.board_name:hover {
+  color: black;
+}
+
+.post {
+  width: 98%;
+  margin: auto;
+}
+
+.post_title_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_title_box1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post_title_info1 {
+  display: flex;
+  margin-top: 15px;
+}
+
+.post_title,
+.writer_MBTI {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.post_title_info2 {
+  margin-top: auto;
+}
+
+.post_title_box2 {
+  display: flex;
+  align-content: space-around;
+  margin-top: 7px;
+  margin-left: 3px;
+  font-size: 12px;
+  color: rgb(39, 39, 39);
+}
+
+#views {
+  margin-left: 10px;
+}
+
+.writer_MBTI {
+  color: silver;
+  margin: auto;
+  padding-left: 7px;
+}
+
+.post_content {
+  width: 95%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.post_comment_wrap {
+  width: 98%;
+  margin: auto;
+  padding: 100px 0 50px 0px;
+}
+
+.writing_comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment_textarea {
+  padding: 10px;
+  width: 93%;
+  height: 40px;
+  outline: none;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  resize: none;
+  overflow-y: visible;
+  font-family: "SF";
+  font-size: 15px;
+}
+
+.comment_textarearea::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+.comment_textarea::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+}
+
+#icon {
+  font-size: 55px;
+}
+
+.send_comment {
+  border: 0;
+  background-color: white;
+}
+
+.show_comment {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.comment_MBTI {
+  width: 37px;
+  height: 20px;
+  margin-right: 10px;
+  padding: 2px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.comment_content {
+  font-size: 17px;
+}
+
+footer {
+  width: 99%;
+}
+.footer_align {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0;
+}

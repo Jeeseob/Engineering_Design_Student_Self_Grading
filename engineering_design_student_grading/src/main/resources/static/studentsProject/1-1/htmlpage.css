@@ -1,0 +1,163 @@
+.topic {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.topic_title {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.mbti_intro {
+  margin-top: -25px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.content_wrap {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.content_column {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.content {
+  border-radius: 25px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 50%;
+  height: 200px;
+}
+.wall {
+  width: 5%;
+  border: none;
+}
+
+.content_title {
+  display: flex;
+  flex: 1;
+  margin: 0px 20px;
+  align-items: center;
+}
+.content_title div {
+  margin: 15px 5px;
+  font-weight: bold;
+}
+
+.content_body {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex: 3;
+}
+
+.content_view {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time {
+  flex: 1;
+  font-size: small;
+  opacity: 0.2;
+  border: 1px solid black;
+  text-align: center;
+}
+.best {
+  flex: 1;
+  font-size: medium;
+  /* border: 1px solid black; */
+  color: blue;
+  text-align: center;
+}
+.new {
+  flex: 1;
+  font-size: medium;
+  /* border: 1px solid black; */
+  color: red;
+  text-align: center;
+}
+
+.mbti {
+  padding: 4px;
+  border: 2px solid black;
+  width: 4 0px;
+  text-align: center;
+}
+.title {
+  flex: 7;
+}
+.view {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  width: 150px;
+}
+.like {
+  width: 150px;
+}
+.comment {
+  flex: 1;
+}
+
+.list {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+i {
+  margin-left: 5px;
+}
+
+#title_margin {
+  width: 30px;
+  padding-top: 35px;
+}
+
+#page_title {
+  font-size: 1rem;
+}
+
+#like_margin {
+  margin-right: 5px;
+}
+
+/* list 영역 */
+.list_container {
+  margin: 20px auto;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+.list_row {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.list_title {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+}
+
+.list_mbti {
+  margin-right: 10px;
+  padding: 0 10px;
+  color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.ahover a:hover {
+  color: black;
+  text-decoration: none;
+}

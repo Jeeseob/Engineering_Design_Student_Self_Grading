@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Post</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="post.css" />
+    <link rel="stylesheet" href="header.css" />
+    <script
+      src="https://kit.fontawesome.com/db685bf63d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function dropdown() {
+        var now = document.querySelector(".timetable");
+        if (getComputedStyle(now).display == "none") {
+          now.style.display = "block";
+        } else {
+          now.style.display = "none";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header_1st_align">
+        <div style="margin-right: 2rem; margin-top: 1rem">
+          <a href="main.html"><img class="img_size" src="logo.jpg" alt="" /></a>
+        </div>
+        <div style="margin-right: 1rem" class="header_2nd_size">
+          <div class="header_nav_align">
+            <div class="header_nav_align_left">
+              <div>
+                <ul id="nav">
+                  <li>
+                    <a href="">MBTI별 게시판</a>
+                    <ul>
+                      <li>
+                        <a class="move_page" href="HTMLPage.html"
+                          ><span style="color: red">E</span>OOO</a
+                        >
+                      </li>
+                      <li>
+                        <a class="move_page" href="HTMLPage_I.html"
+                          ><span style="color: red">I</span>OOO</a
+                        >
+                      </li>
+                      <li>O<span style="color: red">N</span>OO</li>
+                      <li>O<span style="color: red">S</span>OO</li>
+                      <li>OO<span style="color: red">T</span>O</li>
+                      <li>OO<span style="color: red">F</span>O</li>
+                      <li>OOO<span style="color: red">J</span></li>
+                      <li>OOO<span style="color: red">P</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="nav">
+                  <li class="ahover" id="nav_li">
+                    <a href="">실생활 게시판</a>
+                    <!-- <ul>
+                      <li>자유게시판</li>
+                      <li>학교생활</li>
+                      <li>연애</li>
+                      <li>패션/뷰티</li>
+                      <li>연예/방송</li>
+                      <li>취미생활</li>
+                    </ul> -->
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul id="nav">
+                  <li>
+                    <a
+                      href="https://www.16personalities.com/ko/%EB%AC%B4%EB%A3%8C-%EC%84%B1%EA%B2%A9-%EC%9C%A0%ED%98%95-%EA%B2%80%EC%82%AC"
+                      >MBTI 테스트하기</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="header_nav_2nd_align">
+              <a style="color: red" href="I_writing_board.html">글쓰기</a>
+              <a href="">로그아웃</a>
+            </div>
+          </div>
+          <div class="header_search_align">
+            <div style="margin-left: 2rem">ㅣ</div>
+            <div style="margin-right: 2rem">
+              <i class="fas fa-search fa-2x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="bulletin_board_name">
+        <a class="board_name" href="HTMLPage_I.html" target="_self"
+          ><i class="fas fa-user-lock" id="title_margin"></i>
+          &nbsp;<span>I</span>OOO(내향형)</a
+        >
+      </div>
+      <div class="post">
+        <div class="post_title_wrap">
+          <div class="post_title_box1">
+            <div class="post_title_info1">
+              <div class="post_title">과제 질문좀 받아줄 사람</div>
+              <div class="writer_MBTI">(ISFJ)</div>
+            </div>
+            <div class="post_title_info2">
+              <div>
+                <i class="far fa-thumbs-up"> 2</i>
+                <i class="far fa-comment-alt" style="margin-left: 5px"> 4</i>
+              </div>
+            </div>
+          </div>
+          <div class="post_title_box2">
+            <div id="date">2021.12.2</div>
+            <div id="views">166 조회</div>
+          </div>
+        </div>
+        <div class="post_content">
+          분명 맞게 한거 같은데 왜 안나오지 ㅠㅠ <br />
+        </div>
+      </div>
+      <div class="post_comment_wrap">
+        <form
+          class="writing_comment"
+          name="user_comment"
+          action="getcomment.jsp"
+          method="post"
+        >
+          <textarea class="comment_textarea" name="comment"></textarea>
+          <button
+            class="send_comment"
+            type="button"
+            style="cursor: pointer"
+            onclick="window.location.reload()"
+          >
+            <i id="icon" class="far fa-comment-alt"></i>
+          </button>
+        </form>
+        <div class="show_comment">
+          <div class="comment_MBTI">ENFJ</div>
+          <div class="comment_content">뭔데?? 내가 알려줄게</div>
+        </div>
+        <div class="show_comment">
+          <div class="comment_MBTI">ESTP</div>
+          <div class="comment_content">그거 제출일 3주나 남은거 아니야?</div>
+        </div>
+        <div class="show_comment">
+          <div class="comment_MBTI">INTP</div>
+          <div class="comment_content">우리 과제가 있었어?</div>
+        </div>
+        <div class="show_comment">
+          <div class="comment_MBTI">ENTP</div>
+          <div class="comment_content">
+            강의 자료에 이렇게 나와있던데 한 번 해봐
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer_align">
+      <div>
+        <h4 style="color: gray">Copyright © 2020 I’AM. All rights reserved</h4>
+      </div>
+      <div style="display: flex">
+        <h4 style="margin-right: 7px"><i class="fab fa-facebook fa-lg"></i></h4>
+        <h4><i class="fab fa-instagram fa-lg"></i></h4>
+      </div>
+    </footer>
+  </body>
+</html>

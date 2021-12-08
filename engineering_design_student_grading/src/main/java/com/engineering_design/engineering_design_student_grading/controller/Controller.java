@@ -149,6 +149,5 @@ public class Controller {
         model.addAttribute("students", students); //model을 통째로 넘긴다.
         return "studentList";
     }
-
 }
 
