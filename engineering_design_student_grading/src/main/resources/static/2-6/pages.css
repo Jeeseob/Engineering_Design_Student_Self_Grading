@@ -1,0 +1,119 @@
+body {
+  background-color: white;
+}
+
+.page {
+  padding: 0px;
+  background-color: #fcfcfc;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  left: 300px;
+}
+
+.famous {
+  font-size: 38px;
+  font-weight: bold;
+  color: #4bb6ca;
+  margin-left: 20px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #4bb7ca4f;
+}
+
+.famous_infor {
+  margin-top: 12px;
+  margin-left: 20px;
+  height: 50px;
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+.famous_infor_circle {
+  opacity: 30%;
+  font-size: 23px;
+}
+.famous_time {
+  margin-top: 12px;
+  margin-left: 26px;
+  font-size: 26px;
+  text-align: center;
+  height: 50px;
+}
+.famous_plus {
+  margin-left: 26px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.famous_tag {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-left: 12px;
+  padding: 0px 10px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  color: #606060;
+}
+
+.siteline {
+  margin-left: 26px;
+  width: 1026px;
+  height: 280px;
+  padding: 0px;
+}
+.siteline_pictureline {
+  display: flex;
+  width: 1026px;
+  height: 243px;
+}
+.siteline_pictureline_picture {
+  width: 314px;
+  height: 235px;
+  margin-right: 42px;
+  margin-bottom: 8px;
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.naver {
+  height: 217px;
+  border: 10px dashed rgba(255, 0, 0, 0.575);
+}
+.click {
+  position: absolute;
+  font-size: 20px;
+  color: rgba(255, 0, 0, 0.644);
+  top: 400px;
+  left: 150px;
+}
+
+.siteline_pictureline_picture_center {
+  width: 314px;
+  height: 235px;
+  padding: 70px 0px;
+  text-align: center;
+  font-size: 80px;
+  opacity: 50%;
+}
+.siteline_pictureline_picture_img {
+  width: 314px;
+  height: 235px;
+}
+.siteline_nameline {
+  width: 1026px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 37px;
+}
+.siteline_nameline_name {
+  font-size: 18px;
+  font-weight: lighter;
+  width: 314px;
+  height: 29px;
+  margin-bottom: 8px;
+  margin-right: 42px;
+  text-align: center;
+}

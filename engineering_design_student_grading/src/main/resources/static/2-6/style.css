@@ -1,0 +1,139 @@
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
+}
+
+.mframe {
+  height: 400px;
+  border: 1px solid black;
+}
+
+.deth2 {
+  margin-left: 35px;
+  width: 500px;
+  height: 100%;
+
+  float: left;
+}
+
+.deth3 {
+  margin-left: 35px;
+  width: 500px;
+  height: 100%;
+  float: left;
+  border: 1px solid black;
+}
+.deth4 {
+  float: left;
+  width: 320px;
+  height: 100%;
+  margin-left: 35px;
+}
+
+.melon {
+  width: 60px;
+}
+
+.melonran {
+  width: 496px;
+}
+.melonran2 {
+  width: 100%;
+}
+.melondiv {
+  border: 1px solid black;
+}
+
+.you {
+  border-top: 1px solid black;
+}
+
+.meloin,
+.you {
+  border: 1px solid black;
+}
+
+.youDiv {
+  margin-top: 20px;
+}
+
+.pul {
+  margin-top: 20px;
+}
+
+.log {
+  width: 100px;
+}
+
+.logTd {
+  background-color: #273775;
+}
+
+.sonDiv,
+.sonTable {
+  height: 100%;
+}
+
+.contentTr {
+  height: 10%;
+}
+
+.logTd > h3 {
+  margin: 0px;
+  color: white;
+}
+
+.deth5,
+.deth6 {
+  float: left;
+  width: 200px;
+  height: 100%;
+}
+
+.pad10 {
+  padding-left: 10;
+}
+
+.rcmd {
+  height: 150px;
+  width: 300px;
+}
+
+/*.recommend {
+margin-top: 5px;
+}*/
+.naverDiv {
+  float: left;
+}
+
+.page {
+  background-color: #f1f1f1;
+}
+
+.blank {
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  float: left;
+  background-color: white;
+  overflow: hidden;
+}
+.blank_naver {
+  width: 300px;
+  height: 250px;
+}
+/*.navertable {
+}*/
+
+a {
+  text-decoration-line: none;
+}
+a:link {
+  color: white;
+}
+a:visited {
+  color: white;
+}

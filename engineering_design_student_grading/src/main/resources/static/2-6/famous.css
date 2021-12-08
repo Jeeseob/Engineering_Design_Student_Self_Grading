@@ -1,0 +1,167 @@
+body {
+  background-color: white;
+}
+
+.page {
+  padding: 0px;
+  background-color: #fcfcfc;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  left: 300px;
+}
+
+.famous {
+  font-size: 38px;
+  font-weight: bold;
+  color: #4bb6ca;
+  margin-left: 20px;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #4bb7ca4f;
+}
+
+.famous_infor {
+  margin-top: 12px;
+  margin-left: 20px;
+  height: 50px;
+  font-size: 26px;
+  font-weight: lighter;
+}
+
+.famous_infor_circle {
+  opacity: 30%;
+  font-size: 23px;
+}
+.famous_time {
+  margin-left: 26px;
+  font-size: 26px;
+  text-align: center;
+  height: 50px;
+}
+.famous_plus {
+  margin-left: 26px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.famous_tag {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  margin-left: 12px;
+  padding: 0px 10px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+  color: #606060;
+}
+
+.famous_tag_arrow {
+  display: flex;
+  width: 65px;
+  justify-content: space-between;
+}
+
+.famous_filter {
+  height: 49px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-left: 20px;
+  color: #606060;
+  font-size: 13px;
+}
+
+.famous_filter_checkbox {
+  width: 30px;
+}
+.famous_filter_checkbox_icon {
+  margin: 0px;
+}
+.famous_filter_numbers {
+  width: 196px;
+}
+.famous_filter_name {
+  width: 285px;
+}
+.famous_filter_field {
+  width: 200px;
+}
+.famous_filter_follownumber {
+  width: 100px;
+}
+.famous_filter_enter {
+  width: 60px;
+}
+.famous_filter_follow {
+  width: 60px;
+}
+.famous_list {
+  margin-left: 20px;
+  color: #606060;
+}
+
+.famous_list_inner {
+  height: 85px;
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  justify-content: left;
+  align-items: center;
+}
+.famous_list_inner_checkbox {
+  width: 30px;
+}
+.famous_list_inner_checkbox_icon {
+  margin: 0px;
+}
+.famous_list_inner_numbers {
+  font-size: 18px;
+  width: 64px;
+  font-weight: bold;
+  color: #4bb6ca;
+}
+.famous_list_inner_bar {
+  width: 52px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.famous_list_inner_picture {
+  width: 80px;
+}
+
+.famous_list_inner_picture_circle {
+  width: 60px;
+  height: 60px;
+  background-color: gray;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.famous_list_inner_picture_circle_img {
+  width: 60px;
+  height: 60px;
+}
+.famous_list_inner_name {
+  color: black;
+  font-size: 14px;
+  width: 285px;
+}
+.famous_list_inner_field {
+  opacity: 90%;
+  font-size: 14px;
+  width: 194px;
+}
+.famous_list_inner_follownumber {
+  font-size: 12px;
+  width: 113px;
+}
+.famous_list_inner_enter {
+  width: 58px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.famous_list_inner_follow {
+  width: 55px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.5);
+}
