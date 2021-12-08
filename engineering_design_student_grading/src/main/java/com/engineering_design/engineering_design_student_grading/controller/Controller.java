@@ -86,7 +86,7 @@ public class Controller {
                         student.setPhoneNumber(form.getPhoneNumber());
 
                         //SetGrade setGrade = new SetGrade();
-                        grades = setGrade.setGrade(form.getGradeForms(), form.getStudentNumber());
+                        //grades = setGrade.setGrade(form.getGradeForms(), form.getStudentNumber());
 
                         studentService.addStudent(student);
 
