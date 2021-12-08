@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Subspace</title>
+    <style>
+        #header {
+            background-color: #2B6A92;
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            font-family: "Arial Black",sans-serif;
+            font-size: 40pt;
+            text-shadow: 3px 3px 3px #000000;
+            padding-top: 12px;
+            letter-spacing: 3px;
+        }
+        /*header 스타일 설정*/
+
+        a {
+            text-decoration-line: none;
+        }
+            /*링크 밑줄 지우기*/
+
+            /*header 링크 스타일 설정*/
+            a.header:link {
+                color: white;
+            }
+
+            a.header:visited {
+                color: white;
+            }
+
+            a.header:hover {
+                color: white;
+            }
+
+        #nav {
+            width: 15%;
+            background-color: #E6EAED;
+            height: 1000px;
+            float: left;
+            padding-top: 50px;
+        }
+        /*nav 스타일 설정*/
+
+        #list {
+            font-family: 'Aria';
+            text-shadow: 2px 2px 2px #FFFFFF;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        /*introduce subwaymap visit record 스타일 설정*/
+
+        #subway_list {
+            list-style-type: square;
+            padding-left: 80px;
+            letter-spacing: 1px;
+        }
+        /*전체노선도~9호선 리스트 스타일 설정*/
+
+
+        /*호선별 리스트 링크 스타일 설정*/
+        a.line_list:link {
+            color: black;
+        }
+
+        a.line_list:visited {
+            color: black;
+        }
+
+        a.line_list:hover {
+            color: green;
+        }
+
+        #visit_list {
+            list-style-type: circle;
+            padding-left: 80px;
+            letter-spacing: 1px;
+            color: darkslategray;
+        }
+        /*방문기록 리스트 스타일 설정*/
+
+        #content {
+            width: 85%;
+            background-color: white;
+            float: right;
+            height: 1000px;
+        }
+        /*content 스타일 설정*/
+
+        #main_content1 {
+            padding-top: 15px;
+            text-align: center;
+        }
+        /*subway 메인 설명글 스타일 설정*/
+
+        #main_pic {
+            width: 480px;
+            height: 250px;
+            display: block;
+            margin: auto;
+        }
+        /*subway 메인 사진 스타일 설정*/
+
+        #main_content2 {
+            text-align: center;
+        }
+        /*현재 위치 바로가기 스타일 설정*/
+
+        /*현재 위치 바로가기 링크 스타일 설정*/
+        a.main_content2_list:link {
+            color: gray;
+        }
+
+        a.main_content2_list:visited {
+            color: gray;
+        }
+
+        a.main_content2_list:hover {
+            color: darkblue;
+        }
+
+        #footer {
+            background-color: #AAD3ED;
+            width: 100%;
+            height: 35px;
+            clear: both;
+            text-align: center;
+            color: #767676;
+            padding-top: 10px;
+            font-style: italic;
+        }
+        /*footer 스타일 설정*/
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"> <a class="line_list" href="main.html" target="_self" style="color:white"> SUBSPACE </a> </div>
+        <div id="nav">
+            <h2 id="list"><a class="line_list" href="main.html" target="_self">Introduce</a></h2>
+            <h2 id="list"><a class="line_list" href="전체.html" target="_self">SubwayMap</a></h2>
+            <ul id="subway_list">
+                <li><a class="line_list" href="전체.html" target="_self">지하철노선도</a></li>
+                <li><a class="line_list" href="1호선.html" target="_self">1호선</a></li>
+                <li><a class="line_list" href="2호선.html" target="_self">2호선</a></li>
+                <li><a class="line_list" href="3호선.html" target="_self">3호선</a></li>
+                <li><a class="line_list" href="4호선.html" target="_self">4호선</a></li>
+                <li><a class="line_list" href="5호선.html" target="_self">5호선</a></li>
+                <li><a class="line_list" href="6호선.html" target="_self">6호선</a></li>
+                <li><a class="line_list" href="7호선.html" target="_self">7호선</a></li>
+                <li><a class="line_list" href="8호선.html" target="_self">8호선</a></li>
+                <li><a class="line_list" href="9호선.html" target="_self">9호선</a></li>
+            </ul>
+            <h2 id="list">VisitRecord</h2>
+            <ul id="visit_list">
+                <li>이태원역</li>
+                <li>봉은사역</li>
+                <li>종로3가역</li>
+                <li>건대입구역</li>
+                <li>송파역</li>
+            </ul>
+        </div>
+    </div>
+        <div id="sub_close">
+            <center><h1 style="padding-top: 20px">현재 위치는 영등포구청역입니다</h1></center>
+
+            <div style="text-align : center;">
+                <img id="sub_close" src="img/위/영등포구청_2.jpg" width="592" ; height="86" alt="지하철 근접도" /><br />
+                <a href="2호선 영등포구청역.html" target="_self"><img src=img/번호/2_on.jpg width="40" ; height="40"> </a>
+                <a href="5호선 영등포구청역.html" target="_self"><img src=img/번호/5_off.jpg width="40" ; height="40"> </a><br />
+                <a href="2호선 혼잡도/영등포구청 2호선 혼잡도.html" target="_self"><img id="sub_close" src="img/아래/영등포구청_2.jpg" width="592" ; height="162" alt="지하철 근접도" /></a>
+                <h6>테스트 페이지입니다. 위 이미지를 클릭하면 2513번 지하철 역 정보로 이동됩니다.</h6>
+            </div>
+
+            <div id="footer"> COPYRIGHT (c) 2021 SUBSPACE </div>
+        </div>
+</body>
+</html>﻿
